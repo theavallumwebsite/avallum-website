@@ -1,0 +1,90 @@
+:root {
+  --dark: #222222;
+  --gold: linear-gradient(180deg, #ac8246, #f8d175, #ac8246);
+}
+
+html,
+body {
+  background-color: var(--dark);
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  box-sizing: border-box;
+  /* overflow-x: hidden; */
+  width: 100vw;
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  max-width: 1080px;
+  margin: auto;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+}
+
+section {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+}
+
+h1 {
+  font-family: 'Gloock';
+}
+
+h2 {
+  font-family: 'Gloock';
+  background: var(--gold);
+  background-clip: text;
+  color: transparent;
+  font-weight: 100;
+  display: inline-flex;
+  align-items: center;
+  transition: transform 0.4s ease-in-out;
+}
+
+h2::before {
+  content: '';
+  background: url('../assets/pink-star.png');
+  width: 30px;
+  height: 30px;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+h2::after {
+  content: '';
+  background: url('../assets/blue-star.png');
+  width: 30px;
+  height: 30px;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+a > h2:hover {
+  transform: scale(1.1);
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+.extra {
+  font-family: 'Jersey 10';
+  font-size: 24px;
+  filter: drop-shadow(-2px 1px 0px #fa1c9a);
+  margin: 0px;
+}
+
+@media screen and (min-width: 1080px) {
+  body {
+    border-right: 1px solid gold;
+    border-left: 1px solid gold;
+  }
+  section {
+    width: 100%;
+  }
+}

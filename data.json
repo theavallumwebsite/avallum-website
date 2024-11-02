@@ -1,0 +1,32 @@
+{
+  "IDs": [
+    "UC9mydBOLdL6-Fp61paK68Tw",
+    "UCxerQlE0t1yY4bqeK5ldM9A",
+    "UCFwcEIsjvi9XEvpGx6iwHpw",
+    "UCsQqk4cn8pljUeadYbUVgyg",
+    "UC1ZRXoTQUwZtKnpOfJwGNPw"
+  ],
+
+  "channels": {
+    "Gale": {
+      "id": "UCxerQlE0t1yY4bqeK5ldM9A",
+      "color": "F5C34C"
+    },
+    "Cassian": {
+      "id": "UC9mydBOLdL6-Fp61paK68Tw",
+      "color": "50C878"
+    },
+    "Lucien": {
+      "id": "UCFwcEIsjvi9XEvpGx6iwHpw",
+      "color": "BB0F28"
+    },
+    "Zander": {
+      "id": "UC1ZRXoTQUwZtKnpOfJwGNPw",
+      "color": "9932CC"
+    },
+    "Rosco": {
+      "id": "UCsQqk4cn8pljUeadYbUVgyg",
+      "color": "FA1C9A"
+    }
+  }
+}
