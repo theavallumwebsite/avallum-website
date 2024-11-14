@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 import CassIntroComponent from '@/components/CassIntroComponent.vue'
 </script>
 
