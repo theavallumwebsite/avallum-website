@@ -1,9 +1,11 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
-import StreamsView from '../views/StreamsView.vue'
-import MerchView from '../views/MerchView.vue'
-import MusicView from '../views/MusicView.vue'
-import MembersView from '../views/MembersView.vue'
+import CassianView from '@/views/CassianView.vue'
+import GaleView from '@/views/GaleView.vue'
+import ZanderView from '@/views/ZanderView.vue'
+import RoscoView from '@/views/RoscoView.vue'
+import LucienView from '@/views/LucienView.vue'
+
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -14,24 +16,29 @@ const router = createRouter({
       component: HomeView
     },
     {
-      path: '/streams',
-      name: 'Streams',
-      component: StreamsView
+      path: '/cassianfloros',
+      name: 'Cassian',
+      component: CassianView
     },
     {
-      path: '/merch',
-      name: 'Merch',
-      component: MerchView
+      path: '/galegalleon',
+      name: 'Gale',
+      component: GaleView
     },
     {
-      path: '/music',
-      name: 'Music',
-      component: MusicView
+      path: '/zandernetherbrand',
+      name: 'Zander',
+      component: ZanderView
     },
     {
-      path: '/members',
-      name: 'Members',
-      component: MembersView
+      path: '/roscograves',
+      name: 'Rosco',
+      component: RoscoView
+    },
+    {
+      path: '/lucienlunaris',
+      name: 'Lucien',
+      component: LucienView
     }
   ]
 })

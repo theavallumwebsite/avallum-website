@@ -1,5 +1,9 @@
 <script setup lang="ts">
-import { RouterLink, RouterView } from 'vue-router'
+import { RouterLink, RouterView, useRoute } from 'vue-router'
+
+const route = useRoute()
+
+
 </script>
 
 <template>
@@ -11,10 +15,18 @@ import { RouterLink, RouterView } from 'vue-router'
           <h1>Avallum</h1>
           <p>A Vtuber group by FSP EN</p>
         </RouterLink>
-        <div class="nav-sections">
+        <div class="nav-sections" v-if="route.name === 'home'">
           <a href="#members">Members</a>
           <a href="#streams">Streams</a>
           <a href="#music">Music</a>
+        </div>
+
+        <div v-else class="nav-sections member-header">
+          <RouterLink to="/galegalleon">Gale</RouterLink>
+          <RouterLink to="/cassianfloros">Cassian</RouterLink>
+          <RouterLink to="/lucienlunaris">Lucien</RouterLink>
+          <RouterLink to="/zandernetherbrand">Zander</RouterLink>
+          <RouterLink to="/roscograves">Rosco</RouterLink>
         </div>
       </nav>
     </div>
@@ -47,6 +59,7 @@ nav {
   display: flex;
   gap: 30px;
 }
+
 
 nav p {
   font-family: 'Montserrat';
