@@ -2,7 +2,7 @@
 import { useRoute, useRouter } from 'vue-router'
 
 const router = useRouter()
-const route = useRoute()
+
 
 function nagivateTo(member: string) {
   router.push(`/${member}`)
@@ -14,13 +14,21 @@ function nagivateTo(member: string) {
     <img src="../assets/stars.jpg" alt="" />
     <h2>Members</h2>
     <div class="members-list">
-      <div class="gale" @click="nagivateTo('galegalleon')"><h3>Gale Galleon 🍻</h3></div>
-      <div class="cassian" @click="nagivateTo('cassianfloros')"><h3>Cassian Floros 🌿</h3></div>
-      <div class="lucien" @click="nagivateTo('lucienlunaris')"><h3>Lucien Lunaris 🎸</h3></div>
+      <div class="gale" @click="nagivateTo('galegalleon')">
+        <h3>Gale Galleon 🍻</h3>
+      </div>
+      <div class="cassian" @click="nagivateTo('cassianfloros')">
+        <h3>Cassian Floros 🌿</h3>
+      </div>
+      <div class="lucien" @click="nagivateTo('lucienlunaris')">
+        <h3>Lucien Lunaris 🎸</h3>
+      </div>
       <div class="zander" @click="nagivateTo('zandernetherbrand')">
         <h3>Zander Netherbrand ♈️</h3>
       </div>
-      <div class="rosco" @click="nagivateTo('roscograves')"><h3>Rosco Graves 🕹️</h3></div>
+      <div class="rosco" @click="nagivateTo('roscograves')">
+        <h3>Rosco Graves 🕹️</h3>
+      </div>
     </div>
   </section>
 </template>
@@ -69,7 +77,7 @@ function nagivateTo(member: string) {
   padding: 40px;
 }
 
-.members-list > div {
+.members-list>div {
   /* display: flex; */
   height: 420px;
   width: 300px;

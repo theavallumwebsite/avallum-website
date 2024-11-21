@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<!-- <script setup lang="ts">
 import { computed, onMounted, ref } from 'vue';
 import data from '../../data.json'
 
@@ -568,4 +568,4 @@ h3 {
         border: 10px solid white;
     } */
 }
-</style>
+</style> -->

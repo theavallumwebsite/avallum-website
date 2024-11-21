@@ -11,7 +11,7 @@ const props = defineProps({
 })
 
 const member = computed(() => {
-    return data.channels[props.memberName]
+    return data.channels[props.memberName as keyof typeof data.channels]
 })
 
 const font = ref(member.value.font)
