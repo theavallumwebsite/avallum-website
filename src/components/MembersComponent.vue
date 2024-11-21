@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { useRoute, useRouter } from 'vue-router';
+import { useRoute, useRouter } from 'vue-router'
 
 const router = useRouter()
 const route = useRoute()
@@ -17,7 +17,9 @@ function nagivateTo(member: string) {
       <div class="gale" @click="nagivateTo('galegalleon')"><h3>Gale Galleon 🍻</h3></div>
       <div class="cassian" @click="nagivateTo('cassianfloros')"><h3>Cassian Floros 🌿</h3></div>
       <div class="lucien" @click="nagivateTo('lucienlunaris')"><h3>Lucien Lunaris 🎸</h3></div>
-      <div class="zander" @click="nagivateTo('zandernetherbrand')"><h3>Zander Netherbrand ♈️</h3></div>
+      <div class="zander" @click="nagivateTo('zandernetherbrand')">
+        <h3>Zander Netherbrand ♈️</h3>
+      </div>
       <div class="rosco" @click="nagivateTo('roscograves')"><h3>Rosco Graves 🕹️</h3></div>
     </div>
   </section>

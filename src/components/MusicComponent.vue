@@ -97,8 +97,8 @@ const filteredSongs = computed(() => {
   )
 })
 
-// fix link for unarchived karaoke
-// clear selection
+// add original songs
+// add type + member
 
 onMounted(() => {
   getAllSongs()
@@ -108,9 +108,7 @@ onMounted(() => {
 <template>
   <section id="music" class="scroll">
     <div class="music-top">
-      <a href="https://www.youtube.com/watch?v=-WXRrpnYJwA"
-        ><img src="../assets/crossing-fates.jpg" alt=""
-      /></a>
+      <a href="https://www.youtube.com/watch?v=-WXRrpnYJwA"><img src="../assets/crossing-fates.jpg" alt="" /></a>
       <h2>Music</h2>
       <p>Discover all of Avallum's music!</p>
       <p class="extra">For newly released covers, rememeber to search them directly on Youtube!</p>
@@ -144,45 +142,33 @@ onMounted(() => {
       <div>
         <ul class="music-grid">
           <li v-for="video in filteredSongs" :key="video.id" class="song-item">
-            <a
-              :href="
-                video.title.toLowerCase().includes('unarchived') &&
+            <a :href="video.title.toLowerCase().includes('unarchived') &&
                 video.title.toLowerCase().includes('unrachived')
-                  ? ''
-                  : 'https://www.youtube.com/watch?v=' + video.id
-              "
-              target="_blank"
-            >
+                ? ''
+                : 'https://www.youtube.com/watch?v=' + video.id
+              " target="_blank">
               <!-- For Karaoke (type: 'singing') -->
               <div v-if="video.topic_id === 'singing'" class="song-info">
                 <span class="cell">{{ video.title }}</span>
                 <span></span>
                 <span class="cell center"> {{ video.channel.english_name }}</span>
                 <span class="cell center">Karaoke</span>
-                <span class="cell"
-                  ><a
-                    v-if="
-                      video.title.toLowerCase().includes('unarchived') &&
-                      video.title.toLowerCase().includes('unrachived')
-                    "
-                    :href="'https://www.youtube.com/watch?v=' + video.id"
-                    target="_blank"
-                    ><img src="../assets/youtube.png" alt="" class="youtube-logo" /></a
-                ></span>
+                <span class="cell"><a v-if="
+                  video.title.toLowerCase().includes('unarchived') &&
+                  video.title.toLowerCase().includes('unrachived')
+                " :href="'https://www.youtube.com/watch?v=' + video.id" target="_blank"><img
+                      src="../assets/youtube.png" alt="" class="youtube-logo" /></a></span>
               </div>
 
               <!-- For Covers (type: 'Music_Cover') -->
               <div v-else-if="video.topic_id === 'Music_Cover' && video.songs" class="song-info">
                 <span class="cell" v-for="song in video.songs" :key="song.id">{{ song.name }}</span>
                 <span class="cell center" v-for="song in video.songs" :key="song.id">
-                  {{ song.original_artist }}</span
-                >
+                  {{ song.original_artist }}</span>
                 <span class="cell center"> {{ video.channel.english_name }}</span>
                 <span class="cell center">Cover</span>
-                <span class="cell center"
-                  ><a :href="'https://www.youtube.com/watch?v=' + video.id" target="_blank"
-                    ><img src="../assets/youtube.png" alt="" class="youtube-logo" /></a
-                ></span>
+                <span class="cell center"><a :href="'https://www.youtube.com/watch?v=' + video.id" target="_blank"><img
+                      src="../assets/youtube.png" alt="" class="youtube-logo" /></a></span>
               </div>
             </a>
           </li>

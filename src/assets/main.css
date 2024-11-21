@@ -14,15 +14,16 @@ body {
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
-  max-width: 1080px;
+  /* max-width: 1080px; */
   margin: auto;
   scroll-behavior: smooth;
   scroll-snap-type: x mandatory;
+  font-size: 1.4vw;
 }
 
 section {
   height: 100vh;
-  width: 100vw;
+  /* width: 100vw; */
   overflow: hidden;
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
@@ -79,12 +80,18 @@ a {
   margin: 0px;
 }
 
-@media screen and (min-width: 1080px) {
+/* @media screen and (min-width: 1080px) {
   body {
     border-right: 1px solid gold;
     border-left: 1px solid gold;
   }
-  section {
-    width: 100%;
+} */
+
+@media screen and (max-width: 768px) {
+  body,
+  html {
+    width: 100vw;
+    overflow-x: hidden;
+    font-size: 3vw;
   }
 }

@@ -6,7 +6,6 @@ import ZanderView from '@/views/ZanderView.vue'
 import RoscoView from '@/views/RoscoView.vue'
 import LucienView from '@/views/LucienView.vue'
 
-
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [

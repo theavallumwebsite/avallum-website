@@ -10,23 +10,133 @@
   "channels": {
     "Gale": {
       "id": "UCxerQlE0t1yY4bqeK5ldM9A",
-      "color": "F5C34C"
+      "color": "#F5C34C",
+      "extraColor": "#986721",
+      "model": "public/gale_model.webp",
+      "font": "Pirata One",
+      "titleColor": "linear-gradient(#E5C373, #AC8246, #E5C373)",
+      "alternativeNames": "Captain, Gae Galleon",
+      "facts": [
+        "Hates vegetables",
+        "Can turn any horror game into a comedy",
+        "is basically Kermit the Frog",
+        "'Peanitz'"
+      ],
+      "polaroids": [
+        "public/gale1.png",
+        "public/gale2.png",
+        "public/gale3.png",
+        "public/gale4.png",
+        "public/gale5.png"
+      ],
+      "decoration": "",
+      "lore": "Are you ready to set sail on the high seas? Meet Gale Galleon, the goofy captain of the Goldwynd Pirates—one of the most feared crews of their time. Gale spent years in search of something called ‘Avallum’; a mythical place that he discovered after finding a magical crystal.  While looking for some leads, the captain decided to post flyers looking for adventurers; thus connecting him with a certain green elfman who may have some information to share. The two then set off searching for Avallum together, while gaining a few more companions along the way!",
+      "gradient": ["#E5BD5E", "#482B02"],
+      "emoji": "🍻"
     },
     "Cassian": {
       "id": "UC9mydBOLdL6-Fp61paK68Tw",
-      "color": "50C878"
+      "color": "#50C878",
+      "extraColor": "#146665",
+      "model": "public/cassian_model.webp",
+      "font": "Abhaya Libre",
+      "titleColor": "linear-gradient(#7A4D20, #DFA67D, #7A4D20)",
+      "alternativeNames": "Cass, Albert Elfman, Mother(?!)",
+      "facts": [
+        "'Oh hell no!",
+        "Definitely doesn't eat his dewdrops...",
+        "Loves Valorant",
+        "Non-official Epic Seven Ambassador"
+      ],
+      "polaroids": [
+        "public/cassian1.png",
+        "public/cassian2.png",
+        "public/cassian3.png",
+        "public/cassian4.png",
+        "public/cassian5.png"
+      ],
+      "decoration": "",
+      "lore": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla dignissim eget ante sit amet vestibulum. Praesent est libero, euismod vel venenatis ac, convallis a est. Cras quis ante diam. Cras et velit blandit, consequat justo sit amet, pretium mauris. Duis suscipit ornare metus vel sagittis. Duis elementum rhoncus velit, nec semper augue consequat vel. Aliquam dapibus risus placerat arcu iaculis, non varius nulla viverra. Maecenas mattis, elit et luctus cursus, arcu ante laoreet est, vitae scelerisque sem sapien vitae tortor. Praesent ac felis felis. Aliquam aliquam nulla nec nibh aliquam dapibus. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "gradient": ["#28CCCA", "#146665"],
+      "emoji": "✨"
     },
     "Lucien": {
       "id": "UCFwcEIsjvi9XEvpGx6iwHpw",
-      "color": "BB0F28"
+      "color": "#BB0F28",
+      "extraColor": "",
+      "model": "public/lucien_model.webp",
+      "font": "New Rocker",
+      "titleColor": "linear-gradient(#878889, #EBEDEF, #878889)",
+      "alternativeNames": "Luci, Lucien Batsunaris",
+      "facts": [
+        "Loves card games",
+        "Can play the guitar (she's named Luna!)",
+        "Hates tomatoes",
+        "is a good cook"
+      ],
+      "polaroids": [
+        "public/lucien1.png",
+        "public/lucien2.png",
+        "public/lucien3.png",
+        "public/lucien4.png",
+        "public/lucien5.png"
+      ],
+      "decoration": "",
+      "lore": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla dignissim eget ante sit amet vestibulum. Praesent est libero, euismod vel venenatis ac, convallis a est. Cras quis ante diam. Cras et velit blandit, consequat justo sit amet, pretium mauris. Duis suscipit ornare metus vel sagittis. Duis elementum rhoncus velit, nec semper augue consequat vel. Aliquam dapibus risus placerat arcu iaculis, non varius nulla viverra. Maecenas mattis, elit et luctus cursus, arcu ante laoreet est, vitae scelerisque sem sapien vitae tortor. Praesent ac felis felis. Aliquam aliquam nulla nec nibh aliquam dapibus. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "gradient": ["#4F4F4F", "#000000"],
+      "emoji": "🌙"
     },
     "Zander": {
       "id": "UC1ZRXoTQUwZtKnpOfJwGNPw",
-      "color": "9932CC"
+      "color": "#9932CC",
+      "extraColor": "",
+      "model": "public/zander_model.webp",
+      "font": "Damion",
+      "titleColor": "#CF5CD1",
+      "alternativeNames": "Zanny, Boss",
+      "facts": [
+        "Enjoys making his netherlings fold",
+        "Gym bro (he loves his protein powder)",
+        "Loves coffee",
+        "x"
+      ],
+      "polaroids": [
+        "public/zander1.png",
+        "public/zander2.png",
+        "public/zander3.png",
+        "public/zander4.png",
+        "public/zander5.png"
+      ],
+      "decoration": "",
+      "lore": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla dignissim eget ante sit amet vestibulum. Praesent est libero, euismod vel venenatis ac, convallis a est. Cras quis ante diam. Cras et velit blandit, consequat justo sit amet, pretium mauris. Duis suscipit ornare metus vel sagittis. Duis elementum rhoncus velit, nec semper augue consequat vel. Aliquam dapibus risus placerat arcu iaculis, non varius nulla viverra. Maecenas mattis, elit et luctus cursus, arcu ante laoreet est, vitae scelerisque sem sapien vitae tortor. Praesent ac felis felis. Aliquam aliquam nulla nec nibh aliquam dapibus. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "gradient": ["#8A037C", "#2C0047"],
+      "emoji": "♈️"
     },
     "Rosco": {
       "id": "UCsQqk4cn8pljUeadYbUVgyg",
-      "color": "FA1C9A"
+      "color": "#FA1C9A",
+      "extraColor": "",
+      "model": "public/rosco_model.webp",
+      "font": "Sedgwick Ave Display",
+      "titleColor": "#FA1C9A",
+      "alternativeNames": "Rosquito, Rosquino",
+      "facts": [
+        "'Goofy'",
+        "Always eating on stream",
+        "Songwriter, producer, and plays the ukulele",
+        "Test"
+      ],
+      "polaroids": [
+        "public/rosco1.png",
+        "public/rosco2.png",
+        "public/rosco3.png",
+        "public/rosco4.png",
+        "public/rosco5.png"
+      ],
+      "decoration": "",
+      "lore": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla dignissim eget ante sit amet vestibulum. Praesent est libero, euismod vel venenatis ac, convallis a est. Cras quis ante diam. Cras et velit blandit, consequat justo sit amet, pretium mauris. Duis suscipit ornare metus vel sagittis. Duis elementum rhoncus velit, nec semper augue consequat vel. Aliquam dapibus risus placerat arcu iaculis, non varius nulla viverra. Maecenas mattis, elit et luctus cursus, arcu ante laoreet est, vitae scelerisque sem sapien vitae tortor. Praesent ac felis felis. Aliquam aliquam nulla nec nibh aliquam dapibus. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "gradient": ["#001A53", "#D81272"],
+      "emoji": "🕹️"
     }
   }
 }

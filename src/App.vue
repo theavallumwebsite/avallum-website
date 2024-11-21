@@ -1,17 +1,35 @@
 <script setup lang="ts">
 import { RouterLink, RouterView, useRoute } from 'vue-router'
+import { computed } from 'vue'
 
 const route = useRoute()
 
-
+const headerColor = computed(() => {
+  if (route.name === 'Cassian') {
+    return { color: '#146665' }
+  }
+  if (route.name === 'Gale') {
+    return { color: 'red' }
+  }
+  if (route.name === 'Lucien') {
+    return { color: '#146665' }
+  }
+  if (route.name === 'Zander') {
+    return { color: '#146665' }
+  }
+  if (route.name === 'Rosco') {
+    return { color: '#146665' }
+  }
+  return {}
+})
 </script>
 
 <template>
-  <header>
+  <header :style="headerColor">
     <div class="wrapper">
       <p>This website is not affiliated with FSP.</p>
       <nav>
-        <RouterLink to="/">
+        <RouterLink to="/" :style="headerColor">
           <h1>Avallum</h1>
           <p>A Vtuber group by FSP EN</p>
         </RouterLink>
@@ -22,11 +40,11 @@ const route = useRoute()
         </div>
 
         <div v-else class="nav-sections member-header">
-          <RouterLink to="/galegalleon">Gale</RouterLink>
-          <RouterLink to="/cassianfloros">Cassian</RouterLink>
-          <RouterLink to="/lucienlunaris">Lucien</RouterLink>
-          <RouterLink to="/zandernetherbrand">Zander</RouterLink>
-          <RouterLink to="/roscograves">Rosco</RouterLink>
+          <RouterLink to="/galegalleon" :style="headerColor">Gale</RouterLink>
+          <RouterLink to="/cassianfloros" :style="headerColor">Cassian</RouterLink>
+          <RouterLink to="/lucienlunaris" :style="headerColor">Lucien</RouterLink>
+          <RouterLink to="/zandernetherbrand" :style="headerColor">Zander</RouterLink>
+          <RouterLink to="/roscograves" :style="headerColor">Rosco</RouterLink>
         </div>
       </nav>
     </div>
@@ -36,6 +54,10 @@ const route = useRoute()
 </template>
 
 <style scoped>
+header {
+  position: relative;
+  z-index: 999;
+}
 .wrapper {
   position: relative;
   z-index: 1;
@@ -60,12 +82,19 @@ nav {
   gap: 30px;
 }
 
-
 nav p {
   font-family: 'Montserrat';
 }
 
 nav h1 {
   margin: 2px 0px;
+}
+
+.cassian-header {
+  color: #146665;
+}
+
+.gale-header {
+  color: #146665;
 }
 </style>

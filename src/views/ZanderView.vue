@@ -1,3 +1,10 @@
+<script setup>
+import MemberCommonSection from '@/components/MemberCommonSection.vue';
+
+</script>
+
 <template>
-    <section></section>
+  <section>
+    <MemberCommonSection memberName="Zander" class="zander-section"></MemberCommonSection>
+  </section>
 </template>

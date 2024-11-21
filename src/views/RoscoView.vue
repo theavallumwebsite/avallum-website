@@ -1,3 +1,10 @@
+<script setup>
+import MemberCommonSection from '@/components/MemberCommonSection.vue';
+</script>
+
+
 <template>
-    <section></section>
+  <section>
+    <MemberCommonSection memberName="Rosco" class="rosco-section"></MemberCommonSection>
+  </section>
 </template>
