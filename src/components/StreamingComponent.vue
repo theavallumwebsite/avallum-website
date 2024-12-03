@@ -22,8 +22,6 @@ async function fetchLiveStatus() {
         new Date(video.start_scheduled) <= oneMonth
     )
 
-    console.log(response.data)
-    console.log(liveStatus)
   } catch (error) {
     console.error('error')
   }
@@ -45,17 +43,10 @@ onMounted(() => {
             <h3>{{ video.channel.name }} is Live!</h3>
             <div class="space-wrapper">
               <div class="iframe-wrapper">
-                <iframe
-                  v-if="liveStatus"
-                  width="560"
-                  height="315"
-                  :src="`https://www.youtube.com/embed/${video.id}`"
-                  title="YouTube video player"
-                  frameborder="0"
+                <iframe v-if="liveStatus" width="560" height="315" :src="`https://www.youtube.com/embed/${video.id}`"
+                  title="YouTube video player" frameborder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  referrerpolicy="strict-origin-when-cross-origin"
-                  allowfullscreen
-                ></iframe>
+                  referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
               </div>
             </div>
           </div>
@@ -71,18 +62,10 @@ onMounted(() => {
       <div v-if="upcomingLive">
         <div v-for="video in upcomingLive" :key="video.id" class="iframe-wrapper">
           <div class="space-wrapper">
-            <iframe
-              v-if="upcomingLive"
-              width="560"
-              height="315"
-              :src="`https://www.youtube.com/embed/${video.id}`"
-              title="YouTube video player"
-              frameborder="0"
+            <iframe v-if="upcomingLive" width="560" height="315" :src="`https://www.youtube.com/embed/${video.id}`"
+              title="YouTube video player" frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerpolicy="strict-origin-when-cross-origin"
-              allowfullscreen
-              class="iframe"
-            ></iframe>
+              referrerpolicy="strict-origin-when-cross-origin" allowfullscreen class="iframe"></iframe>
           </div>
         </div>
       </div>

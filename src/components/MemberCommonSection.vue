@@ -15,7 +15,9 @@ const member = computed(() => {
 })
 
 const font = ref(member.value.font)
-const color = ref(member.value.color)
+const color = computed(() => {
+    return member.value.name === 'Cassian Floros' ? member.value.extraColor : member.value.color;
+});
 const titleColor = ref(member.value.titleColor)
 const extraColor = ref(member.value.extraColor)
 
@@ -24,7 +26,6 @@ onMounted(() => {
     const bg = document.querySelector('.bg') as HTMLElement
     const gradient = member.value.gradient
     if (bg) {
-        console.log('test')
         bg.style.background = `linear-gradient(to bottom, ${gradient[0]}, ${gradient[1]})`;
     }
 }
@@ -383,7 +384,7 @@ h3 {
 
 .gale-section .image img {
     max-width: 25vw;
-    ;
+
 }
 
 .rosco-section,

@@ -9,12 +9,18 @@
 
   "channels": {
     "Gale": {
+      "name": "Gale Galleon",
+      "jpName": "ゲイル・ガレオン",
       "id": "UCxerQlE0t1yY4bqeK5ldM9A",
+      "birthday": "2024-12-09",
       "color": "#F5C34C",
       "extraColor": "#986721",
-      "model": "/gale_model.webp",
+      "model": "gale_model.webp",
+      "portrait": "gale-portrait.webp",
+      "mainArt": "",
+      "mainArtTransparent": "",
       "font": "Pirata One",
-      "titleColor": "linear-gradient(#E5C373, #AC8246, #E5C373)",
+      "titleColor": "linear-gradient(#E5C373, #AC8246, #C0A054)",
       "alternativeNames": "Captain, Gae Galleon",
       "facts": [
         "Hates vegetables",
@@ -22,17 +28,72 @@
         "is basically Kermit the Frog",
         "'Peanitz'"
       ],
-      "polaroids": ["/gale1.png", "/gale2.png", "/gale3.png", "/gale4.png", "/gale5.png"],
+      "tags": ["December 9th", "28 years old", "Human", "Pirate"],
+      "hastags": [
+        "Art: #galeGallery",
+        "Live: #galeGoingLive",
+        "Clips: #Pipsclips",
+        "Memes: #GaleGallons"
+      ],
+      "fanName": "Pipsqueak",
+      "mascot": "lunarist-black.gif",
+      "polaroids": ["gale1.png", "gale2.png", "gale3.png", "gale4.png", "gale5.png"],
       "decoration": "",
       "lore": "Are you ready to set sail on the high seas? Meet Gale Galleon, the goofy captain of the Goldwynd Pirates—one of the most feared crews of their time. Gale spent years in search of something called ‘Avallum’; a mythical place that he discovered after finding a magical crystal.  While looking for some leads, the captain decided to post flyers looking for adventurers; thus connecting him with a certain green elfman who may have some information to share. The two then set off searching for Avallum together, while gaining a few more companions along the way!",
       "gradient": ["#E5BD5E", "#482B02"],
-      "emoji": "🍻"
+      "emoji": "🍻⚔️",
+      "debut": "https://www.youtube.com/embed/VOhzg-Vi7Z0",
+      "debut3D": "https://www.youtube.com/embed/LPvjfazmpLA",
+      "ogSongImage": "change-square.jpg",
+      "credits": [
+        {
+          "role": "Mama (model)",
+          "name": "Kokonata",
+          "socialMedia": "https://twitter.com/cocokana_ovo"
+        },
+        {
+          "role": "Papa (rigging)",
+          "name": "Naname",
+          "socialMedia": "https://twitter.com/7name_"
+        },
+        {
+          "role": "Zatsudan room",
+          "name": "Nura",
+          "socialMedia": "https://twitter.com/slimenura"
+        },
+        {
+          "role": "Gaming screen & logo",
+          "name": "Azaka",
+          "socialMedia": "https://twitter.com/azatomomiage44"
+        },
+        {
+          "role": "Opening screen",
+          "name": "Be Suke",
+          "socialMedia": "https://twitter.com/_Be_suke_"
+        },
+        {
+          "role": "Ending screen & transition",
+          "name": "Aco",
+          "socialMedia": "https://twitter.com/acco_0v0"
+        },
+        {
+          "role": "Trailer PV",
+          "name": "guriart.co.jp",
+          "socialMedia": "http://guriart.co.jp"
+        }
+      ]
     },
     "Cassian": {
+      "name": "Cassian Floros",
+      "jpName": "カシアン・フロロス",
       "id": "UC9mydBOLdL6-Fp61paK68Tw",
+      "birthday": "2024-11-19",
       "color": "#50C878",
       "extraColor": "#146665",
-      "model": "/cassian_model.webp",
+      "model": "cassian_model.webp",
+      "portrait": "cassian-portrait.webp",
+      "mainArt": "",
+      "mainArtTransparent": "zanny-transparent.png",
       "font": "Abhaya Libre",
       "titleColor": "linear-gradient(#7A4D20, #DFA67D, #7A4D20)",
       "alternativeNames": "Cass, Albert Elfman, Mother(?!)",
@@ -42,23 +103,72 @@
         "Loves Valorant",
         "Non-official Epic Seven Ambassador"
       ],
-      "polaroids": [
-        "cassian1.png",
-        "cassian2.png",
-        "/cassian3.png",
-        "/cassian4.png",
-        "/cassian5.png"
+      "tags": ["December 9th", "28 years old", "Human", "Pirate"],
+      "hastags": [
+        "Art: #galeGallery",
+        "Live: #galeGoingLive",
+        "Clips: #Pipsclips",
+        "Memes: #GaleGallons"
       ],
+      "fanName": "Dewdrop",
+      "mascot": "lunarist-black.gif",
+      "polaroids": ["cassian1.png", "cassian2.png", "cassian3.png", "cassian4.png", "cassian5.png"],
       "decoration": "",
       "lore": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla dignissim eget ante sit amet vestibulum. Praesent est libero, euismod vel venenatis ac, convallis a est. Cras quis ante diam. Cras et velit blandit, consequat justo sit amet, pretium mauris. Duis suscipit ornare metus vel sagittis. Duis elementum rhoncus velit, nec semper augue consequat vel. Aliquam dapibus risus placerat arcu iaculis, non varius nulla viverra. Maecenas mattis, elit et luctus cursus, arcu ante laoreet est, vitae scelerisque sem sapien vitae tortor. Praesent ac felis felis. Aliquam aliquam nulla nec nibh aliquam dapibus. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
       "gradient": ["#28CCCA", "#146665"],
-      "emoji": "✨"
+      "emoji": "🌿✨",
+      "debut": "https://www.youtube.com/embed/Myb8C_slm08",
+      "debut3D": "https://www.youtube.com/embed/1QsGykAKGTU",
+      "ogSongImage": "manymanymore-square.jpeg",
+      "credits": [
+        {
+          "role": "",
+          "name": "",
+          "socialMedia": ""
+        },
+        {
+          "role": "",
+          "name": "",
+          "socialMedia": ""
+        },
+        {
+          "role": "",
+          "name": "",
+          "socialMedia": ""
+        },
+        {
+          "role": "",
+          "name": "",
+          "socialMedia": ""
+        },
+        {
+          "role": "",
+          "name": "",
+          "socialMedia": ""
+        },
+        {
+          "role": "",
+          "name": "",
+          "socialMedia": ""
+        },
+        {
+          "role": "",
+          "name": "",
+          "socialMedia": ""
+        }
+      ]
     },
     "Lucien": {
+      "name": "Lucien Lunaris",
+      "jpName": "ルシエン・ルナリス",
       "id": "UCFwcEIsjvi9XEvpGx6iwHpw",
+      "birthday": "2024-10-18",
       "color": "#BB0F28",
       "extraColor": "",
-      "model": "/lucien_model.webp",
+      "model": "lucien_model.webp",
+      "portrait": "lucien-portrait.webp",
+      "mainArt": "",
+      "mainArtTransparent": "",
       "font": "New Rocker",
       "titleColor": "linear-gradient(#878889, #EBEDEF, #878889)",
       "alternativeNames": "Luci, Lucien Batsunaris",
@@ -68,17 +178,73 @@
         "Hates tomatoes",
         "is a good cook"
       ],
-      "polaroids": ["/lucien1.png", "/lucien2.png", "/lucien3.png", "/lucien4.png", "/lucien5.png"],
+      "tags": ["October 19th", "129 years old", "Vampire Wanderer"],
+      "hastags": [
+        "Art & Live : #Lunography",
+        "Clips: #Lunariclipse",
+        "Memes: #LuLcien",
+        "Assets: #Lunassets",
+        "Thumbnails: #Lunabait"
+      ],
+      "fanName": "Lunarist",
+      "mascot": "lunarist-black.gif",
+      "polaroids": ["lucien1.png", "lucien2.png", "lucien3.png", "lucien4.png", "lucien5.png"],
       "decoration": "",
       "lore": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla dignissim eget ante sit amet vestibulum. Praesent est libero, euismod vel venenatis ac, convallis a est. Cras quis ante diam. Cras et velit blandit, consequat justo sit amet, pretium mauris. Duis suscipit ornare metus vel sagittis. Duis elementum rhoncus velit, nec semper augue consequat vel. Aliquam dapibus risus placerat arcu iaculis, non varius nulla viverra. Maecenas mattis, elit et luctus cursus, arcu ante laoreet est, vitae scelerisque sem sapien vitae tortor. Praesent ac felis felis. Aliquam aliquam nulla nec nibh aliquam dapibus. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
       "gradient": ["#4F4F4F", "#000000"],
-      "emoji": "🌙"
+      "emoji": "🎸🌙",
+      "debut": "https://www.youtube.com/embed/a7m0Iy-Z5Iw",
+      "debut3D": "https://www.youtube.com/embed/VJyp8skS5u0",
+      "ogSongImage": "dearyesterday-square.jpg",
+      "credits": [
+        {
+          "role": "",
+          "name": "",
+          "socialMedia": ""
+        },
+        {
+          "role": "",
+          "name": "",
+          "socialMedia": ""
+        },
+        {
+          "role": "",
+          "name": "",
+          "socialMedia": ""
+        },
+        {
+          "role": "",
+          "name": "",
+          "socialMedia": ""
+        },
+        {
+          "role": "",
+          "name": "",
+          "socialMedia": ""
+        },
+        {
+          "role": "",
+          "name": "",
+          "socialMedia": ""
+        },
+        {
+          "role": "",
+          "name": "",
+          "socialMedia": ""
+        }
+      ]
     },
     "Zander": {
+      "name": "Zander Netherbrand",
+      "jpName": "ザンダー・ネザーブランド",
       "id": "UC1ZRXoTQUwZtKnpOfJwGNPw",
+      "birthday": "2024-04-07",
       "color": "#9932CC",
       "extraColor": "",
-      "model": "/zander_model.webp",
+      "model": "zander_model.webp",
+      "portrait": "zander-portrait.webp",
+      "mainArt": "zander_pc.png",
+      "mainArtTransparent": "zanny-transparent.png",
       "font": "Damion",
       "titleColor": "#CF5CD1",
       "alternativeNames": "Zanny, Boss",
@@ -88,17 +254,72 @@
         "Loves coffee",
         "x"
       ],
-      "polaroids": ["/zander1.png", "/zander2.png", "/zander3.png", "/zander4.png", "/zander5.png"],
+      "tags": ["December 9th", "28 years old", "Human", "Pirate"],
+      "hastags": [
+        "Art: #galeGallery",
+        "Live: #galeGoingLive",
+        "Clips: #Pipsclips",
+        "Memes: #GaleGallons"
+      ],
+      "fanName": "Netherling",
+      "mascot": "lunarist-black.gif",
+      "polaroids": ["zander1.png", "zander2.png", "zander3.png", "zander4.png", "zander5.png"],
       "decoration": "",
       "lore": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla dignissim eget ante sit amet vestibulum. Praesent est libero, euismod vel venenatis ac, convallis a est. Cras quis ante diam. Cras et velit blandit, consequat justo sit amet, pretium mauris. Duis suscipit ornare metus vel sagittis. Duis elementum rhoncus velit, nec semper augue consequat vel. Aliquam dapibus risus placerat arcu iaculis, non varius nulla viverra. Maecenas mattis, elit et luctus cursus, arcu ante laoreet est, vitae scelerisque sem sapien vitae tortor. Praesent ac felis felis. Aliquam aliquam nulla nec nibh aliquam dapibus. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
       "gradient": ["#8A037C", "#2C0047"],
-      "emoji": "♈️"
+      "emoji": "♈️",
+      "debut": "https://www.youtube.com/embed/LuUxkgwdmis",
+      "debut3D": "https://www.youtube.com/embed/DB256_jcVxI",
+      "ogSongImage": "coldwrists-square.jpg",
+      "credits": [
+        {
+          "role": "",
+          "name": "",
+          "socialMedia": ""
+        },
+        {
+          "role": "",
+          "name": "",
+          "socialMedia": ""
+        },
+        {
+          "role": "",
+          "name": "",
+          "socialMedia": ""
+        },
+        {
+          "role": "",
+          "name": "",
+          "socialMedia": ""
+        },
+        {
+          "role": "",
+          "name": "",
+          "socialMedia": ""
+        },
+        {
+          "role": "",
+          "name": "",
+          "socialMedia": ""
+        },
+        {
+          "role": "",
+          "name": "",
+          "socialMedia": ""
+        }
+      ]
     },
     "Rosco": {
+      "name": "Rosco Graves",
+      "jpName": "ロスコ・グレイヴス ",
       "id": "UCsQqk4cn8pljUeadYbUVgyg",
+      "birthday": "2024-07-08",
       "color": "#FA1C9A",
       "extraColor": "",
-      "model": "/rosco_model.webp",
+      "model": "rosco_model.webp",
+      "portrait": "rosco-portrait.webp",
+      "mainArt": "",
+      "mainArtTransparent": "rosco_test.png",
       "font": "Sedgwick Ave Display",
       "titleColor": "#FA1C9A",
       "alternativeNames": "Rosquito, Rosquino",
@@ -108,11 +329,60 @@
         "Songwriter, producer, and plays the ukulele",
         "Test"
       ],
-      "polaroids": ["/rosco1.png", "/rosco2.png", "/rosco3.png", "/rosco4.png", "/rosco5.png"],
+      "tags": ["December 9th", "28 years old", "Human", "Pirate"],
+      "hastags": [
+        "Art: #galeGallery",
+        "Live: #galeGoingLive",
+        "Clips: #Pipsclips",
+        "Memes: #GaleGallons"
+      ],
+      "fanName": "Roscal",
+      "mascot": "",
+      "polaroids": ["rosco1.png", "rosco2.png", "rosco3.png", "rosco4.png", "rosco5.png"],
       "decoration": "",
       "lore": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla dignissim eget ante sit amet vestibulum. Praesent est libero, euismod vel venenatis ac, convallis a est. Cras quis ante diam. Cras et velit blandit, consequat justo sit amet, pretium mauris. Duis suscipit ornare metus vel sagittis. Duis elementum rhoncus velit, nec semper augue consequat vel. Aliquam dapibus risus placerat arcu iaculis, non varius nulla viverra. Maecenas mattis, elit et luctus cursus, arcu ante laoreet est, vitae scelerisque sem sapien vitae tortor. Praesent ac felis felis. Aliquam aliquam nulla nec nibh aliquam dapibus. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
       "gradient": ["#001A53", "#D81272"],
-      "emoji": "🕹️"
+      "emoji": "🕹️",
+      "debut": "https://www.youtube.com/embed/XvkFHGc4V44",
+      "debut3D": "",
+      "ogSongImage": "deadmeat-square.jpg",
+      "credits": [
+        {
+          "role": "",
+          "name": "",
+          "socialMedia": ""
+        },
+        {
+          "role": "",
+          "name": "",
+          "socialMedia": ""
+        },
+        {
+          "role": "",
+          "name": "",
+          "socialMedia": ""
+        },
+        {
+          "role": "",
+          "name": "",
+          "socialMedia": ""
+        },
+        {
+          "role": "",
+          "name": "",
+          "socialMedia": ""
+        },
+        {
+          "role": "",
+          "name": "",
+          "socialMedia": ""
+        },
+        {
+          "role": "",
+          "name": "",
+          "socialMedia": ""
+        }
+      ]
     }
   }
 }

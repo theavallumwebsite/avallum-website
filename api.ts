@@ -52,4 +52,15 @@ export async function getMusic(channelId: string, topic: string): Promise<ApiRes
   return await getData<any>(holodexClient, '/videos', queryParams)
 }
 
+//get latest videos
+export async function getVideos(channelId: string): Promise<ApiResponse<any>> {
+  const queryParams = {
+    channel_id: channelId,
+    type: 'stream',
+    status: 'past',
+    limit: 1
+  }
+  return await getData<any>(holodexClient, '/videos', queryParams)
+}
+
 export { getData }

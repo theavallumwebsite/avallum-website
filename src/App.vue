@@ -12,7 +12,7 @@ const headerColor = computed(() => {
     return { color: 'red' }
   }
   if (route.name === 'Lucien') {
-    return { color: '#146665' }
+    return { color: 'white' }
   }
   if (route.name === 'Zander') {
     return { color: '#146665' }
@@ -27,16 +27,17 @@ const headerColor = computed(() => {
 <template>
   <header :style="headerColor">
     <div class="wrapper">
-      <p>This website is not affiliated with FSP.</p>
+      <p>This website is not affiliated with First Stage Production.</p>
       <nav>
         <RouterLink to="/" :style="headerColor">
-          <h1>Avallum</h1>
-          <p>A Vtuber group by FSP EN</p>
+          <h1>Avallum World</h1>
+          <!-- <p>A Vtuber group by FSP EN</p> -->
         </RouterLink>
         <div class="nav-sections" v-if="route.name === 'home'">
           <a href="#members">Members</a>
           <a href="#streams">Streams</a>
           <a href="#music">Music</a>
+          <a href="#birthday">Birthdays</a>
         </div>
 
         <div v-else class="nav-sections member-header">
@@ -58,6 +59,7 @@ header {
   position: relative;
   z-index: 999;
 }
+
 .wrapper {
   position: relative;
   z-index: 1;

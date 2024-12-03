@@ -3,6 +3,7 @@ import { getMusic } from '../../api'
 import data from '../../data.json'
 import { ref, onMounted } from 'vue'
 import { computed } from 'vue'
+import CDComponent from './CDComponent.vue'
 
 const allSongs = ref<any[]>([])
 const selectedFilter = ref<string | null>(null)
@@ -108,10 +109,12 @@ onMounted(() => {
 <template>
   <section id="music" class="scroll">
     <div class="music-top">
-      <a href="https://www.youtube.com/watch?v=-WXRrpnYJwA"><img src="../assets/crossing-fates.jpg" alt="" /></a>
+      <a href="https://www.youtube.com/watch?v=-WXRrpnYJwA">
+        <CDComponent memberName="avallum" class="avallum-section"></CDComponent>
+      </a>
       <h2>Music</h2>
       <p>Discover all of Avallum's music!</p>
-      <p class="extra">For newly released covers, rememeber to search them directly on Youtube!</p>
+      <p class="extra">For newly released songs, rememeber to search them directly on Youtube!</p>
     </div>
 
     <ul class="filter">
@@ -143,9 +146,9 @@ onMounted(() => {
         <ul class="music-grid">
           <li v-for="video in filteredSongs" :key="video.id" class="song-item">
             <a :href="video.title.toLowerCase().includes('unarchived') &&
-                video.title.toLowerCase().includes('unrachived')
-                ? ''
-                : 'https://www.youtube.com/watch?v=' + video.id
+              video.title.toLowerCase().includes('unrachived')
+              ? ''
+              : 'https://www.youtube.com/watch?v=' + video.id
               " target="_blank">
               <!-- For Karaoke (type: 'singing') -->
               <div v-if="video.topic_id === 'singing'" class="song-info">
@@ -189,17 +192,29 @@ onMounted(() => {
   padding-left: 40px;
 }
 
+
 .music-top {
+  /* display: flex; */
   height: 300px;
   border-bottom: 1px solid gold;
   margin: auto;
   padding: 15px 0px;
 }
 
-.music-top img {
+/* .music-top img {
   height: 100%;
   float: left;
   margin-right: 10px;
+} */
+
+.music-top .cd-container {
+  float: left;
+  margin: 0px;
+  margin-right: 10px;
+}
+
+.music-top .cd-player {
+  margin: 0px;
 }
 
 .filter {
