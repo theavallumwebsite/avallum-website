@@ -8,6 +8,10 @@ import CDComponent from './CDComponent.vue'
 const allSongs = ref<any[]>([])
 const selectedFilter = ref<string | null>(null)
 
+function isUnarchived(title: string) {
+  return title.toLowerCase().includes('unarchived') || title.toLowerCase().includes('unrachived');
+}
+
 async function getKaraoke() {
   selectedFilter.value = 'karaoke'
   try {
@@ -42,18 +46,45 @@ async function getCovers() {
       }
     })
   } catch (error) {
-    console.log('error covers, error')
+    console.log('error covers', error)
   }
 }
+
+async function getOriginalSongs() {
+  selectedFilter.value = 'original_Song'
+  try {
+    const originalSongPromise = data.IDs.map((channelId) => getMusic(channelId, 'Original_Song'))
+
+    const originalSongResponse = await Promise.all(originalSongPromise)
+
+    allSongs.value = []
+
+    originalSongResponse.forEach((response) => {
+      if (response.data) {
+        const filteredSongs = response.data.filter((song: { title: string }) =>
+          !/after\s*party/i.test(song.title) && // Matches "after party" with any number of spaces
+          !/afterparty/i.test(song.title)    // Matches "afterparty" case-insensitively
+        );
+        allSongs.value.push(...filteredSongs)
+      }
+    })
+  } catch (error) {
+    console.log('error og song', error)
+  }
+}
+
 
 async function getAllSongs() {
   try {
     const coverPromises = data.IDs.map((channelId) => getMusic(channelId, 'Music_Cover'))
     const karaokePromises = data.IDs.map((channelId) => getMusic(channelId, 'singing'))
+    const originalSongPromises = data.IDs.map((channelId) => getMusic(channelId, 'Original_Song'))
 
-    const [coversResponse, karaokeResponse] = await Promise.all([
+
+    const [coversResponse, karaokeResponse, originalSongResponse] = await Promise.all([
       Promise.all(coverPromises),
-      Promise.all(karaokePromises)
+      Promise.all(karaokePromises),
+      Promise.all(originalSongPromises)
     ])
 
     coversResponse.forEach((response) => {
@@ -67,6 +98,13 @@ async function getAllSongs() {
         allSongs.value.push(...response.data)
       }
     })
+
+    originalSongResponse.forEach((response) => {
+      if (response.data) {
+        allSongs.value.push(...response.data)
+      }
+    })
+    allSongs.value.sort((a, b) => new Date(b.published_at).getTime() - new Date(a.published_at).getTime());
   } catch (error) {
     console.error('songs error', error)
   }
@@ -84,9 +122,10 @@ async function getMemberMusic(member: keyof typeof data.channels) {
     const channelId = data.channels[member].id
     const cover = await getMusic(channelId, 'Music_Cover')
     const karaoke = await getMusic(channelId, 'singing')
-    console.log(cover, karaoke)
+    const originalSong = await getMusic(channelId, 'Original_Song')
+    console.log(cover, karaoke, originalSong)
     allSongs.value = []
-    allSongs.value.push(...cover.data, ...karaoke.data)
+    allSongs.value.push(...cover.data, ...karaoke.data, ...originalSong.data)
   } catch (error) {
     console.log(error)
   }
@@ -94,20 +133,20 @@ async function getMemberMusic(member: keyof typeof data.channels) {
 
 const filteredSongs = computed(() => {
   return allSongs.value.filter(
-    (video) => (video.topic_id === 'Music_Cover' && video.songs) || video.topic_id === 'singing'
+    (video) => (video.topic_id === 'Music_Cover' && video.songs) || video.topic_id === 'singing' || video.topic_id === 'Original_Song'
   )
+    .sort((a, b) => new Date(b.published_at).getTime() - new Date(a.published_at).getTime());
 })
 
-// add original songs
-// add type + member
 
 onMounted(() => {
   getAllSongs()
+  console.log(allSongs)
 })
 </script>
 
 <template>
-  <section id="music" class="scroll">
+  <section id="music">
     <div class="music-top">
       <a href="https://www.youtube.com/watch?v=-WXRrpnYJwA">
         <CDComponent memberName="avallum" class="avallum-section"></CDComponent>
@@ -120,6 +159,7 @@ onMounted(() => {
     <ul class="filter">
       <li @click="getCovers()" :class="{ selected: selectedFilter === 'cover' }">Cover</li>
       <li @click="getKaraoke()" :class="{ selected: selectedFilter === 'karaoke' }">Karaoke</li>
+      <li @click="getOriginalSongs()" :class="{ selected: selectedFilter === 'original_song' }">Original Songs</li>
       <li @click="getMemberMusic('Gale')" :class="{ selected: selectedFilter === 'Gale' }">Gale</li>
       <li @click="getMemberMusic('Cassian')" :class="{ selected: selectedFilter === 'Cassian' }">
         Cassian
@@ -145,37 +185,48 @@ onMounted(() => {
       <div>
         <ul class="music-grid">
           <li v-for="video in filteredSongs" :key="video.id" class="song-item">
-            <a :href="video.title.toLowerCase().includes('unarchived') &&
-              video.title.toLowerCase().includes('unrachived')
-              ? ''
-              : 'https://www.youtube.com/watch?v=' + video.id
-              " target="_blank">
-              <!-- For Karaoke (type: 'singing') -->
-              <div v-if="video.topic_id === 'singing'" class="song-info">
-                <span class="cell">{{ video.title }}</span>
-                <span></span>
-                <span class="cell center"> {{ video.channel.english_name }}</span>
-                <span class="cell center">Karaoke</span>
-                <span class="cell"><a v-if="
-                  video.title.toLowerCase().includes('unarchived') &&
-                  video.title.toLowerCase().includes('unrachived')
-                " :href="'https://www.youtube.com/watch?v=' + video.id" target="_blank"><img
-                      src="../assets/youtube.png" alt="" class="youtube-logo" /></a></span>
-              </div>
+            <a :href="isUnarchived(video.title) ? '' : 'https://www.youtube.com/watch?v=' + video.id" target="_blank">
+              <div class="song-info">
+                <!-- Song Title -->
+                <span class="cell">
+                  <template v-if="video.topic_id === 'Music_Cover' && video.songs">
+                    <span v-for="song in video.songs" :key="song.id">{{ song.name }}</span>
+                  </template>
+                  <template v-else>
+                    {{ video.title }}
+                  </template>
+                </span>
 
-              <!-- For Covers (type: 'Music_Cover') -->
-              <div v-else-if="video.topic_id === 'Music_Cover' && video.songs" class="song-info">
-                <span class="cell" v-for="song in video.songs" :key="song.id">{{ song.name }}</span>
-                <span class="cell center" v-for="song in video.songs" :key="song.id">
-                  {{ song.original_artist }}</span>
-                <span class="cell center"> {{ video.channel.english_name }}</span>
-                <span class="cell center">Cover</span>
-                <span class="cell center"><a :href="'https://www.youtube.com/watch?v=' + video.id" target="_blank"><img
-                      src="../assets/youtube.png" alt="" class="youtube-logo" /></a></span>
+                <!-- Original Artist (for Covers) -->
+                <span class="cell center">
+                  <template v-if="video.topic_id === 'Music_Cover' && video.songs">
+                    <span v-for="song in video.songs" :key="song.id">{{ song.original_artist }}</span>
+                  </template>
+                </span>
+
+                <!-- Channel Name -->
+                <span class="cell center">{{ video.channel.english_name }}</span>
+
+                <!-- Song Type -->
+                <span class="cell center">
+                  <template v-if="video.topic_id === 'Music_Cover'">Cover</template>
+                  <template v-else-if="video.topic_id === 'singing'">Karaoke</template>
+                  <template v-else-if="video.topic_id === 'Original_Song'">Original Song</template>
+                </span>
+
+                <!-- YouTube Link -->
+                <span class="cell center">
+                  <a v-if="!isUnarchived(video.title)"
+                    :href="isUnarchived(video.title) ? '' : 'https://www.youtube.com/watch?v=' + video.id"
+                    target="_blank">
+                    <img src="../assets/youtube.png" alt="YouTube Logo" class="youtube-logo" />
+                  </a>
+                </span>
               </div>
             </a>
           </li>
         </ul>
+
       </div>
     </div>
   </section>
@@ -183,7 +234,8 @@ onMounted(() => {
 
 <style>
 #music {
-  background: repeat url('../assets/gradient.png');
+  background: url('../assets/gradient.png');
+  background-size: cover;
   padding: 0px 10px;
   box-sizing: border-box;
 }
@@ -201,11 +253,6 @@ onMounted(() => {
   padding: 15px 0px;
 }
 
-/* .music-top img {
-  height: 100%;
-  float: left;
-  margin-right: 10px;
-} */
 
 .music-top .cd-container {
   float: left;
@@ -244,10 +291,11 @@ onMounted(() => {
 }
 
 .music-grid {
-  width: 80%;
+  width: 80vw;
+  height: 40vh;
   margin: auto;
   padding: 0px;
-  /* max-height: 1000px; */
+  overflow: scroll;
 }
 
 .song-item {

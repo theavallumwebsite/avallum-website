@@ -4,13 +4,45 @@ import MemberMusicStreamsSection from '@/components/MemberMusicStreamsSection.vu
 import MemberCreditsComponent from '@/components/MemberCreditsComponent.vue';
 import IntroComponent from '@/components/IntroComponent.vue';
 import ZanderIntroComponent from '@/components/ZanderIntroComponent.vue';
+import data from '../../data.json'
+import gsap from 'gsap';
+import { onMounted, ref } from 'vue';
+
+const titleColor = ref(data.channels.Zander.titleColor)
+const font = ref(data.channels.Zander.font)
+
+function neonFlicker() {
+  const h2Titles = document.querySelectorAll('h2')
+
+  h2Titles.forEach((h2) => {
+    gsap.fromTo((h2),
+      {
+        filter: 'drop-shadow(0px 0px 0.3rem #c000ca)'
+
+      },
+      {
+        filter: 'drop-shadow(0px 0px 0rem #c000ca)',
+        yoyo: true,
+        duration: 1,
+        repeat: -1,
+        ease: 'power1.inOut'
+      }
+
+    )
+  })
+}
+
+onMounted(() => {
+  neonFlicker()
+})
+
 </script>
 
 
 <template>
   <main>
     <IntroComponent memberName="Zander" class="zander-section"></IntroComponent>
-    <ZanderIntroComponent class="animation"></ZanderIntroComponent>
+    <ZanderIntroComponent class="animation zander-section"></ZanderIntroComponent>
     <MemberCommonSection memberName="Zander" class="zander-section"></MemberCommonSection>
     <MemberMusicStreamsSection memberName="Zander" class="zander-section layout-2"></MemberMusicStreamsSection>
     <MemberCreditsComponent memberName="Zander" class="zander-section"></MemberCreditsComponent>
@@ -18,9 +50,27 @@ import ZanderIntroComponent from '@/components/ZanderIntroComponent.vue';
 </template>
 
 <style>
-.animation {
+.animation.zander-section {
   position: absolute;
   top: 0;
   z-index: 998;
+}
+
+.zander-section {
+  font-family: 'Cormorant Garamond';
+}
+
+.zander-section h2::after,
+.zander-section h2::before {
+  content: none;
+}
+
+.zander-section h2 {
+  font-family: v-bind(font);
+  background: linear-gradient(#900098, #f541ff, #9800a0);
+  background-clip: text;
+  color: transparent;
+  text-shadow: -1px -1px 2px rgba(213, 3, 255, 0.5), 1px 1px 2px rgba(57, 0, 52, 0.6);
+  filter: drop-shadow(0px 0px 0.5rem #c831d0);
 }
 </style>

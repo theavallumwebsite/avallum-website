@@ -269,7 +269,7 @@ h3 {
 }
 
 .image img {
-    width: 120%;
+    /* width: 120%; */
     max-width: 450px;
     position: relative;
     left: -10%;
@@ -340,6 +340,9 @@ h3 {
     color: v-bind(extraColor);
 }
 
+.cassian-section .image img {
+    width: 100%;
+}
 
 .lucien-section h2 {
     -webkit-text-stroke: 1px #BB0F28;
@@ -354,10 +357,6 @@ h3 {
 }
 
 
-.zander-section h2 {
-    filter: drop-shadow(0px 0px 0.3rem #c000ca);
-    text-shadow: rgb(253, 145, 255) 2px 1px 2px;
-}
 
 .zander-section .right svg path {
     stroke: v-bind(color)
@@ -403,6 +402,11 @@ h3 {
 
 .rosco-section .right p {
     color: v-bind(color);
+}
+
+.rosco-section .image img {
+    width: 66%;
+    left: auto;
 }
 
 /* mobile */

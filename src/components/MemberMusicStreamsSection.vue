@@ -359,7 +359,16 @@ section {
 .zander-section {
     background: linear-gradient(#190026, #5E008C);
 }
+
+/* GALE */
+
+.gale-section {
+    background: url('../assets/gale_background.png'), linear-gradient(#241b07, #513939);
+    background-size: cover;
+    background-blend-mode: multiply;
+}
 </style>
+
 
 
 <!-- for dynamic elements -->

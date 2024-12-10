@@ -39,7 +39,12 @@ const router = createRouter({
       name: 'Lucien',
       component: LucienView
     }
-  ]
+  ],
+  scrollBehavior(to, from, savedPosition) {
+    return {
+      top: 0
+    }
+  }
 })
 
 export default router

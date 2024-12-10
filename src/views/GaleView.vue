@@ -17,10 +17,10 @@ import GaleIntroComponent from '@/components/GaleIntroComponent.vue';
 </template>
 
 <style>
-.animation {
+.animation.gale-section {
   position: absolute;
   top: 0;
-  z-index: 998;
+  z-index: 997;
 }
 
 

@@ -18,6 +18,10 @@ import IntroComponent from '@/components/IntroComponent.vue';
 
 
 <style scoped>
+.lucien-section {
+  font-family: 'Cormorant Garamond';
+}
+
 .animation {
   position: absolute;
   top: 0;

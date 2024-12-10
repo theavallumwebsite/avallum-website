@@ -111,9 +111,10 @@ onMounted(() => {
 <template>
     <section>
         <div class="intro">
+            <video src="../assets/rosco_background.mp4" v-if="memberName === 'Rosco'" class="rosco-video" autoplay loop
+                muted playsinline></video>
             <div class="content">
                 <div class="name">
-
                     <p class="emoji">{{ member.emoji }}</p>
                     <h2>{{ member.name }}</h2>
                     <h3>{{ member.jpName }} </h3>
@@ -159,9 +160,9 @@ onMounted(() => {
 
 <style scoped>
 section {
-    font-family: 'Cormorant Garamond', serif;
+    /* font-family: 'Cormorant Garamond', serif; */
     position: relative;
-    z-index: 999;
+    z-index: 998;
 
 }
 
@@ -201,9 +202,12 @@ b {
 }
 
 
+
 .intro {
     display: flex;
     padding: 20px;
+    padding-top: 11vh;
+    box-sizing: border-box
 }
 
 .content {
@@ -222,6 +226,10 @@ b {
     font-size: 4vw;
     margin: 0px;
     text-align: center;
+}
+
+.emoji {
+    margin: 0px;
 }
 
 .tags-list {
@@ -281,7 +289,6 @@ b {
 
 /* LUCI */
 
-
 .lucien-section h2 {
     background: v-bind(titleColor);
     background-clip: text;
@@ -294,29 +301,27 @@ b {
     border-radius: 3%;
 }
 
+.lucien-section .content .description {
+    width: 40vw;
+    margin: auto;
+}
 
-/* ROSCO */
-
-.rosco-section .model {
-    width: 60%;
+.lucien-section .tags-list {
+    list-style-image: url('../assets/lucien_li.svg');
 
 }
+
+
+
 
 /* zander */
 
 .zander-section {
     z-index: 998;
     position: relative;
-    margin-top: -75px;
 }
 
 .zander-section h2 {
-    background: linear-gradient(#900098, #f541ff, #9800a0);
-    background-clip: text;
-    filter: drop-shadow(0px 0px 0.5rem #c831d0);
-    text-shadow:
-        -1px -1px 2px rgba(213, 3, 255, 0.5),
-        1px 1px 2px rgba(57, 0, 52, 0.6);
     padding-right: 6px;
 }
 
@@ -336,7 +341,7 @@ b {
 }
 
 .zander-section ul {
-    justify-content: center;
+    /* justify-content: center; */
     gap: 10px;
     margin: 5px;
 }
@@ -349,14 +354,19 @@ b {
     width: 60%;
 }
 
+
 .zander-section .content p {
     width: 70%;
     margin: 15px auto;
 }
 
+.zander-section .content .emoji {
+    margin: auto;
+}
 
 .zander-section .tags-list {
     color: white;
+    padding-bottom: 0.5vh;
 }
 
 .zander-section .hastags li {
@@ -370,7 +380,7 @@ b {
     position: absolute;
     bottom: -10vh;
     right: 0;
-    width: 75vw;
+    width: 70vw;
 }
 
 /* .zander-section .mascot {
@@ -385,6 +395,7 @@ b {
 
 /* Cass */
 
+
 .cassian-section h2 {
     font-weight: bold;
     background: linear-gradient(#7a4d20, #dfa67d, #7a4d20);
@@ -393,15 +404,19 @@ b {
 
 .cassian-section .intro {
     flex-direction: row-reverse;
-    color: black;
+    color: rgb(216, 216, 216);
 }
 
 .cassian-section .tags-list li {
     font-weight: bold;
-    border: 1px solid #ca7726;
+    border: 1px solid #d89a5c;
     padding: 5px;
     border-radius: 5px;
     margin: 0px 5px;
+}
+
+.cassian-section .model {
+    top: 2vh;
 }
 
 /* Gale */
@@ -417,8 +432,9 @@ b {
 
 .gale-section .intro {
     width: 85vw;
+    height: 100vh;
     margin: auto;
-    margin-top: 3vh;
+
 }
 
 .gale-section .content {
@@ -436,12 +452,18 @@ b {
 
 .gale-section .image {
     width: 27vw;
+
 }
 
 .gale-section .mascot {
     position: absolute;
     align-self: flex-end;
-    bottom: 70vh;
+    bottom: 55vh;
+}
+
+.gale-section .model-div {
+    position: relative;
+    top: 2vh;
 }
 
 .gale-section .model {
@@ -451,10 +473,37 @@ b {
 
 /* rosco */
 
+.rosco-section .model {
+    width: 60%;
+
+}
+
 .rosco-section {
     background: linear-gradient(#690031e0, #00042cb1), url('../assets/rosco_transparent.png'), url('../assets/check.png');
-    /* background-blend-mode: lighten; */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
 
+.rosco-section h2 {
+    filter: drop-shadow(-5px 5px 0px darkblue);
+    font-size: 5vw;
+    color: v-bind(titleColor);
+}
+
+.rosco-section h3 {
+    color: white;
+}
+
+.rosco-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.2;
+    mix-blend-mode: luminosity;
 }
 
 .rosco-section .intro {
@@ -467,6 +516,9 @@ b {
     flex-direction: row;
     width: 100vw;
     justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 998;
 }
 
 .rosco-section .name {
@@ -474,10 +526,27 @@ b {
     width: 100%;
 }
 
+.rosco-section .emoji {
+    margin-bottom: -5vh;
+}
+
+
 .rosco-section .lists ul {
     display: flex;
     flex-direction: column;
+    font-family: 'Pixelify Sans';
+    color: white;
 }
+
+.rosco-section .model {
+    border-bottom: 10px solid v-bind(color);
+}
+
+.rosco-section .icons {
+    filter: drop-shadow(-5px 5px 0px darkblue);
+}
+
+
 
 /* mobile */
 
@@ -575,6 +644,7 @@ b {
 
 
 
+
 }
 </style>
 
@@ -604,7 +674,7 @@ b {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 20vw;
+    width: 30vw;
 }
 
 @media (max-width: 768px) {

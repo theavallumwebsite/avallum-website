@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { useRoute, useRouter } from 'vue-router'
+import { useRouter } from 'vue-router'
 
 const router = useRouter()
 
@@ -10,8 +10,7 @@ function nagivateTo(member: string) {
 </script>
 
 <template>
-  <section id="members" class="scroll">
-    <img src="../assets/stars.jpg" alt="" />
+  <section id="members">
     <h2>Members</h2>
     <div class="members-list">
       <div class="gale" @click="nagivateTo('galegalleon')">
@@ -30,12 +29,29 @@ function nagivateTo(member: string) {
         <h3>Rosco Graves 🕹️</h3>
       </div>
     </div>
+    <!-- <routerLink to="/galegalleon" class="gale">
+        <h3>Gale Galleon 🍻</h3>
+      </routerLink>
+      <routerLink to="/cassianfloros" class="cassian">
+        <h3>Cassian Floros 🌿</h3>
+      </routerLink>
+      <routerLink to="/lucienlunaris" class="lucien">
+        <h3>Lucien Lunaris 🎸</h3>
+      </routerLink>
+      <routerLink to="/zandernetherbrand" class="zander">
+        <h3>Zander Netherbrand ♈️</h3>
+      </routerLink>
+      <routerLink to="/roscograves" class="rosco">
+        <h3>Rosco Graves 🕹️</h3>
+      </routerLink>
+    </div> -->
   </section>
 </template>
 
 <style>
 #members {
-  background: linear-gradient(black, transparent);
+  background: linear-gradient(rgba(0, 0, 0, 0.99), rgba(38, 38, 38, 0.96)), url('/avallum-website/src/assets/black-stars.png');
+  background-blend-mode: darken;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -99,7 +115,7 @@ function nagivateTo(member: string) {
 .members-list .gale {
   background: linear-gradient(transparent, black), url('../assets/gale_portrait.webp'), #f5c34c;
   background-position: center bottom;
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
 }
 
@@ -107,7 +123,7 @@ function nagivateTo(member: string) {
   background: linear-gradient(transparent, black), url('../assets/cassian_floros_portrait.webp'),
     #50c878;
   background-position: center bottom;
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
 }
 
@@ -115,7 +131,7 @@ function nagivateTo(member: string) {
   background: linear-gradient(transparent, black), url('../assets/lucien_lunaris_portrait.webp'),
     #bb0f28;
   background-position: center bottom;
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
 }
 
@@ -123,7 +139,7 @@ function nagivateTo(member: string) {
   background: linear-gradient(transparent, black), url('../assets/zander_netherbrand_portrait.webp'),
     #9932cc;
   background-position: center bottom;
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
 }
 
@@ -131,7 +147,7 @@ function nagivateTo(member: string) {
   background: linear-gradient(transparent, black), url('../assets/rosco_graves_portrait.webp'),
     #fa1c9a;
   background-position: center bottom;
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
 }
 </style>

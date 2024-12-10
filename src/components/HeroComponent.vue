@@ -3,7 +3,7 @@
 <template>
   <section id="hero">
     <div class="img-container">
-      <img src="../assets/avallum-hero.webp" />
+      <!-- <img src="../assets/avallum-hero.webp" /> -->
     </div>
 
     <p>
@@ -11,26 +11,37 @@
       <a href="https://firststage-pro.com/en/">First Stage Production</a>.
     </p>
     <p>Together, they're searching for <i>Avallum</i>.</p>
-    <a href="#members" class="hero-a"><h2>Enter</h2></a>
+    <a href="#members" class="hero-a">
+      <h2>Enter</h2>
+    </a>
   </section>
 </template>
 
 <style>
 #hero {
-  height: 88vh;
+  height: 100Vh;
   text-align: center;
-  position: relative;
-  /* top: -16vh; */
   display: flex;
   flex-direction: column;
+
+}
+
+.img-container {
+  height: 80vh;
+  overflow: hidden;
+  background: linear-gradient(rgba(0, 0, 0, 0.522), transparent), url('../assets/avallum-hero.webp');
+  background-size: cover;
+  background-position: center top;
+
 }
 
 #hero img {
   max-width: 100%;
   height: auto;
+
 }
 
-#hero p > a {
+#hero p>a {
   font-weight: 700;
 }
 

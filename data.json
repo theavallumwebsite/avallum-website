@@ -81,6 +81,18 @@
           "name": "guriart.co.jp",
           "socialMedia": "http://guriart.co.jp"
         }
+      ],
+      "Pagecredits": [
+        {
+          "role": "Mascot animation",
+          "name": "Ren",
+          "socialMedia": "https://twitter.com/ren_deru16"
+        },
+        {
+          "role": "Description and lore writer",
+          "name": "Hannah B.",
+          "socialMedia": "https://twitter.com/Beenana0_0"
+        }
       ]
     },
     "Cassian": {
@@ -111,7 +123,7 @@
         "Memes: #GaleGallons"
       ],
       "fanName": "Dewdrop",
-      "mascot": "lunarist-black.gif",
+      "mascot": "dewdrops.gif",
       "polaroids": ["cassian1.png", "cassian2.png", "cassian3.png", "cassian4.png", "cassian5.png"],
       "decoration": "",
       "lore": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla dignissim eget ante sit amet vestibulum. Praesent est libero, euismod vel venenatis ac, convallis a est. Cras quis ante diam. Cras et velit blandit, consequat justo sit amet, pretium mauris. Duis suscipit ornare metus vel sagittis. Duis elementum rhoncus velit, nec semper augue consequat vel. Aliquam dapibus risus placerat arcu iaculis, non varius nulla viverra. Maecenas mattis, elit et luctus cursus, arcu ante laoreet est, vitae scelerisque sem sapien vitae tortor. Praesent ac felis felis. Aliquam aliquam nulla nec nibh aliquam dapibus. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
@@ -122,39 +134,66 @@
       "ogSongImage": "manymanymore-square.jpeg",
       "credits": [
         {
-          "role": "",
-          "name": "",
-          "socialMedia": ""
+          "role": "mama",
+          "name": "yamada shiro",
+          "socialMedia": "https://twitter.com/yamashiro_k"
         },
         {
-          "role": "",
-          "name": "",
-          "socialMedia": ""
+          "role": "papa",
+          "name": "nabeko kao",
+          "socialMedia": "https://twitter.com/omaehadareda"
         },
         {
-          "role": "",
-          "name": "",
-          "socialMedia": ""
+          "role": "zatsudan screen",
+          "name": "azuma hatori",
+          "socialMedia": "https://twitter.com/azuma_hatori"
         },
         {
-          "role": "",
-          "name": "",
-          "socialMedia": ""
+          "role": "gaming screen & logo",
+          "name": "azaka",
+          "socialMedia": "https://x.com/azatomomiage44"
         },
         {
-          "role": "",
-          "name": "",
-          "socialMedia": ""
+          "role": "op/en screen & teaser",
+          "name": "guri art",
+          "socialMedia": "http://guriart.co.jp"
         },
         {
-          "role": "",
-          "name": "",
-          "socialMedia": ""
+          "role": "transition",
+          "name": "yujureal works",
+          "socialMedia": "https://twitter.com/yujureal_works"
         },
         {
-          "role": "",
-          "name": "",
-          "socialMedia": ""
+          "role": "lore video",
+          "name": "galeia studio",
+          "socialMedia": "https://twitter.com/galeiastudio"
+        },
+        {
+          "role": "cover art",
+          "name": "tsumoi",
+          "socialMedia": "https://twitter.com/pafujojo"
+        },
+        {
+          "role": "cover mix",
+          "name": "yoshiken",
+          "socialMedia": "https://x.com/yoshi_kennn"
+        },
+        {
+          "role": "cover mv",
+          "name": "yoshidanasubi",
+          "socialMedia": "https://x.com/Yoshidanasubeam"
+        }
+      ],
+      "Pagecredits": [
+        {
+          "role": "Mascot animation",
+          "name": "Ren",
+          "socialMedia": "https://twitter.com/ren_deru16"
+        },
+        {
+          "role": "Mama (model)",
+          "name": "Kokonata",
+          "socialMedia": "https://twitter.com/cocokana_ovo"
         }
       ]
     },
@@ -198,39 +237,76 @@
       "ogSongImage": "dearyesterday-square.jpg",
       "credits": [
         {
-          "role": "",
-          "name": "",
+          "role": "mama",
+          "name": "inutsukikemuri",
+          "socialMedia": "https://twitter.com/takerunamito"
+        },
+        {
+          "role": "papa",
+          "name": "date",
+          "socialMedia": "https://twitter.com/date_list"
+        },
+        {
+          "role": "zatsudan screen",
+          "name": "azuma hatori",
+          "socialMedia": "https://twitter.com/azuma_hatori"
+        },
+        {
+          "role": "gaming screen",
+          "name": "minato design",
+          "socialMedia": "https://x.com/minato_design_s"
+        },
+        {
+          "role": "teaser trailer",
+          "name": "guri art",
+          "socialMedia": "http://guriart.co.jp"
+        },
+        {
+          "role": "transition",
+          "name": "ritz",
+          "socialMedia": "https://twitter.com/youtube_ritz_"
+        },
+        {
+          "role": "schedule",
+          "name": "halpe",
+          "socialMedia": "https://twitter.com/harumaki03161"
+        },
+        {
+          "role": "logo",
+          "name": "maruta",
           "socialMedia": ""
         },
         {
-          "role": "",
-          "name": "",
-          "socialMedia": ""
+          "role": "op/en",
+          "name": "poyo yuru",
+          "socialMedia": "https://x.com/poyo_yuru"
         },
         {
-          "role": "",
-          "name": "",
-          "socialMedia": ""
+          "role": "cover mv",
+          "name": "omuka",
+          "socialMedia": "https://twitter.com/rexmeltykiss"
         },
         {
-          "role": "",
-          "name": "",
-          "socialMedia": ""
+          "role": "cover mix",
+          "name": "yoshiken",
+          "socialMedia": "https://twitter.com/yoshi_kennn"
         },
         {
-          "role": "",
-          "name": "",
-          "socialMedia": ""
+          "role": "cover art",
+          "name": "daken",
+          "socialMedia": "https://twitter.com/xdakn"
+        }
+      ],
+      "Pagecredits": [
+        {
+          "role": "Mascot animation",
+          "name": "Ren",
+          "socialMedia": "https://twitter.com/ren_deru16"
         },
         {
-          "role": "",
-          "name": "",
-          "socialMedia": ""
-        },
-        {
-          "role": "",
-          "name": "",
-          "socialMedia": ""
+          "role": "Mama (model)",
+          "name": "Kokonata",
+          "socialMedia": "https://twitter.com/cocokana_ovo"
         }
       ]
     },
@@ -273,39 +349,56 @@
       "ogSongImage": "coldwrists-square.jpg",
       "credits": [
         {
-          "role": "",
-          "name": "",
+          "role": "mama",
+          "name": "namakawa",
+          "socialMedia": "https://twitter.com/morimokimori"
+        },
+        {
+          "role": "papa",
+          "name": "kotobumi komano",
+          "socialMedia": "https://twitter.com/kotobumi_komano"
+        },
+        {
+          "role": "zatsudan screen",
+          "name": "azuma hatori",
+          "socialMedia": "https://twitter.com/azuma_hatori"
+        },
+        {
+          "role": "gaming screen",
+          "name": "minato design",
+          "socialMedia": "https://twitter.com/minato_design_s"
+        },
+        {
+          "role": "teaser trailer",
+          "name": "har",
           "socialMedia": ""
         },
         {
-          "role": "",
-          "name": "",
+          "role": "transition",
+          "name": "tanshio",
           "socialMedia": ""
         },
         {
-          "role": "",
-          "name": "",
-          "socialMedia": ""
+          "role": "logo",
+          "name": "minato design",
+          "socialMedia": "https://twitter.com/minato_design_s"
         },
         {
-          "role": "",
-          "name": "",
-          "socialMedia": ""
+          "role": "op/en",
+          "name": "tsukada sao",
+          "socialMedia": "https://x.com/Tsukadasao"
+        }
+      ],
+      "Pagecredits": [
+        {
+          "role": "Mascot animation",
+          "name": "Ren",
+          "socialMedia": "https://twitter.com/ren_deru16"
         },
         {
-          "role": "",
-          "name": "",
-          "socialMedia": ""
-        },
-        {
-          "role": "",
-          "name": "",
-          "socialMedia": ""
-        },
-        {
-          "role": "",
-          "name": "",
-          "socialMedia": ""
+          "role": "Mama (model)",
+          "name": "Kokonata",
+          "socialMedia": "https://twitter.com/cocokana_ovo"
         }
       ]
     },
@@ -337,50 +430,77 @@
         "Memes: #GaleGallons"
       ],
       "fanName": "Roscal",
-      "mascot": "",
+      "mascot": "lunarist-black.gif",
       "polaroids": ["rosco1.png", "rosco2.png", "rosco3.png", "rosco4.png", "rosco5.png"],
       "decoration": "",
       "lore": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla dignissim eget ante sit amet vestibulum. Praesent est libero, euismod vel venenatis ac, convallis a est. Cras quis ante diam. Cras et velit blandit, consequat justo sit amet, pretium mauris. Duis suscipit ornare metus vel sagittis. Duis elementum rhoncus velit, nec semper augue consequat vel. Aliquam dapibus risus placerat arcu iaculis, non varius nulla viverra. Maecenas mattis, elit et luctus cursus, arcu ante laoreet est, vitae scelerisque sem sapien vitae tortor. Praesent ac felis felis. Aliquam aliquam nulla nec nibh aliquam dapibus. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
       "gradient": ["#001A53", "#D81272"],
-      "emoji": "🕹️",
+      "emoji": "🕹️🩻",
       "debut": "https://www.youtube.com/embed/XvkFHGc4V44",
-      "debut3D": "",
+      "debut3D": "https://www.youtube.com/embed/8PRMe739U7U",
       "ogSongImage": "deadmeat-square.jpg",
       "credits": [
         {
-          "role": "",
-          "name": "",
-          "socialMedia": ""
+          "role": "mama",
+          "name": "shinotaro",
+          "socialMedia": "https://twitter.com/shinotaro0502"
         },
         {
-          "role": "",
-          "name": "",
-          "socialMedia": ""
+          "role": "papa",
+          "name": "fumi",
+          "socialMedia": "https://twitter.com/fumi_411"
         },
         {
-          "role": "",
-          "name": "",
-          "socialMedia": ""
+          "role": "zatsudan screen",
+          "name": "nura",
+          "socialMedia": "https://twitter.com/slimenura"
         },
         {
-          "role": "",
-          "name": "",
-          "socialMedia": ""
+          "role": "gaming screen & logo",
+          "name": "mamiya syun",
+          "socialMedia": "https://twitter.com/s48969"
         },
         {
-          "role": "",
-          "name": "",
-          "socialMedia": ""
+          "role": "op/en",
+          "name": "guri art",
+          "socialMedia": "http://guriart.co.jp"
         },
         {
-          "role": "",
-          "name": "",
-          "socialMedia": ""
+          "role": "stinger",
+          "name": "hlint",
+          "socialMedia": "https://twitter.com/hlnt6"
         },
         {
-          "role": "",
-          "name": "",
+          "role": "teaser trailer",
+          "name": "konoha hazuqu",
+          "socialMedia": "https://twitter.com/hazuqu"
+        },
+        {
+          "role": "schedule graphic",
+          "name": "halpe",
+          "socialMedia": "https://twitter.com/harumaki03161"
+        },
+        {
+          "role": "lore video",
+          "name": "galeia studio",
+          "socialMedia": "https://twitter.com/galeiastudio"
+        },
+        {
+          "role": "slides & nyambie art",
+          "name": "anonymous",
           "socialMedia": ""
+        }
+      ],
+      "Pagecredits": [
+        {
+          "role": "Mascot animation",
+          "name": "Ren",
+          "socialMedia": "https://twitter.com/ren_deru16"
+        },
+        {
+          "role": "Description and lore writer",
+          "name": "Hannah B.",
+          "socialMedia": "https://twitter.com/Beenana0_0"
         }
       ]
     }

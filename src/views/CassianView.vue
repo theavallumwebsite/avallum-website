@@ -4,31 +4,16 @@ import MemberCommonSection from '@/components/MemberCommonSection.vue';
 import MemberMusicStreamsSection from '@/components/MemberMusicStreamsSection.vue';
 import MemberCreditsComponent from '@/components/MemberCreditsComponent.vue';
 import IntroComponent from '@/components/IntroComponent.vue';
-import { onMounted } from 'vue';
-
-function duplicateH2() {
-  const headings = document.querySelectorAll('h2');
 
 
-  headings.forEach((heading) => {
-    const headingElement = heading as HTMLElement;
-    const clonedHeading = headingElement.cloneNode(true) as HTMLElement;
-    clonedHeading.classList.add('duplicated');
-    headingElement.parentNode?.insertBefore(clonedHeading, headingElement.nextSibling);
-    // headingElement.appendChild(clonedHeading);
-  });
-}
 
 
-// onMounted(() => (
-//   duplicateH2()
-// ))
 </script>
 
 <template>
   <main>
     <IntroComponent memberName="Cassian" class="cassian-section"></IntroComponent>
-    <CassianAnimation class="animation"></CassianAnimation>
+    <CassianAnimation class="animation cassian-section"></CassianAnimation>
     <MemberCommonSection memberName="Cassian" class="cassian-section"></MemberCommonSection>
     <MemberMusicStreamsSection memberName="Cassian" class="cassian-section layout-1"></MemberMusicStreamsSection>
     <MemberCreditsComponent memberName="Cassian" class="cassian-section"></MemberCreditsComponent>
@@ -37,10 +22,14 @@ function duplicateH2() {
 </template>
 
 <style scoped>
-.animation {
+.cassian-section {
+  font-family: 'Cormorant Garamond';
+}
+
+.cassian-section.animation {
   position: absolute;
   top: 0;
-  z-index: 998;
+  z-index: 997;
 }
 
 .star {
@@ -68,5 +57,10 @@ h2.duplicated,
 <style>
 .cassian-section .hastag {
   color: #146665;
+}
+
+.cassian-section h2::after,
+.cassian-section h2::before {
+  content: none;
 }
 </style>

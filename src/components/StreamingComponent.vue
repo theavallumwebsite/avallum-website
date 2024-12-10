@@ -33,7 +33,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <section id="streams" class="scroll">
+  <section id="streams">
     <div class="currentlyStreaming">
       <div class="current-wrapper">
         <h2>Who's streaming?</h2>
@@ -52,14 +52,14 @@ onMounted(() => {
           </div>
         </div>
         <div v-else>
-          <p>No one is Live</p>
+          <p>No one is live.</p>
         </div>
       </div>
     </div>
 
     <div class="upcomingStreams">
       <h2>Upcoming Streams</h2>
-      <div v-if="upcomingLive">
+      <div v-if="upcomingLive && upcomingLive.length > 0">
         <div v-for="video in upcomingLive" :key="video.id" class="iframe-wrapper">
           <div class="space-wrapper">
             <iframe v-if="upcomingLive" width="560" height="315" :src="`https://www.youtube.com/embed/${video.id}`"
@@ -69,7 +69,9 @@ onMounted(() => {
           </div>
         </div>
       </div>
-      <div v-else>No streams scheduled</div>
+      <div v-else>
+        <p>No streams scheduled.</p>
+      </div>
     </div>
   </section>
 </template>
@@ -89,7 +91,7 @@ li {
 }
 
 .currentlyStreaming {
-  background: linear-gradient(80deg, #4e4e4e, #000000);
+  background: linear-gradient(80deg, #313131e4, #000000), url('../assets/black-stars.png');
   border-right: 1px solid rgb(153, 131, 6);
   width: 65vw;
   height: 100vh;

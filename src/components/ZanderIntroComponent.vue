@@ -30,6 +30,45 @@ function smokeAnimation() {
 
 }
 
+function bigParticlesAnimation() {
+    const container = document.querySelector(".bigparticles-container")
+    const bigParticles: HTMLDivElement[] = [];
+
+
+
+    for (let i = 0; i < 10; i++) {
+        const bigParticle = document.createElement('div')
+        container?.appendChild(bigParticle)
+        bigParticle.classList.add('bigParticle')
+        bigParticles.push(bigParticle)
+    }
+
+    const size = gsap.utils.random(50, 100);
+
+    bigParticles.forEach((bigParticle) => {
+        gsap.fromTo(
+            bigParticle,
+            {
+                width: `${size}px`,
+                height: `${size}px`,
+                opacity: gsap.utils.random(0.1, 0.8),
+                top: gsap.utils.random(0, window.innerHeight),
+                left: gsap.utils.random(0, window.innerWidth),
+                filter: `blur(${gsap.utils.random(2, 5)}px)`,
+            },
+            {
+                width: `${size}px`,
+                height: `${size}px`,
+                top: gsap.utils.random(0, window.innerHeight),
+                left: gsap.utils.random(0, window.innerWidth),
+                opacity: 1,
+                yoyo: true,
+                repeat: -1,
+                duration: gsap.utils.random(30, 60)
+            }
+        )
+    })
+}
 
 onMounted(() => {
     smokeAnimation()
