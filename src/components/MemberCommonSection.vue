@@ -89,7 +89,7 @@ onMounted(() => {
                     <h3>Also known as</h3>
                     <h2>{{ member.alternativeNames }}</h2>
                 </div>
-                <p>{{ member.lore }}</p>
+                <p>{{ member.personality }}</p>
                 <img src="" alt="">
             </div>
             <div class="fact right fact-d">

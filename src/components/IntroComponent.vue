@@ -207,7 +207,8 @@ b {
     display: flex;
     padding: 20px;
     padding-top: 11vh;
-    box-sizing: border-box
+    box-sizing: border-box;
+    height: 100vh;
 }
 
 .content {
@@ -251,7 +252,7 @@ b {
 }
 
 .mascot img {
-    width: 150px;
+    width: 10vw;
     /* border: 12px double v-bind(color); */
 }
 
@@ -296,7 +297,7 @@ b {
 }
 
 .lucien-section .content {
-    background: linear-gradient(rgba(0, 0, 0, 0.844), transparent);
+    background: linear-gradient(rgba(0, 0, 0, 0.979), transparent);
     padding: 20px;
     border-radius: 3%;
 }
@@ -400,6 +401,7 @@ b {
     font-weight: bold;
     background: linear-gradient(#7a4d20, #dfa67d, #7a4d20);
     background-clip: text;
+    -webkit-text-stroke: 0.5px #ffb700;
 }
 
 .cassian-section .intro {
@@ -418,6 +420,7 @@ b {
 .cassian-section .model {
     top: 2vh;
 }
+
 
 /* Gale */
 
@@ -443,6 +446,7 @@ b {
 
 .gale-section .icons {
     margin: 10px;
+    color: #7a4d20;
 }
 
 .gale-section .description {
@@ -473,10 +477,6 @@ b {
 
 /* rosco */
 
-.rosco-section .model {
-    width: 60%;
-
-}
 
 .rosco-section {
     background: linear-gradient(#690031e0, #00042cb1), url('../assets/rosco_transparent.png'), url('../assets/check.png');
@@ -508,6 +508,7 @@ b {
 
 .rosco-section .intro {
     flex-direction: column-reverse;
+    padding: 0px;
 
 }
 
@@ -515,14 +516,17 @@ b {
     display: flex;
     flex-direction: row;
     width: 100vw;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     position: relative;
     z-index: 998;
 }
 
+.rosco-section .image {
+    width: 30vw;
+}
+
 .rosco-section .name {
-    flex-grow: 4;
     width: 100%;
 }
 
@@ -540,6 +544,7 @@ b {
 
 .rosco-section .model {
     border-bottom: 10px solid v-bind(color);
+    width: 100%;
 }
 
 .rosco-section .icons {
@@ -666,8 +671,7 @@ b {
     color: v-bind(color);
     font-size: 3.5vw;
     position: relative;
-    /* top: 5vh; */
-    padding: 15px
+    padding: 15px;
 }
 
 .newDiv {

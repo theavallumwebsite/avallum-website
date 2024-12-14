@@ -31,48 +31,41 @@ const headerClass = computed(() => {
 const sections = ref<HTMLElement[]>([]);
 const currentSectionIndex = ref(0);
 let lastScrollY = 0;
-
+let isHashNavigation = false;
 
 
 function onScroll() {
+  if (isHashNavigation) return
+
   const isScrollingDown = window.scrollY > lastScrollY; // Detect if scrolling down
   const isScrollingUp = window.scrollY < lastScrollY; // Detect if scrolling up
   lastScrollY = window.scrollY; // Update last scroll position
 
   if (isScrollingDown) {
-    scrollToNextSection();
+    scrollToSectionByDirection(1);
   }
 
   if (isScrollingUp) {
-    scrollToPreviousSection();
+    scrollToSectionByDirection(-1);
   }
 }
 
-function scrollToNextSection() {
-  const nextIndex = currentSectionIndex.value + 1;
+function scrollToSectionByDirection(direction: number) {
+  const targetIndex = currentSectionIndex.value + direction;
 
-  if (nextIndex < sections.value.length) {
-    const nextSection = sections.value[nextIndex];
-    const nextSectionMiddle = nextSection.offsetTop + nextSection.offsetHeight / 2;
+  if (targetIndex >= 0 && targetIndex < sections.value.length) {
+    const targetSection = sections.value[targetIndex];
+    const targetSectionMiddle = targetSection.offsetTop + targetSection.offsetHeight / 2;
 
-    if (window.scrollY + window.innerHeight >= nextSectionMiddle) {
-      scrollToSection(nextIndex);
+    if (
+      (direction === 1 && window.scrollY + window.innerHeight >= targetSectionMiddle) ||
+      (direction === -1 && window.scrollY <= targetSectionMiddle)
+    ) {
+      scrollToSection(targetIndex);
     }
   }
 }
 
-function scrollToPreviousSection() {
-  const prevIndex = currentSectionIndex.value - 1;
-
-  if (prevIndex >= 0) {
-    const prevSection = sections.value[prevIndex];
-    const prevSectionMiddle = prevSection.offsetTop + prevSection.offsetHeight / 2;
-
-    if (window.scrollY <= prevSectionMiddle) {
-      scrollToSection(prevIndex);
-    }
-  }
-}
 
 function scrollToSection(index: number) {
   if (index >= sections.value.length || index < 0) return;
@@ -90,9 +83,8 @@ function scrollToSection(index: number) {
 
 function initializeScrollBehavior() {
   setTimeout(() => {
-    sections.value = Array.from(document.querySelectorAll('section:not(.animation)'));
+    sections.value = Array.from(document.querySelectorAll('section:not(.animation):not(.footer)'));
     window.addEventListener('scroll', onScroll);
-
   }, 100);
 }
 
@@ -102,39 +94,41 @@ function cleanupScrollBehavior() {
   currentSectionIndex.value = 0;
 }
 
-function aosInitialize() {
-  const sections = document.querySelectorAll('section');
-  console.log("aos section", sections)
+// function aosInitialize() {
+//   const sections = document.querySelectorAll('section:not(.footer)');
 
-  sections.forEach((section) => {
-    section.setAttribute('data-aos', 'slide-up');
-  });
+//   sections.forEach((section) => {
+//     section.setAttribute('data-aos', 'slide-up');
+//   });
 
-  AOS.init()
-}
+//   AOS.init()
+// }
+
+window.addEventListener('hashchange', () => {
+  isHashNavigation = true;
+});
 
 onMounted(() => {
-  initializeScrollBehavior()
-  setTimeout(() => {
-    aosInitialize()
-  }, 100)
+  // initializeScrollBehavior()
+  // setTimeout(() => {
+  //   aosInitialize()
+  // }, 100)
 });
 
 
 onUnmounted(() => {
-  cleanupScrollBehavior();
+  // cleanupScrollBehavior();
 });
 
-// for view changes 
-router.beforeEach((to, from, next) => {
-  console.log('Route change detected');
-  cleanupScrollBehavior();
-  initializeScrollBehavior();
-  next();
-  setTimeout(() => {
-    aosInitialize()
-  }, 100)
-});
+
+// router.beforeEach((to, from, next) => {
+//   cleanupScrollBehavior();
+//   initializeScrollBehavior();
+//   next();
+//   // setTimeout(() => {
+//   //   aosInitialize()
+//   // }, 100)
+// });
 
 
 
@@ -154,7 +148,9 @@ router.beforeEach((to, from, next) => {
           <a href="#streams">Streams</a>
           <a href="#music">Music</a>
           <a href="#birthday">Birthdays</a>
+          <a href="#merch">Merch</a>
         </div>
+
 
         <div v-else class="nav-sections member-header">
           <RouterLink to="/galegalleon">Gale</RouterLink>
@@ -213,15 +209,26 @@ h1 {
 .gale-header p,
 .gale-header a,
 .gale-header h1 {
-  color: #986721;
   font-family: 'Pirata One';
+  color: transparent;
+  background: linear-gradient(#E5C373, #AC8246, #C0A054);
+  background-clip: text;
+  -webkit-text-stroke: 0.3px #613a0a;
 }
 
 .cassian-header p,
 .cassian-header a,
 .cassian-header h1 {
   color: white;
+  /* color: #146665; */
   font-family: 'Abhaya Libre';
+  /* -webkit-text-stroke: 0.3px #146665; */
+}
+
+.cassian-header h1 {
+  background: linear-gradient(#7A4D20, #DFA67D, #7A4D20);
+  background-clip: text;
+  color: transparent;
 }
 
 .rosco-header p,

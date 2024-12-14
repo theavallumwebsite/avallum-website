@@ -19,6 +19,7 @@
       "portrait": "gale-portrait.webp",
       "mainArt": "",
       "mainArtTransparent": "",
+      "birthdayHat": "Gale-party-hat.png",
       "font": "Pirata One",
       "titleColor": "linear-gradient(#E5C373, #AC8246, #C0A054)",
       "alternativeNames": "Captain, Gae Galleon",
@@ -40,6 +41,7 @@
       "polaroids": ["gale1.png", "gale2.png", "gale3.png", "gale4.png", "gale5.png"],
       "decoration": "",
       "lore": "Are you ready to set sail on the high seas? Meet Gale Galleon, the goofy captain of the Goldwynd Pirates—one of the most feared crews of their time. Gale spent years in search of something called ‘Avallum’; a mythical place that he discovered after finding a magical crystal.  While looking for some leads, the captain decided to post flyers looking for adventurers; thus connecting him with a certain green elfman who may have some information to share. The two then set off searching for Avallum together, while gaining a few more companions along the way!",
+      "personality": "Gale’s charismatic and goofy demeanor is sure to make you want to join his crew; thus making you a Pipsqueak. This trustworthy captain isn’t just funny, he is extremely hardworking, kind and intelligent as well. While he’s very loud and outspoken—something you will learn the minute you open his stream—he is also compassionate and affectionate. He cares deeply for his fellow genmates and his crew, which reflects in everything that he puts out in the universe. Be warned about giving him TV privileges though! Expect a lot of dirty jokes and an occasional moan while watching his streams…",
       "gradient": ["#E5BD5E", "#482B02"],
       "emoji": "🍻⚔️",
       "debut": "https://www.youtube.com/embed/VOhzg-Vi7Z0",
@@ -106,6 +108,7 @@
       "portrait": "cassian-portrait.webp",
       "mainArt": "",
       "mainArtTransparent": "zanny-transparent.png",
+      "birthdayHat": "Cass-party-hat.png",
       "font": "Abhaya Libre",
       "titleColor": "linear-gradient(#7A4D20, #DFA67D, #7A4D20)",
       "alternativeNames": "Cass, Albert Elfman, Mother(?!)",
@@ -127,6 +130,7 @@
       "polaroids": ["cassian1.png", "cassian2.png", "cassian3.png", "cassian4.png", "cassian5.png"],
       "decoration": "",
       "lore": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla dignissim eget ante sit amet vestibulum. Praesent est libero, euismod vel venenatis ac, convallis a est. Cras quis ante diam. Cras et velit blandit, consequat justo sit amet, pretium mauris. Duis suscipit ornare metus vel sagittis. Duis elementum rhoncus velit, nec semper augue consequat vel. Aliquam dapibus risus placerat arcu iaculis, non varius nulla viverra. Maecenas mattis, elit et luctus cursus, arcu ante laoreet est, vitae scelerisque sem sapien vitae tortor. Praesent ac felis felis. Aliquam aliquam nulla nec nibh aliquam dapibus. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "personality": "Gale’s charismatic and goofy demeanor is sure to make you want to join his crew; thus making you a Pipsqueak. This trustworthy captain isn’t just funny, he is extremely hardworking, kind and intelligent as well. While he’s very loud and outspoken—something you will learn the minute you open his stream—he is also compassionate and affectionate. He cares deeply for his fellow genmates and his crew, which reflects in everything that he puts out in the universe. Be warned about giving him TV privileges though! Expect a lot of dirty jokes and an occasional moan while watching his streams…",
       "gradient": ["#28CCCA", "#146665"],
       "emoji": "🌿✨",
       "debut": "https://www.youtube.com/embed/Myb8C_slm08",
@@ -208,6 +212,7 @@
       "portrait": "lucien-portrait.webp",
       "mainArt": "",
       "mainArtTransparent": "",
+      "birthdayHat": "Luci-party-hat.png",
       "font": "New Rocker",
       "titleColor": "linear-gradient(#878889, #EBEDEF, #878889)",
       "alternativeNames": "Luci, Lucien Batsunaris",
@@ -230,6 +235,7 @@
       "polaroids": ["lucien1.png", "lucien2.png", "lucien3.png", "lucien4.png", "lucien5.png"],
       "decoration": "",
       "lore": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla dignissim eget ante sit amet vestibulum. Praesent est libero, euismod vel venenatis ac, convallis a est. Cras quis ante diam. Cras et velit blandit, consequat justo sit amet, pretium mauris. Duis suscipit ornare metus vel sagittis. Duis elementum rhoncus velit, nec semper augue consequat vel. Aliquam dapibus risus placerat arcu iaculis, non varius nulla viverra. Maecenas mattis, elit et luctus cursus, arcu ante laoreet est, vitae scelerisque sem sapien vitae tortor. Praesent ac felis felis. Aliquam aliquam nulla nec nibh aliquam dapibus. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "personality": "Gale’s charismatic and goofy demeanor is sure to make you want to join his crew; thus making you a Pipsqueak. This trustworthy captain isn’t just funny, he is extremely hardworking, kind and intelligent as well. While he’s very loud and outspoken—something you will learn the minute you open his stream—he is also compassionate and affectionate. He cares deeply for his fellow genmates and his crew, which reflects in everything that he puts out in the universe. Be warned about giving him TV privileges though! Expect a lot of dirty jokes and an occasional moan while watching his streams…",
       "gradient": ["#4F4F4F", "#000000"],
       "emoji": "🎸🌙",
       "debut": "https://www.youtube.com/embed/a7m0Iy-Z5Iw",
@@ -321,6 +327,7 @@
       "portrait": "zander-portrait.webp",
       "mainArt": "zander_pc.png",
       "mainArtTransparent": "zanny-transparent.png",
+      "birthdayHat": "Zanny-party-hat.png",
       "font": "Damion",
       "titleColor": "#CF5CD1",
       "alternativeNames": "Zanny, Boss",
@@ -342,6 +349,7 @@
       "polaroids": ["zander1.png", "zander2.png", "zander3.png", "zander4.png", "zander5.png"],
       "decoration": "",
       "lore": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla dignissim eget ante sit amet vestibulum. Praesent est libero, euismod vel venenatis ac, convallis a est. Cras quis ante diam. Cras et velit blandit, consequat justo sit amet, pretium mauris. Duis suscipit ornare metus vel sagittis. Duis elementum rhoncus velit, nec semper augue consequat vel. Aliquam dapibus risus placerat arcu iaculis, non varius nulla viverra. Maecenas mattis, elit et luctus cursus, arcu ante laoreet est, vitae scelerisque sem sapien vitae tortor. Praesent ac felis felis. Aliquam aliquam nulla nec nibh aliquam dapibus. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "personality": "Gale’s charismatic and goofy demeanor is sure to make you want to join his crew; thus making you a Pipsqueak. This trustworthy captain isn’t just funny, he is extremely hardworking, kind and intelligent as well. While he’s very loud and outspoken—something you will learn the minute you open his stream—he is also compassionate and affectionate. He cares deeply for his fellow genmates and his crew, which reflects in everything that he puts out in the universe. Be warned about giving him TV privileges though! Expect a lot of dirty jokes and an occasional moan while watching his streams…",
       "gradient": ["#8A037C", "#2C0047"],
       "emoji": "♈️",
       "debut": "https://www.youtube.com/embed/LuUxkgwdmis",
@@ -413,6 +421,7 @@
       "portrait": "rosco-portrait.webp",
       "mainArt": "",
       "mainArtTransparent": "rosco_test.png",
+      "birthdayHat": "Rosco-party-hat.png",
       "font": "Sedgwick Ave Display",
       "titleColor": "#FA1C9A",
       "alternativeNames": "Rosquito, Rosquino",
@@ -433,7 +442,8 @@
       "mascot": "lunarist-black.gif",
       "polaroids": ["rosco1.png", "rosco2.png", "rosco3.png", "rosco4.png", "rosco5.png"],
       "decoration": "",
-      "lore": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla dignissim eget ante sit amet vestibulum. Praesent est libero, euismod vel venenatis ac, convallis a est. Cras quis ante diam. Cras et velit blandit, consequat justo sit amet, pretium mauris. Duis suscipit ornare metus vel sagittis. Duis elementum rhoncus velit, nec semper augue consequat vel. Aliquam dapibus risus placerat arcu iaculis, non varius nulla viverra. Maecenas mattis, elit et luctus cursus, arcu ante laoreet est, vitae scelerisque sem sapien vitae tortor. Praesent ac felis felis. Aliquam aliquam nulla nec nibh aliquam dapibus. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "lore": "YO YO YO! Meet “Ya boy Roscoooooo”. This unruly undead guy has had quite the past. As a lab experiment in a torturous lab being mistreated everyday, Rosco decided that enough was enough. He fought back against the evil beings holding him there—managing to steal a unique heart-shaped crystal along the way. Just after escaping, he is somehow magically transported into an arcade, where he inserts the crystal into one of the games. Weirdly enough, this caused him to teleport once more, only this time he isn’t alone when he gets there. He then finds himself standing among a strange group of individuals, all with crystals of their own. They tell him they’re looking for a place called “Avallum” in order to obtain a special wish. Deciding that this wish would be worth his while, Rosco joins the rag-tag group consisting of an elf, a vampire, an incubus and a human. Thus his journey of seeking “Avallum” begins.",
+      "personality": "Rosco Graves is a multi-talented individual. Anything that he sets his mind to, can be achieved with flying colors. Whether it be singing, rapping, voice packs or gaming, this artistic genius excels at it all. While he is extremely hardworking and energetic, he still has a calm and laid-back side to him as well. Contradictive, I know… It really just depends on the situation. If you’re a Roscal, don’t try to fight him without expecting some kind of push back; but also know that this zombie is one of the kindest guys around. You can also see his more energetic and playful side when he interacts with his fellow genmates. But beware of wearing headphones while watching him, as he can be quite loud…",
       "gradient": ["#001A53", "#D81272"],
       "emoji": "🕹️🩻",
       "debut": "https://www.youtube.com/embed/XvkFHGc4V44",
@@ -504,5 +514,48 @@
         }
       ]
     }
-  }
+  },
+
+  "merch": [
+    {
+      "name": "1 Month Anniversary Voice & Goods",
+      "link": "https://ichi-pro.booth.pm/items/5447385",
+      "image": "1month-merch.jpeg"
+    },
+    {
+      "name": "Zander Birthday Goods",
+      "link": "https://x.com/fsp_english/status/1776994782419751307",
+      "image": "zander-merch.jpeg"
+    },
+    {
+      "name": "Rosco Birthday Goods",
+      "link": "https://x.com/fsp_english/status/1815038774205907125",
+      "image": "rosco-merch.jpeg"
+    },
+    {
+      "name": "Avallum: Half Anniversary Voice & Goods",
+      "link": "https://x.com/fsp_english/status/1817319068808220823",
+      "image": "halfanniv-merch.jpeg"
+    },
+    {
+      "name": "Lucien Birthday Goods",
+      "link": "https://ichi-pro.booth.pm/items/6189842",
+      "image": "lucien-merch.jpeg"
+    },
+    {
+      "name": "Avallum Halloween Voice",
+      "link": "https://ichi-pro.booth.pm/items/6216086",
+      "image": "halloween-merch.jpeg"
+    },
+    {
+      "name": "Cassian Birthday Goods",
+      "link": "https://ichi-pro.booth.pm/items/6288096",
+      "image": "cassian-merch.jpeg"
+    },
+    {
+      "name": "Gale Birthday Goods",
+      "link": "https://ichi-pro.booth.pm/items/6334219",
+      "image": "gale-merch.jpeg"
+    }
+  ]
 }

@@ -24,7 +24,6 @@ import GaleIntroComponent from '@/components/GaleIntroComponent.vue';
 }
 
 
-
 .gale-section h2::after,
 .gale-section h2::before {
   content: none;
@@ -35,7 +34,7 @@ import GaleIntroComponent from '@/components/GaleIntroComponent.vue';
   color: transparent;
   background: linear-gradient(#E5C373, #AC8246, #C0A054);
   background-clip: text;
-  -webkit-text-stroke: 0.5px #986721;
+  -webkit-text-stroke: 1px #986721;
 }
 
 .gale-section {

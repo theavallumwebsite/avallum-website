@@ -111,42 +111,50 @@ onMounted(() => {
 <style scoped>
 .cd-container {
     margin: 10px;
-    height: 250px;
+    height: auto;
 }
 
 
 .cd-player {
-    height: 200px;
-    width: 200px;
+    max-height: 200px;
+    max-width: 200px;
+    width: 50%;
+    aspect-ratio: 1 / 1;
     background: grey;
-    padding: 15px;
-    border-radius: 40px;
+    padding: 5%;
+    border-radius: 20%;
     margin: auto;
     overflow: hidden;
     filter: drop-shadow(1px 0px 4px black);
     margin: 5px auto;
     box-shadow: inset 0px 0px 0.5em rgba(255, 255, 255, 0.706);
+
 }
 
 .cd-images {
-    width: 200px;
-    height: 200px;
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 1 / 1;
     filter: drop-shadow(0px 0px 2px black);
     transform: rotate(10deg);
-    transform-origin: center;
+    transform-origin: 50% 50%;
 }
 
 .cd {
-    width: 200px;
-    height: 200px;
+    max-height: 200px;
+    max-width: 200px;
+    width: 100%;
+    aspect-ratio: 1 / 1;
     position: relative;
-    bottom: 204px;
+    bottom: 101%;
     z-index: 998;
 }
 
 .image {
-    width: 200px;
-    height: 200px;
+    max-height: 200px;
+    max-width: 200px;
+    width: 100%;
+    aspect-ratio: 1 / 1;
     position: relative;
     z-index: 999;
     mix-blend-mode: multiply;
@@ -164,7 +172,7 @@ onMounted(() => {
     margin: 0px;
 }
 
-.cassian-section .cd-container {
+ç .cassian-section .cd-container {
     display: flex;
     justify-content: center;
     align-items: center;

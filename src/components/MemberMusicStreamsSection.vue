@@ -224,11 +224,12 @@ section {
 
 .layout-1 .music {
     width: 50%;
+    overflow: hidden;
 }
 
 .layout-1 .music-grid {
     width: 90%;
-    height: 100%;
+    height: 55%;
     max-height: 75%;
     overflow: scroll;
 
@@ -303,6 +304,12 @@ section {
     background-clip: text;
 }
 
+.cassian-section .cd-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 
 
 /* LUCI */
@@ -371,7 +378,6 @@ section {
 
 
 
-<!-- for dynamic elements -->
 <style>
 .cassian-section .iframe {
     display: flex;

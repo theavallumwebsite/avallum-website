@@ -23,6 +23,8 @@
   text-align: center;
   display: flex;
   flex-direction: column;
+  background: linear-gradient(transparent, black);
+  border-bottom: 0.5px solid burlywood;
 
 }
 
@@ -47,5 +49,11 @@
 
 .hero-a {
   margin-top: auto;
+}
+
+@media screen and (max-width: 768px) {
+  .img-container {
+    height: 30vh;
+  }
 }
 </style>

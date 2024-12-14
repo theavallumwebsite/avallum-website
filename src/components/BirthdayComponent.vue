@@ -21,13 +21,22 @@ function findClosestBirthday() {
     const birthdays = extractBirthdays().map(({ name, birthday }) => {
         const birthdayDate = new Date(birthday)
 
+        if (birthdayDate.getTime() < todayTime) {
+            birthdayDate.setFullYear(today.getFullYear() + 1);
+        }
+
         const difference = birthdayDate.getTime() - todayTime
         return { name, birthdayDate, difference }
 
     })
 
+
+
     const calculatedClosestBirthday = birthdays
         .sort((a, b) => Math.abs(a.difference) - Math.abs(b.difference))[0];
+
+    const channels = Object.values(data.channels);
+    const closestChannel = channels.find(channel => channel.name === calculatedClosestBirthday.name);
 
     closestBirthday.value = {
         name: calculatedClosestBirthday.name,
@@ -35,7 +44,8 @@ function findClosestBirthday() {
         formattedBirthday: calculatedClosestBirthday.birthdayDate.toLocaleDateString('en-US', {
             month: 'long',
             day: 'numeric',
-        })
+        }),
+        birthdayHat: closestChannel?.birthdayHat || null
     }
 
     birthdayCountdown()
@@ -69,7 +79,6 @@ function birthdayCountdown() {
 
 
 function getModel() {
-
     const channels = Object.values(data.channels);
 
     const closestBirthdayChannel = channels.find(channel => channel.name === closestBirthday.value.name);
@@ -102,6 +111,8 @@ onMounted(() => {
         <i>Please note that this uses your local time and not JST.</i>
         <div class="birthdays">
             <div class="left">
+                <img :src="closestBirthday.birthdayHat" alt="" class="birthdayHat"
+                    v-if="closestBirthday && closestBirthday.birthdayHat">
                 <img :src="closestBirthday.portrait" alt="" class="mainModel" v-if="closestBirthday">
             </div>
             <div class="right">
@@ -111,6 +122,9 @@ onMounted(() => {
                         closestBirthday.formattedBirthday }}th</b>.
                     </h3>
                     <p>It's in {{ countdown.days }} days, {{ countdown.hours }} hours.</p>
+                </div>
+                <div v-else>
+                    <p>No birthdays. (if you see this please scream at me on X because you're not supposed to lmao)</p>
                 </div>
                 <div class="otherBirthdays models" v-if="remainingMembers">
                     <div v-for="member in remainingMembers" :key="member.name" class="modelDiv" :class="member.name">
@@ -174,8 +188,16 @@ b {
 
 .mainModel {
     width: 80%;
+    margin-left: -10vw;
+    /*for the birthday hat */
 }
 
+.birthdayHat {
+    position: relative;
+    width: 200px;
+    bottom: 60vh;
+    left: 12vw;
+}
 
 .modelDiv {
     text-align: center;

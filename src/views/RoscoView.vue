@@ -24,6 +24,15 @@ import RoscoIntroComponent from '@/components/RoscoIntroComponent.vue';
   z-index: 997;
 }
 
+
+
+/* .rosco-section h2::after,
+.rosco-section h2::before {
+  content: none;
+} */
+</style>
+
+<style>
 .rosco-section {
   font-family: 'Quicksand';
 }
@@ -31,12 +40,6 @@ import RoscoIntroComponent from '@/components/RoscoIntroComponent.vue';
 .rosco-section h2 {
   font-family: 'Sedgwick Ave Display';
   color: #FF0E7C;
+  filter: drop-shadow(3px 3px 0px white);
 }
-
-
-
-/* .rosco-section h2::after,
-.rosco-section h2::before {
-  content: none;
-} */
 </style>

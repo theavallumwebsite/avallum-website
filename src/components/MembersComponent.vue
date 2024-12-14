@@ -1,54 +1,60 @@
 <script setup lang="ts">
 import { useRouter } from 'vue-router'
+import gsap from 'gsap';
+import { onMounted } from 'vue';
 
 const router = useRouter()
-
 
 function nagivateTo(member: string) {
   router.push(`/${member}`)
 }
+
+
+
 </script>
 
 <template>
   <section id="members">
     <h2>Members</h2>
     <div class="members-list">
-      <div class="gale" @click="nagivateTo('galegalleon')">
-        <h3>Gale Galleon 🍻</h3>
+      <div @click="nagivateTo('galegalleon')" class="container">
+
+        <div class="gale">
+          <h3>Gale Galleon 🍻</h3>
+        </div>
+        <img src="../assets/pipsqueak.png" alt="" class="mascot">
       </div>
-      <div class="cassian" @click="nagivateTo('cassianfloros')">
-        <h3>Cassian Floros 🌿</h3>
+      <div class="container">
+        <div class="cassian" @click="nagivateTo('cassianfloros')">
+          <h3>Cassian Floros 🌿</h3>
+        </div>
+        <img src="../assets/dewdrop.png" alt="" class="mascot">
       </div>
-      <div class="lucien" @click="nagivateTo('lucienlunaris')">
-        <h3>Lucien Lunaris 🎸</h3>
+      <div class="container">
+
+        <div class="lucien" @click="nagivateTo('lucienlunaris')">
+          <h3>Lucien Lunaris 🎸</h3>
+        </div>
+        <img src="../assets/dewdrop.png" alt="" class="mascot">
       </div>
-      <div class="zander" @click="nagivateTo('zandernetherbrand')">
-        <h3>Zander Netherbrand ♈️</h3>
+      <div class="container">
+
+        <div class="zander" @click="nagivateTo('zandernetherbrand')">
+          <h3>Zander Netherbrand ♈️</h3>
+        </div>
+        <img src="../assets/netherling.png" alt="" class="mascot">
       </div>
-      <div class="rosco" @click="nagivateTo('roscograves')">
-        <h3>Rosco Graves 🕹️</h3>
+      <div class="container">
+        <div class="rosco" @click="nagivateTo('roscograves')">
+          <h3>Rosco Graves 🕹️</h3>
+        </div>
+        <img src="../assets/roscal.png" alt="" class="mascot">
       </div>
     </div>
-    <!-- <routerLink to="/galegalleon" class="gale">
-        <h3>Gale Galleon 🍻</h3>
-      </routerLink>
-      <routerLink to="/cassianfloros" class="cassian">
-        <h3>Cassian Floros 🌿</h3>
-      </routerLink>
-      <routerLink to="/lucienlunaris" class="lucien">
-        <h3>Lucien Lunaris 🎸</h3>
-      </routerLink>
-      <routerLink to="/zandernetherbrand" class="zander">
-        <h3>Zander Netherbrand ♈️</h3>
-      </routerLink>
-      <routerLink to="/roscograves" class="rosco">
-        <h3>Rosco Graves 🕹️</h3>
-      </routerLink>
-    </div> -->
   </section>
 </template>
 
-<style>
+<style scoped>
 #members {
   background: linear-gradient(rgba(0, 0, 0, 0.99), rgba(38, 38, 38, 0.96)), url('/avallum-website/src/assets/black-stars.png');
   background-blend-mode: darken;
@@ -69,47 +75,91 @@ function nagivateTo(member: string) {
 
 #members h3 {
   font-family: 'Gloock';
-  position: relative;
-  top: 85%;
-  margin-left: 20px;
+  font-size: 1rem;
 }
 
-#members img {
-  display: inline;
-  position: absolute;
-  top: 0;
-  mix-blend-mode: multiply;
-  filter: saturate(0);
-  opacity: 0.5;
-}
 
 .members-list {
   display: flex;
+  align-items: center;
   justify-content: space-around;
-  overflow-x: auto;
   position: relative;
   z-index: 1;
-  height: auto;
-  padding: 40px;
 }
 
-.members-list>div {
-  /* display: flex; */
-  height: 420px;
-  width: 300px;
-  aspect-ratio: 16 / 9;
-  margin: 0px 20px;
-  border: 1px solid gold;
+.container {
+  position: relative;
+  z-index: 999;
+  width: 100%;
+  max-width: 400px;
+  padding-bottom: 30%;
+  border: 1px solid burlywood;
   border-radius: 10px;
-  transition:
-    transform 0.3s,
-    filter 0.3s;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  margin: 1vw;
 }
 
-.members-list div:hover {
-  transform: scale(1.1);
-  filter: drop-shadow(0px 0px 10px black);
-  z-index: 2;
+.container>div {
+  position: absolute;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 10px;
+  text-align: center;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.container>div h3 {
+  margin: 0;
+  padding: 10px 0;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+
+.container:hover {
+  animation: scale 0.3s alternate linear forwards;
+}
+
+@keyframes scale {
+  100% {
+    transform: scale(1.1);
+  }
+}
+
+
+.mascot {
+  /* width: 5vw; */
+  width: 10vw;
+  position: absolute;
+  top: 10px;
+  z-index: 998;
+  opacity: 0;
+  rotate: -10deg;
+  transform: translate(0px, -50px);
+}
+
+.container:hover .mascot {
+  animation: mascotSlideUp alternate 0.3s forwards;
+}
+
+@keyframes mascotSlideUp {
+  100% {
+    width: 10vw;
+    opacity: 1;
+    transform: translate(-10px, -120px);
+    z-index: 999;
+  }
 }
 
 .members-list .gale {
@@ -141,6 +191,7 @@ function nagivateTo(member: string) {
   background-position: center bottom;
   background-size: cover;
   background-repeat: no-repeat;
+  text-wrap: wrap;
 }
 
 .members-list .rosco {
@@ -149,5 +200,21 @@ function nagivateTo(member: string) {
   background-position: center bottom;
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+
+@media screen and (max-width: 768px) {
+  .members-list {
+    flex-wrap: wrap;
+  }
+
+  #members h2 {
+    margin: auto;
+  }
+
+  .container {
+    height: 10vh;
+    width: 33vw;
+  }
 }
 </style>

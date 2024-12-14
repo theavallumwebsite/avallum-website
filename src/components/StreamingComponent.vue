@@ -35,10 +35,10 @@ onMounted(() => {
 <template>
   <section id="streams">
     <div class="currentlyStreaming">
-      <div class="current-wrapper">
+      <div>
         <h2>Who's streaming?</h2>
         <p class="extra">Oh, look...</p>
-        <div v-if="liveStatus && liveStatus.length > 0">
+        <div v-if="liveStatus && liveStatus.length > 0" class="streamsContainer">
           <div v-for="video in liveStatus" :key="video.id">
             <h3>{{ video.channel.name }} is Live!</h3>
             <div class="space-wrapper">
@@ -59,7 +59,7 @@ onMounted(() => {
 
     <div class="upcomingStreams">
       <h2>Upcoming Streams</h2>
-      <div v-if="upcomingLive && upcomingLive.length > 0">
+      <div v-if="upcomingLive && upcomingLive.length > 0" class="upcomingContainer">
         <div v-for="video in upcomingLive" :key="video.id" class="iframe-wrapper">
           <div class="space-wrapper">
             <iframe v-if="upcomingLive" width="560" height="315" :src="`https://www.youtube.com/embed/${video.id}`"
@@ -95,7 +95,7 @@ li {
   border-right: 1px solid rgb(153, 131, 6);
   width: 65vw;
   height: 100vh;
-  overflow: scroll;
+  /* overflow: scroll; */
   padding: 20px;
   text-align: center;
   margin: auto;
@@ -104,11 +104,21 @@ li {
   justify-content: center;
 }
 
+.streamsContainer {
+  overflow: scroll;
+  height: 80vh;
+}
+
+.upcomingContainer {
+  overflow: scroll;
+  height: 80vh;
+}
+
 .upcomingStreams {
   width: 40vw;
   height: 100vh;
   padding-left: 10px;
-  overflow: scroll;
+  /* overflow: scroll; */
   padding: 20px;
   margin: auto;
   text-align: center;
@@ -137,5 +147,37 @@ li {
   width: 100%;
   height: 100%;
   border: 0;
+}
+
+
+@media screen and (max-width: 768px) {
+  #streams {
+    flex-direction: column;
+  }
+
+  .currentlyStreaming {
+    width: 100vw;
+    height: 50vh;
+    padding: 0px;
+  }
+
+  .upcomingStreams {
+    width: 100vw;
+    height: 50vh;
+    padding: 0px;
+  }
+
+  .streamsContainer {
+    height: 45vh;
+  }
+
+  .upcomingContainer {
+    height: 45vh;
+  }
+
+  .upcomingStreams h2 {
+    margin: 0px auto;
+  }
+
 }
 </style>

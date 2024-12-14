@@ -22,6 +22,19 @@ import IntroComponent from '@/components/IntroComponent.vue';
 </template>
 
 <style scoped>
+.star {
+  stroke: #DFA67D;
+  stroke-width: 2px;
+  position: relative;
+  width: 50px;
+}
+
+.star path {
+  fill: #146665;
+}
+</style>
+
+<style>
 .cassian-section {
   font-family: 'Cormorant Garamond';
 }
@@ -30,6 +43,17 @@ import IntroComponent from '@/components/IntroComponent.vue';
   position: absolute;
   top: 0;
   z-index: 997;
+}
+
+
+
+.cassian-section .hastag {
+  color: #146665;
+}
+
+.cassian-section h2::after,
+.cassian-section h2::before {
+  content: none;
 }
 
 .star {
@@ -41,26 +65,5 @@ import IntroComponent from '@/components/IntroComponent.vue';
 
 .star path {
   fill: #146665;
-}
-
-h2.duplicated,
-.cassian-section h2.duplicated {
-  font-family: "Neonderthaw", serif;
-  color: #DFA67D;
-  position: relative;
-  opacity: 0.5;
-  font-weight: 300;
-  margin-top: -50px;
-}
-</style>
-
-<style>
-.cassian-section .hastag {
-  color: #146665;
-}
-
-.cassian-section h2::after,
-.cassian-section h2::before {
-  content: none;
 }
 </style>

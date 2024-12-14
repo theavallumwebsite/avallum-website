@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import data from "../../data.json"
-import { computed } from "vue";
+import { computed, ref } from "vue";
 
 const props = defineProps({
     memberName: {
@@ -12,6 +12,8 @@ const props = defineProps({
 const member = computed(() => {
     return data.channels[props.memberName as keyof typeof data.channels]
 })
+
+const font = ref(member.value.font)
 </script>
 
 <template>
@@ -50,6 +52,7 @@ const member = computed(() => {
     flex-direction: column;
     justify-content: center;
     gap: 3vh;
+    background: linear-gradient(black, transparent);
 }
 
 h2 {

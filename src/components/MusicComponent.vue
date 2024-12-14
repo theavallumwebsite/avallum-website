@@ -148,87 +148,96 @@ onMounted(() => {
 <template>
   <section id="music">
     <div class="music-top">
-      <a href="https://www.youtube.com/watch?v=-WXRrpnYJwA">
-        <CDComponent memberName="avallum" class="avallum-section"></CDComponent>
-      </a>
-      <h2>Music</h2>
-      <p>Discover all of Avallum's music!</p>
-      <p class="extra">For newly released songs, rememeber to search them directly on Youtube!</p>
+      <div class="music-top-container">
+        <a href="https://www.youtube.com/watch?v=-WXRrpnYJwA" class="CD">
+          <CDComponent memberName="avallum" class="avallum-section"></CDComponent>
+        </a>
+        <div class="musicTopContent">
+          <h2>Music</h2>
+          <p>Discover all of Avallum's music!</p>
+          <p class="extra">For newly released songs, rememeber to search them directly on Youtube!</p>
+        </div>
+      </div>
+
+
     </div>
 
-    <ul class="filter">
-      <li @click="getCovers()" :class="{ selected: selectedFilter === 'cover' }">Cover</li>
-      <li @click="getKaraoke()" :class="{ selected: selectedFilter === 'karaoke' }">Karaoke</li>
-      <li @click="getOriginalSongs()" :class="{ selected: selectedFilter === 'original_song' }">Original Songs</li>
-      <li @click="getMemberMusic('Gale')" :class="{ selected: selectedFilter === 'Gale' }">Gale</li>
-      <li @click="getMemberMusic('Cassian')" :class="{ selected: selectedFilter === 'Cassian' }">
-        Cassian
-      </li>
-      <li @click="getMemberMusic('Lucien')" :class="{ selected: selectedFilter === 'Lucien' }">
-        Lucien
-      </li>
-      <li @click="getMemberMusic('Zander')" :class="{ selected: selectedFilter === 'Zander' }">
-        Zander
-      </li>
-      <li @click="getMemberMusic('Rosco')" :class="{ selected: selectedFilter === 'Rosco' }">
-        Rosco
-      </li>
-    </ul>
+    <div class="container">
+      <ul class="filter">
+        <li @click="getCovers()" :class="{ selected: selectedFilter === 'cover' }">Cover</li>
+        <li @click="getKaraoke()" :class="{ selected: selectedFilter === 'karaoke' }">Karaoke</li>
+        <li @click="getOriginalSongs()" :class="{ selected: selectedFilter === 'original_song' }">Original Songs</li>
+        <li @click="getMemberMusic('Gale')" :class="{ selected: selectedFilter === 'Gale' }">Gale</li>
+        <li @click="getMemberMusic('Cassian')" :class="{ selected: selectedFilter === 'Cassian' }">
+          Cassian
+        </li>
+        <li @click="getMemberMusic('Lucien')" :class="{ selected: selectedFilter === 'Lucien' }">
+          Lucien
+        </li>
+        <li @click="getMemberMusic('Zander')" :class="{ selected: selectedFilter === 'Zander' }">
+          Zander
+        </li>
+        <li @click="getMemberMusic('Rosco')" :class="{ selected: selectedFilter === 'Rosco' }">
+          Rosco
+        </li>
+      </ul>
 
-    <div class="music-content">
-      <!-- <ul class="header-row">
+      <div class="music-content">
+        <!-- <ul class="header-row">
         <li>Song</li>
         <li>Original artist</li>
         <li>By</li>
         <li>Type</li>
       </ul> -->
-      <div>
-        <ul class="music-grid">
-          <li v-for="video in filteredSongs" :key="video.id" class="song-item">
-            <a :href="isUnarchived(video.title) ? '' : 'https://www.youtube.com/watch?v=' + video.id" target="_blank">
-              <div class="song-info">
-                <!-- Song Title -->
-                <span class="cell">
-                  <template v-if="video.topic_id === 'Music_Cover' && video.songs">
-                    <span v-for="song in video.songs" :key="song.id">{{ song.name }}</span>
-                  </template>
-                  <template v-else>
-                    {{ video.title }}
-                  </template>
-                </span>
+        <div>
+          <ul class="music-grid">
+            <li v-for="video in filteredSongs" :key="video.id" class="song-item">
+              <a :href="isUnarchived(video.title) ? '' : 'https://www.youtube.com/watch?v=' + video.id" target="_blank">
+                <div class="song-info">
+                  <!-- Song Title -->
+                  <span class="cell">
+                    <template v-if="video.topic_id === 'Music_Cover' && video.songs">
+                      <span v-for="song in video.songs" :key="song.id">{{ song.name }}</span>
+                    </template>
+                    <template v-else>
+                      {{ video.title }}
+                    </template>
+                  </span>
 
-                <!-- Original Artist (for Covers) -->
-                <span class="cell center">
-                  <template v-if="video.topic_id === 'Music_Cover' && video.songs">
-                    <span v-for="song in video.songs" :key="song.id">{{ song.original_artist }}</span>
-                  </template>
-                </span>
+                  <!-- Original Artist (for Covers) -->
+                  <span class="cell center">
+                    <template v-if="video.topic_id === 'Music_Cover' && video.songs">
+                      <span v-for="song in video.songs" :key="song.id">{{ song.original_artist }}</span>
+                    </template>
+                  </span>
 
-                <!-- Channel Name -->
-                <span class="cell center">{{ video.channel.english_name }}</span>
+                  <!-- Channel Name -->
+                  <span class="cell center">{{ video.channel.english_name }}</span>
 
-                <!-- Song Type -->
-                <span class="cell center">
-                  <template v-if="video.topic_id === 'Music_Cover'">Cover</template>
-                  <template v-else-if="video.topic_id === 'singing'">Karaoke</template>
-                  <template v-else-if="video.topic_id === 'Original_Song'">Original Song</template>
-                </span>
+                  <!-- Song Type -->
+                  <span class="cell center">
+                    <template v-if="video.topic_id === 'Music_Cover'">Cover</template>
+                    <template v-else-if="video.topic_id === 'singing'">Karaoke</template>
+                    <template v-else-if="video.topic_id === 'Original_Song'">Original Song</template>
+                  </span>
 
-                <!-- YouTube Link -->
-                <span class="cell center">
-                  <a v-if="!isUnarchived(video.title)"
-                    :href="isUnarchived(video.title) ? '' : 'https://www.youtube.com/watch?v=' + video.id"
-                    target="_blank">
-                    <img src="../assets/youtube.png" alt="YouTube Logo" class="youtube-logo" />
-                  </a>
-                </span>
-              </div>
-            </a>
-          </li>
-        </ul>
+                  <!-- YouTube Link -->
+                  <span class="cell center">
+                    <a v-if="!isUnarchived(video.title)"
+                      :href="isUnarchived(video.title) ? '' : 'https://www.youtube.com/watch?v=' + video.id"
+                      target="_blank">
+                      <img src="../assets/youtube.png" alt="YouTube Logo" class="youtube-logo" />
+                    </a>
+                  </span>
+                </div>
+              </a>
+            </li>
+          </ul>
 
+        </div>
       </div>
     </div>
+
   </section>
 </template>
 
@@ -246,23 +255,21 @@ onMounted(() => {
 
 
 .music-top {
-  /* display: flex; */
   height: 300px;
-  border-bottom: 1px solid gold;
+  border-bottom: 1px solid burlywood;
   margin: auto;
-  padding: 15px 0px;
+  padding: 3vh 0vh;
+  display: flex;
+  justify-content: center;
+}
+
+.music-top-container {
+  display: flex;
+  width: 80vw;
+  gap: 15px;
 }
 
 
-.music-top .cd-container {
-  float: left;
-  margin: 0px;
-  margin-right: 10px;
-}
-
-.music-top .cd-player {
-  margin: 0px;
-}
 
 .filter {
   width: 100%;
@@ -324,5 +331,44 @@ onMounted(() => {
 
 .selected {
   font-weight: bold;
+}
+
+@media screen and (max-width: 768px) {
+
+  #music {
+    display: flex;
+    flex-direction: column;
+
+  }
+
+  .music-top {
+    height: 17vh;
+
+    margin: 0px;
+  }
+
+  .music-top-container {
+    width: 100%;
+
+  }
+
+  .music-content {
+    height: 70vh;
+  }
+
+  .music-grid {
+    height: 70vh;
+  }
+
+  .container {
+    height: 75vh;
+
+  }
+
+  .filter {
+    margin-bottom: 2vh;
+  }
+
+
 }
 </style>
