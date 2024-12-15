@@ -207,5 +207,20 @@ onMounted(() => {
 /* avallum  */
 .avallum-section .cd-player {
     background: linear-gradient(#e4c989, #7a531d);
+    max-width: none;
+    max-height: none;
+}
+
+
+@media screen and (max-width: 768px) {
+    .cd-container {
+        margin: 0px;
+        width: auto;
+    }
+
+    .cd-player {
+        margin: auto;
+        width: 80%;
+    }
 }
 </style>

@@ -122,7 +122,7 @@ function nagivateTo(member: string) {
   margin: 0;
   padding: 10px 0;
   text-overflow: ellipsis;
-  white-space: nowrap;
+  /* white-space: nowrap; */
   overflow: hidden;
 }
 
@@ -206,6 +206,7 @@ function nagivateTo(member: string) {
 @media screen and (max-width: 768px) {
   .members-list {
     flex-wrap: wrap;
+
   }
 
   #members h2 {

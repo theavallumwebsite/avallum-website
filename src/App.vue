@@ -198,7 +198,8 @@ nav {
 
 .nav-sections {
   display: flex;
-  gap: 30px;
+  flex-wrap: wrap;
+  gap: 3vw;
 }
 
 h1 {
@@ -252,5 +253,22 @@ h1 {
   color: white;
   font-family: 'New Rocker';
   -webkit-text-stroke: 0.4px black;
+}
+
+@media screen and (max-width: 768px) {
+
+  h1 {
+    padding-left: 0px;
+  }
+
+  .nav-sections {
+    justify-content: flex-end;
+    align-items: flex-end;
+    gap: 3vw;
+  }
+
+  .wrapper p {
+    font-size: 2vw;
+  }
 }
 </style>

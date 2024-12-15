@@ -266,9 +266,14 @@ onMounted(() => {
 .music-top-container {
   display: flex;
   width: 80vw;
-  gap: 15px;
+
 }
 
+.CD {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 
 .filter {
@@ -283,14 +288,6 @@ onMounted(() => {
 .filter li {
   cursor: pointer;
 }
-
-/* .header-row {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  list-style-type: none;
-  width: 80%;
-  font-weight: 500;
-} */
 
 .music-content {
   height: 55vh;
@@ -342,8 +339,7 @@ onMounted(() => {
   }
 
   .music-top {
-    height: 17vh;
-
+    height: auto;
     margin: 0px;
   }
 
@@ -353,20 +349,40 @@ onMounted(() => {
   }
 
   .music-content {
-    height: 70vh;
+    height: 52vh;
   }
 
   .music-grid {
     height: 70vh;
+    width: 90vw;
   }
+
+  .song-info {
+    grid-template-columns: 28vw 15vw 20vw 20vw 6vw;
+    font-size: 90%;
+  }
+
+
 
   .container {
     height: 75vh;
+  }
 
+  .CD {
+    width: 90vw;
+  }
+
+
+
+  .musicTopContent {
+    text-align: center;
   }
 
   .filter {
     margin-bottom: 2vh;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2vw;
   }
 
 

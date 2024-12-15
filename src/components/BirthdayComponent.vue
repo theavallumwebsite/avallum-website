@@ -166,7 +166,6 @@ b {
 
 .birthdays {
     display: flex;
-
 }
 
 .right {
@@ -194,9 +193,9 @@ b {
 
 .birthdayHat {
     position: relative;
-    width: 200px;
-    bottom: 60vh;
-    left: 12vw;
+    width: 10vw;
+    left: 10vw;
+    bottom: 45vh;
 }
 
 .modelDiv {
@@ -219,5 +218,42 @@ b {
 
 .text {
     margin: 3vw 0px;
+}
+
+
+@media screen and (max-width: 768px) {
+    .birthdays {
+        flex-direction: column;
+    }
+
+    .left,
+    .right {
+        width: 100vw;
+    }
+
+    .left {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .birthdayHat {
+        width: 22vw;
+        bottom: 17vh;
+        left: 32vw;
+        z-index: 999;
+    }
+
+    .birthdaycake {
+        width: 20vw;
+        float: left;
+    }
+
+    .mainModel {
+        width: 80%;
+        border-bottom: 3px solid black;
+        position: relative;
+        left: -3vh;
+        z-index: 998;
+    }
 }
 </style>

@@ -54,6 +54,16 @@
 @media screen and (max-width: 768px) {
   .img-container {
     height: 30vh;
+    margin-top: 11vh;
+    margin-bottom: 10vh;
   }
+
+  /* #hero {
+    justify-content: space-between;
+  }
+
+  #hero a {
+    margin: 0px;
+  } */
 }
 </style>

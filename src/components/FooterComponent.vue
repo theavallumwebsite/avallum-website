@@ -12,17 +12,27 @@ let showModal = ref<boolean>(false);
             <div class="about">
                 <p @click="showModal = false" class="closeButton">X</p>
                 <h3>About</h3>
-                <i>This website is not affiliated with First Stage Production.</i>
-                <p>This website was designed and developed by <b>Nana (@gukkietty on X)</b>.</p>
-                <p>This was developed in <b>VueJS</b> (with typescript), with the <b>Holodex API</b> for all the stream
+                <i>This website is not affiliated with First Stage Production. No profit is being made off this
+                    website.</i>
+                <p>Avallum World was designed and developed by <b>Nana (@gukkietty on X)</b>.</p>
+                <p>I decided to do this website because I love Avallum and I wanted to gain some more developing
+                    experience for my own professional life. This is kinda my love letter to the community, and I hope
+                    that this website is useful.</p>
+
+                <h3>General Credits</h3>
+                <p>Data Collection: Noise & Hannah B. (HUGE thank you to them for putting together all the data!)</p>
+                <p>Mascots drawing: Nanni</p>
+                <p>Mascots drawing: Risa</p>
+                <p>Free assets: Pixabay</p>
+                <h3>For my fellow developers (and anyone curious)</h3>
+                <p>This was developed in <b>VueJS</b> (in typescript), with the <b>Holodex API</b> for all the stream
                     and
                     music
                     related data
-                    (thanks to Matt for suggesting it to me), with the help of the GSAP library for animations. </p>
-                <h3>Credits</h3>
-                <p>Data Collection: Noise & Hannah B. (HUGE thank you to them for putting together all the data!)</p>
-                <p>Mascots drawing: Nanni</p>
-                <p>Please check the member pages for precise credits.</p>
+                    (thanks to Matt for suggesting it to me), with the help of the <b>GSAP</b> library for animations.
+                    Everything was designed in <b>Figma</b>.</p>
+                <h3>See a problem or have a question?</h3>
+                <a href="https://x.com/gukkietty">Contact me!</a>
 
             </div>
         </div>
@@ -37,6 +47,7 @@ section {
     align-items: baseline;
     justify-content: center;
     font-family: 'Gloock';
+
 }
 
 p {
@@ -69,13 +80,14 @@ p {
     border-radius: 10px;
     padding: 10px;
     text-align: center;
-    font-family: 'Montserrat';
+    font-family: 'Cormorant Garamond';
+    overflow: scroll;
 }
 
 @media screen and (max-width: 768px) {
 
     section {
-        height: 3vh;
+        height: 7vh;
     }
 }
 </style>

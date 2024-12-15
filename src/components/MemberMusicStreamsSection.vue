@@ -5,6 +5,7 @@ import CDComponent from './CDComponent.vue';
 import data from '../../data.json'
 
 
+
 const props = defineProps({
     memberName: {
         type: String,
@@ -15,6 +16,10 @@ const props = defineProps({
 const member = computed(() => {
     return data.channels[props.memberName as keyof typeof data.channels]
 })
+
+function isUnarchived(title: string) {
+    return title.toLowerCase().includes('unarchived') || title.toLowerCase().includes('unrachived');
+}
 
 const titleColor = ref(member.value.titleColor)
 const font = ref(member.value.font)
@@ -36,7 +41,9 @@ async function getMemberMusic() {
     try {
         const cover = await getMusic(member.value.id, 'Music_Cover')
         const karaoke = await getMusic(member.value.id, 'singing')
-        allSongs.value.push(...cover.data, ...karaoke.data)
+        const originalSong = await getMusic(member.value.id, 'Original_Song')
+        allSongs.value.push(...originalSong.data, ...cover.data, ...karaoke.data)
+        allSongs.value.sort((a, b) => new Date(b.published_at).getTime() - new Date(a.published_at).getTime());
     } catch (error) {
         console.log(error)
     }
@@ -125,39 +132,50 @@ onMounted(() => {
             <h2>Music</h2>
             <CDComponent :memberName="memberName"></CDComponent>
             <ul class="music-grid">
-                <li v-for="(video, index) in allSongs" :key="index" class="song-item">
-                    <a :href="video.title.toLowerCase().includes('unarchived') &&
-                        video.title.toLowerCase().includes('unrachived')
-                        ? ''
-                        : 'https://www.youtube.com/watch?v=' + video.id
-                        " target="_blank">
-                        <!-- For Karaoke (type: 'singing') -->
-                        <div v-if="video.topic_id === 'singing'" class="song-info">
-                            <span class="cell">{{ video.title }}</span>
-                            <span></span>
-                            <span class="cell center"> {{ video.channel.english_name }}</span>
-                            <span class="cell center">Karaoke</span>
-                            <span class="cell"><a v-if="
-                                video.title.toLowerCase().includes('unarchived') &&
-                                video.title.toLowerCase().includes('unrachived')
-                            " :href="'https://www.youtube.com/watch?v=' + video.id" target="_blank"><img
-                                        src="../assets/youtube.png" alt="" class="youtube-logo" /></a></span>
-                        </div>
+                <li v-for="video in allSongs" :key="video.id" class="song-item">
+                    <a :href="isUnarchived(video.title) ? '' : 'https://www.youtube.com/watch?v=' + video.id"
+                        target="_blank">
+                        <div class="song-info">
+                            <!-- Song Title -->
+                            <span class="cell">
+                                <template v-if="video.topic_id === 'Music_Cover' && video.songs">
+                                    <span v-for="song in video.songs" :key="song.id">{{ song.name }}</span>
+                                </template>
+                                <template v-else>
+                                    {{ video.title }}
+                                </template>
+                            </span>
 
-                        <!-- For Covers (type: 'Music_Cover') -->
-                        <div v-else-if="video.topic_id === 'Music_Cover' && video.songs" class="song-info">
-                            <span class="cell" v-for="song in video.songs" :key="song.id">{{ song.name }}</span>
-                            <span class="cell center" v-for="song in video.songs" :key="song.id">
-                                {{ song.original_artist }}</span>
-                            <span class="cell center"> {{ video.channel.english_name }}</span>
-                            <span class="cell center">Cover</span>
-                            <span class="cell center"><a :href="'https://www.youtube.com/watch?v=' + video.id"
-                                    target="_blank"><img src="../assets/youtube.png" alt=""
-                                        class="youtube-logo" /></a></span>
+                            <!-- Original Artist (for Covers) -->
+                            <span class="cell center">
+                                <template v-if="video.topic_id === 'Music_Cover' && video.songs">
+                                    <span v-for="song in video.songs" :key="song.id">{{ song.original_artist }}</span>
+                                </template>
+                            </span>
+
+                            <!-- Channel Name -->
+                            <span class="cell center">{{ video.channel.english_name }}</span>
+
+                            <!-- Song Type -->
+                            <span class="cell center">
+                                <template v-if="video.topic_id === 'Music_Cover'">Cover</template>
+                                <template v-else-if="video.topic_id === 'singing'">Karaoke</template>
+                                <template v-else-if="video.topic_id === 'Original_Song'">Original Song</template>
+                            </span>
+
+                            <!-- YouTube Link -->
+                            <span class="cell center">
+                                <a v-if="!isUnarchived(video.title)"
+                                    :href="isUnarchived(video.title) ? '' : 'https://www.youtube.com/watch?v=' + video.id"
+                                    target="_blank">
+                                    <img src="../assets/youtube.png" alt="YouTube Logo" class="youtube-logo" />
+                                </a>
+                            </span>
                         </div>
                     </a>
                 </li>
             </ul>
+
         </div>
 
     </section>
