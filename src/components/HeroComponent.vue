@@ -24,7 +24,7 @@
   display: flex;
   flex-direction: column;
   background: linear-gradient(transparent, black);
-  border-bottom: 0.5px solid burlywood;
+  border-bottom: 0.5px solid gold;
 
 }
 
@@ -58,12 +58,9 @@
     margin-bottom: 10vh;
   }
 
-  /* #hero {
-    justify-content: space-between;
-  }
 
   #hero a {
     margin: 0px;
-  } */
+  }
 }
 </style>

@@ -1,9 +1,8 @@
 <script setup lang="ts">
-import MemberCommonSection from '@/components/MemberCommonSection.vue';
-import MemberMusicStreamsSection from '@/components/MemberMusicStreamsSection.vue';
-import MemberCreditsComponent from '@/components/MemberCreditsComponent.vue';
-import IntroComponent from '@/components/IntroComponent.vue';
-import ZanderIntroComponent from '@/components/ZanderIntroComponent.vue';
+import MemberCommonSection from '@/components/MemberPages/MemberCommonSection.vue';
+import MemberMusicStreamsSection from '@/components/MemberPages/MemberMusicStreamsSection.vue';
+import MemberCreditsComponent from '@/components/MemberPages/MemberCreditsComponent.vue';
+import IntroComponent from '@/components/MemberPages/IntroComponent.vue';
 import data from '../../data.json'
 import gsap from 'gsap';
 import { onMounted, ref } from 'vue';
@@ -42,7 +41,6 @@ onMounted(() => {
 <template>
   <main>
     <IntroComponent memberName="Zander" class="zander-section"></IntroComponent>
-    <ZanderIntroComponent class="animation zander-section"></ZanderIntroComponent>
     <MemberCommonSection memberName="Zander" class="zander-section"></MemberCommonSection>
     <MemberMusicStreamsSection memberName="Zander" class="zander-section layout-2"></MemberMusicStreamsSection>
     <MemberCreditsComponent memberName="Zander" class="zander-section"></MemberCreditsComponent>

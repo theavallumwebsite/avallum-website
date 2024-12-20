@@ -93,7 +93,7 @@ function nagivateTo(member: string) {
   width: 100%;
   max-width: 400px;
   padding-bottom: 30%;
-  border: 1px solid burlywood;
+  border: 1px solid gold;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
@@ -204,9 +204,13 @@ function nagivateTo(member: string) {
 
 
 @media screen and (max-width: 768px) {
+  section {
+    overflow: scroll;
+  }
+
   .members-list {
     flex-wrap: wrap;
-
+    overflow: scroll;
   }
 
   #members h2 {

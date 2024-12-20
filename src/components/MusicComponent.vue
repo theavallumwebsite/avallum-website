@@ -256,7 +256,7 @@ onMounted(() => {
 
 .music-top {
   height: 300px;
-  border-bottom: 1px solid burlywood;
+  border-bottom: 1px solid gold;
   margin: auto;
   padding: 3vh 0vh;
   display: flex;
@@ -273,6 +273,11 @@ onMounted(() => {
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 50%;
+}
+
+.CD .cd-container {
+  width: 60%;
 }
 
 

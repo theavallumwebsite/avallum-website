@@ -1,9 +1,8 @@
 <script setup lang="ts">
-import CassianAnimation from '@/components/CassianAnimation.vue'
-import MemberCommonSection from '@/components/MemberCommonSection.vue';
-import MemberMusicStreamsSection from '@/components/MemberMusicStreamsSection.vue';
-import MemberCreditsComponent from '@/components/MemberCreditsComponent.vue';
-import IntroComponent from '@/components/IntroComponent.vue';
+import MemberCommonSection from '@/components/MemberPages/MemberCommonSection.vue';
+import MemberMusicStreamsSection from '@/components/MemberPages/MemberMusicStreamsSection.vue';
+import MemberCreditsComponent from '@/components/MemberPages/MemberCreditsComponent.vue';
+import IntroComponent from '@/components/MemberPages/IntroComponent.vue';
 
 
 
@@ -13,7 +12,7 @@ import IntroComponent from '@/components/IntroComponent.vue';
 <template>
   <main>
     <IntroComponent memberName="Cassian" class="cassian-section"></IntroComponent>
-    <CassianAnimation class="animation cassian-section"></CassianAnimation>
+
     <MemberCommonSection memberName="Cassian" class="cassian-section"></MemberCommonSection>
     <MemberMusicStreamsSection memberName="Cassian" class="cassian-section layout-1"></MemberMusicStreamsSection>
     <MemberCreditsComponent memberName="Cassian" class="cassian-section"></MemberCreditsComponent>

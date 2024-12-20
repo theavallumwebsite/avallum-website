@@ -1,10 +1,23 @@
 <script setup lang="ts">
 import { onMounted, ref } from 'vue';
 import data from '../../data.json'
+import galeBirthday from "../assets/gale-birthday.png";
+import cassianBirthday from "../assets/cassian-birthday.png";
+import lucienBirthday from "../assets/lucien-birthday.png";
+import zanderBirthday from "../assets/zander-birthday.png";
+import roscoBirthday from "../assets/rosco-birthday.png";
 
 const closestBirthday = ref()
 const countdown = ref({ days: 0, hours: 0, minutes: 0, seconds: 0 })
 const remainingMembers = ref<any>(null)
+
+const birthdayPortrait: Record<string, string> = {
+    "Gale Galleon": galeBirthday,
+    "Cassian Floros": cassianBirthday,
+    "Lucien Lunaris": lucienBirthday,
+    "Zander Netherbrand": zanderBirthday,
+    "Rosco Graves": roscoBirthday,
+};
 
 function extractBirthdays() {
     const channels = data.channels
@@ -83,7 +96,8 @@ function getModel() {
 
     const closestBirthdayChannel = channels.find(channel => channel.name === closestBirthday.value.name);
 
-    closestBirthday.value.portrait = closestBirthdayChannel ? closestBirthdayChannel.portrait : null;
+    closestBirthday.value.portrait = birthdayPortrait[closestBirthday.value.name]
+        || (closestBirthdayChannel ? closestBirthdayChannel.portrait : null);
 
     remainingMembers.value = channels
         .filter(channel => channel.name !== closestBirthday.value.name)
@@ -93,7 +107,7 @@ function getModel() {
                 month: 'long',
                 day: 'numeric',
             });
-            return { ...channel, formattedBirthday };
+            return { ...channel, formattedBirthday, portrait: channel.portrait };
         })
 
 }
@@ -111,8 +125,8 @@ onMounted(() => {
         <i>Please note that this uses your local time and not JST.</i>
         <div class="birthdays">
             <div class="left">
-                <img :src="closestBirthday.birthdayHat" alt="" class="birthdayHat"
-                    v-if="closestBirthday && closestBirthday.birthdayHat">
+                <!-- <img :src="closestBirthday.birthdayHat" alt="" class="birthdayHat"
+                    v-if="closestBirthday && closestBirthday.birthdayHat"> -->
                 <img :src="closestBirthday.portrait" alt="" class="mainModel" v-if="closestBirthday">
             </div>
             <div class="right">
@@ -187,16 +201,8 @@ b {
 
 .mainModel {
     width: 80%;
-    margin-left: -10vw;
-    /*for the birthday hat */
 }
 
-.birthdayHat {
-    position: relative;
-    width: 10vw;
-    left: 10vw;
-    bottom: 45vh;
-}
 
 .modelDiv {
     text-align: center;
@@ -236,13 +242,6 @@ b {
         align-items: center;
     }
 
-    .birthdayHat {
-        width: 22vw;
-        bottom: 17vh;
-        left: 32vw;
-        z-index: 999;
-    }
-
     .birthdaycake {
         width: 20vw;
         float: left;
@@ -250,10 +249,14 @@ b {
 
     .mainModel {
         width: 80%;
-        border-bottom: 3px solid black;
+        border-bottom: 3px solid white;
         position: relative;
-        left: -3vh;
         z-index: 998;
+        margin-bottom: 3vh;
+    }
+
+    .text {
+        margin-bottom: 5vh;
     }
 }
 </style>

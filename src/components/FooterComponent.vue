@@ -23,7 +23,9 @@ let showModal = ref<boolean>(false);
                 <p>Data Collection: Noise & Hannah B. (HUGE thank you to them for putting together all the data!)</p>
                 <p>Mascots drawing: Nanni</p>
                 <p>Mascots drawing: Risa</p>
+                <p>Birthday Hat: Azure</p>
                 <p>Free assets: Pixabay</p>
+                <p>Cake image: Microsoft</p>
                 <h3>For my fellow developers (and anyone curious)</h3>
                 <p>This was developed in <b>VueJS</b> (in typescript), with the <b>Holodex API</b> for all the stream
                     and
@@ -44,10 +46,12 @@ let showModal = ref<boolean>(false);
 section {
     height: 7vh;
     display: flex;
-    align-items: baseline;
+    align-items: center;
     justify-content: center;
     font-family: 'Gloock';
-
+    background: rgb(11, 11, 11);
+    /* background: linear-gradient(rgba(38, 38, 38, 0.9), rgba(0, 0, 0, 0.94)), url('../assets/black-stars.png');
+    background-blend-mode: darken; */
 }
 
 p {

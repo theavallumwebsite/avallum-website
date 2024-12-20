@@ -35,26 +35,26 @@ onMounted(() => {
 <template>
   <section id="streams">
     <div class="currentlyStreaming">
-      <div>
-        <h2>Who's streaming?</h2>
-        <p class="extra">Oh, look...</p>
-        <div v-if="liveStatus && liveStatus.length > 0" class="streamsContainer">
-          <div v-for="video in liveStatus" :key="video.id">
-            <h3>{{ video.channel.name }} is Live!</h3>
-            <div class="space-wrapper">
-              <div class="iframe-wrapper">
-                <iframe v-if="liveStatus" width="560" height="315" :src="`https://www.youtube.com/embed/${video.id}`"
-                  title="YouTube video player" frameborder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-              </div>
+
+      <h2>Who's streaming?</h2>
+      <p class="extra">Oh, look...</p>
+      <div v-if="liveStatus && liveStatus.length > 0" class="streamsContainer">
+        <div v-for="video in liveStatus" :key="video.id">
+          <h3>{{ video.channel.name }} is Live!</h3>
+          <div class="space-wrapper">
+            <div class="iframe-wrapper">
+              <iframe v-if="liveStatus" width="560" height="315" :src="`https://www.youtube.com/embed/${video.id}`"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
           </div>
         </div>
-        <div v-else>
-          <p>No one is live.</p>
-        </div>
       </div>
+      <div v-else>
+        <p>No one is live.</p>
+      </div>
+
     </div>
 
     <div class="upcomingStreams">
@@ -90,8 +90,12 @@ li {
   list-style-type: none;
 }
 
+h2 {
+  margin: 0px auto;
+}
+
 .currentlyStreaming {
-  background: linear-gradient(80deg, #313131e4, #000000), url('../assets/black-stars.png');
+  background: linear-gradient(80deg, #050505e4, #000000), url('../assets/black-stars.png');
   border-right: 1px solid rgb(153, 131, 6);
   width: 65vw;
   height: 100vh;

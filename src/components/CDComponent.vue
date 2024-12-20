@@ -141,8 +141,8 @@ onMounted(() => {
 }
 
 .cd {
-    max-height: 200px;
-    max-width: 200px;
+    /* max-height: 200px;
+    max-width: 200px; */
     width: 100%;
     aspect-ratio: 1 / 1;
     position: relative;
@@ -151,8 +151,8 @@ onMounted(() => {
 }
 
 .image {
-    max-height: 200px;
-    max-width: 200px;
+    /* max-height: 200px;
+    max-width: 200px; */
     width: 100%;
     aspect-ratio: 1 / 1;
     position: relative;

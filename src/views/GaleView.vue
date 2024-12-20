@@ -1,15 +1,14 @@
 <script setup lang="ts">
-import MemberCommonSection from '@/components/MemberCommonSection.vue';
-import MemberMusicStreamsSection from '@/components/MemberMusicStreamsSection.vue';
-import MemberCreditsComponent from '@/components/MemberCreditsComponent.vue';
-import IntroComponent from '@/components/IntroComponent.vue';
-import GaleIntroComponent from '@/components/GaleIntroComponent.vue';
+import MemberCommonSection from '@/components/MemberPages/MemberCommonSection.vue';
+import MemberMusicStreamsSection from '@/components/MemberPages/MemberMusicStreamsSection.vue';
+import MemberCreditsComponent from '@/components/MemberPages/MemberCreditsComponent.vue';
+import IntroComponent from '@/components/MemberPages/IntroComponent.vue';
+
 </script>
 
 <template>
   <main>
     <IntroComponent memberName="Gale" class="gale-section"></IntroComponent>
-    <GaleIntroComponent class="animation gale-section"></GaleIntroComponent>
     <MemberCommonSection memberName="Gale" class="gale-section"></MemberCommonSection>
     <MemberMusicStreamsSection memberName="Gale" class="gale-section layout-2"></MemberMusicStreamsSection>
     <MemberCreditsComponent memberName="Gale" class="gale-section"></MemberCreditsComponent>
