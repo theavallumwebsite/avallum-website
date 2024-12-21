@@ -3,6 +3,13 @@ import MemberCommonSection from '@/components/MemberPages/MemberCommonSection.vu
 import MemberMusicStreamsSection from '@/components/MemberPages/MemberMusicStreamsSection.vue';
 import MemberCreditsComponent from '@/components/MemberPages/MemberCreditsComponent.vue';
 import IntroComponent from '@/components/MemberPages/IntroComponent.vue';
+import { ref } from 'vue';
+import data from '../../data.json'
+
+const titleColor = ref(data.channels.Lucien.titleColor)
+const color = ref(data.channels.Lucien.color)
+const font = ref(data.channels.Lucien.font)
+
 </script>
 
 <template>
@@ -14,14 +21,15 @@ import IntroComponent from '@/components/MemberPages/IntroComponent.vue';
   </main>
 </template>
 
-
-<style scoped>
-.lucien-section {
-  font-family: 'Cormorant Garamond';
+<style>
+.lucien-section h2 {
+  font-family: v-bind(font);
+  background: v-bind(titleColor);
+  background-clip: text;
+  -webkit-text-stroke: 1px v-bind(color);
 }
 
-.animation {
-  position: absolute;
-  top: 0;
+.lucien-section {
+  font-family: 'Cormorant Garamond';
 }
 </style>

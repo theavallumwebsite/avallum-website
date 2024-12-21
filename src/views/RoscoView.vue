@@ -3,6 +3,12 @@ import MemberCommonSection from '@/components/MemberPages/MemberCommonSection.vu
 import MemberMusicStreamsSection from '@/components/MemberPages/MemberMusicStreamsSection.vue';
 import MemberCreditsComponent from '@/components/MemberPages/MemberCreditsComponent.vue';
 import IntroComponent from '@/components/MemberPages/IntroComponent.vue';
+import data from '../../data.json'
+import { ref } from 'vue'
+
+const color = ref(data.channels.Rosco.color)
+const font = ref(data.channels.Rosco.font)
+
 
 </script>
 
@@ -23,13 +29,6 @@ import IntroComponent from '@/components/MemberPages/IntroComponent.vue';
   top: 0;
   z-index: 997;
 }
-
-
-
-/* .rosco-section h2::after,
-.rosco-section h2::before {
-  content: none;
-} */
 </style>
 
 <style>
@@ -38,8 +37,8 @@ import IntroComponent from '@/components/MemberPages/IntroComponent.vue';
 }
 
 .rosco-section h2 {
-  font-family: 'Sedgwick Ave Display';
-  color: #FF0E7C;
-  filter: drop-shadow(3px 3px 0px white);
+  font-family: v-bind(font);
+  color: v-bind(color);
+  filter: drop-shadow(1px 2px 0px white);
 }
 </style>

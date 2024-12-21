@@ -182,7 +182,7 @@ onMounted(() => {
 /* LUCI */
 
 .lucien-section .cd-player {
-    background: linear-gradient(#DFDFDF, #3c1717);
+    background: linear-gradient(#363636, #620000);
 }
 
 /* ROSCO */

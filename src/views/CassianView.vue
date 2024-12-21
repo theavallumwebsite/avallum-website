@@ -3,14 +3,18 @@ import MemberCommonSection from '@/components/MemberPages/MemberCommonSection.vu
 import MemberMusicStreamsSection from '@/components/MemberPages/MemberMusicStreamsSection.vue';
 import MemberCreditsComponent from '@/components/MemberPages/MemberCreditsComponent.vue';
 import IntroComponent from '@/components/MemberPages/IntroComponent.vue';
+import { ref } from 'vue';
+import data from '../../data.json'
 
+const color = ref(data.channels.Cassian.extraColor)
+const font = ref(data.channels.Cassian.font)
 
 
 
 </script>
 
 <template>
-  <main>
+  <main class="cursor">
     <IntroComponent memberName="Cassian" class="cassian-section"></IntroComponent>
 
     <MemberCommonSection memberName="Cassian" class="cassian-section"></MemberCommonSection>
@@ -21,6 +25,10 @@ import IntroComponent from '@/components/MemberPages/IntroComponent.vue';
 </template>
 
 <style scoped>
+.cursor {
+  cursor: url('../assets/dewdrop-cursor.png'), auto;
+}
+
 .star {
   stroke: #DFA67D;
   stroke-width: 2px;
@@ -29,7 +37,7 @@ import IntroComponent from '@/components/MemberPages/IntroComponent.vue';
 }
 
 .star path {
-  fill: #146665;
+  fill: v-bind(color);
 }
 </style>
 
@@ -47,7 +55,7 @@ import IntroComponent from '@/components/MemberPages/IntroComponent.vue';
 
 
 .cassian-section .hastag {
-  color: #146665;
+  color: v-bind(color);
 }
 
 .cassian-section h2::after,
@@ -63,6 +71,6 @@ import IntroComponent from '@/components/MemberPages/IntroComponent.vue';
 }
 
 .star path {
-  fill: #146665;
+  fill: v-bind(color);
 }
 </style>

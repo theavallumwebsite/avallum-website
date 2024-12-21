@@ -3,6 +3,10 @@ import MemberCommonSection from '@/components/MemberPages/MemberCommonSection.vu
 import MemberMusicStreamsSection from '@/components/MemberPages/MemberMusicStreamsSection.vue';
 import MemberCreditsComponent from '@/components/MemberPages/MemberCreditsComponent.vue';
 import IntroComponent from '@/components/MemberPages/IntroComponent.vue';
+import { ref } from 'vue';
+import data from '../../data.json'
+
+const font = ref(data.channels.Gale.font)
 
 </script>
 
@@ -29,7 +33,7 @@ import IntroComponent from '@/components/MemberPages/IntroComponent.vue';
 }
 
 .gale-section h2 {
-  font-family: 'Pirata One';
+  font-family: v-bind(font);
   color: transparent;
   background: linear-gradient(#E5C373, #AC8246, #C0A054);
   background-clip: text;
