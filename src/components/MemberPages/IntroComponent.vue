@@ -140,8 +140,8 @@ onMounted(() => {
                 <p class="description">{{ member.lore }}</p>
 
                 <div class="icons">
-                    <i class="bi bi-youtube"></i>
-                    <i class="bi bi-twitter-x"></i>
+                    <a :href="member.Youtube"><i class="bi bi-youtube"></i></a>
+                    <a :href="member.X"><i class="bi bi-twitter-x"></i></a>
                 </div>
 
                 <div class="mascot">
@@ -255,7 +255,7 @@ b {
 }
 
 
-.icons {
+.icons a {
     color: v-bind(color);
     font-size: 20px;
 }
@@ -272,6 +272,7 @@ b {
     width: 10vw;
     /* border: 12px double v-bind(color); */
 }
+
 
 .image {
     width: 45vw;

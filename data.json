@@ -47,6 +47,8 @@
       "debut": "https://www.youtube.com/embed/VOhzg-Vi7Z0",
       "debut3D": "https://www.youtube.com/embed/LPvjfazmpLA",
       "ogSongImage": "change-square.jpg",
+      "X": "https://x.com/GaleGalleon",
+      "Youtube": "https://www.youtube.com/@GaleGalleon",
       "credits": [
         {
           "role": "Mama (model)",
@@ -94,6 +96,11 @@
           "role": "Description and lore writer",
           "name": "Hannah B.",
           "socialMedia": "https://twitter.com/Beenana0_0"
+        },
+        {
+          "role": "Mascot animation",
+          "name": "Ren",
+          "socialMedia": "https://twitter.com/ren_deru16"
         }
       ]
     },
@@ -136,6 +143,8 @@
       "debut": "https://www.youtube.com/embed/Myb8C_slm08",
       "debut3D": "https://www.youtube.com/embed/1QsGykAKGTU",
       "ogSongImage": "manymanymore-square.jpeg",
+      "X": "https://x.com/CassianFloros",
+      "Youtube": "https://www.youtube.com/@CassianFloros",
       "credits": [
         {
           "role": "mama",
@@ -198,6 +207,11 @@
           "role": "Mama (model)",
           "name": "Kokonata",
           "socialMedia": "https://twitter.com/cocokana_ovo"
+        },
+        {
+          "role": "Description and lore writer",
+          "name": "Hannah B.",
+          "socialMedia": "https://twitter.com/Beenana0_0"
         }
       ]
     },
@@ -244,6 +258,8 @@
       "debut": "https://www.youtube.com/embed/a7m0Iy-Z5Iw",
       "debut3D": "https://www.youtube.com/embed/VJyp8skS5u0",
       "ogSongImage": "dearyesterday-square.jpg",
+      "X": "https://x.com/LucienLunaris",
+      "Youtube": "https://www.youtube.com/@LucienLunaris",
       "credits": [
         {
           "role": "mama",
@@ -313,9 +329,9 @@
           "socialMedia": "https://twitter.com/ren_deru16"
         },
         {
-          "role": "Mama (model)",
-          "name": "Kokonata",
-          "socialMedia": "https://twitter.com/cocokana_ovo"
+          "role": "Description and lore writer",
+          "name": "Hannah B.",
+          "socialMedia": "https://twitter.com/Beenana0_0"
         }
       ]
     },
@@ -359,6 +375,8 @@
       "debut": "https://www.youtube.com/embed/LuUxkgwdmis",
       "debut3D": "https://www.youtube.com/embed/DB256_jcVxI",
       "ogSongImage": "coldwrists-square.jpg",
+      "X": "https://x.com/ZanderNetherbrand",
+      "Youtube": "https://www.youtube.com/@ZanderNetherbrand",
       "credits": [
         {
           "role": "mama",
@@ -455,6 +473,8 @@
       "debut": "https://www.youtube.com/embed/XvkFHGc4V44",
       "debut3D": "https://www.youtube.com/embed/8PRMe739U7U",
       "ogSongImage": "deadmeat-square.jpg",
+      "X": "https://x.com/RoscoGraves",
+      "Youtube": "https://www.youtube.com/@RoscoGraves",
       "credits": [
         {
           "role": "mama",
@@ -529,12 +549,12 @@
       "image": "1month-merch.jpeg"
     },
     {
-      "name": "Zander Birthday Goods",
+      "name": "Zander Birthday Voice & Goods",
       "link": "https://x.com/fsp_english/status/1776994782419751307",
       "image": "zander-merch.jpeg"
     },
     {
-      "name": "Rosco Birthday Goods",
+      "name": "Rosco Birthday Voice & Goods",
       "link": "https://x.com/fsp_english/status/1815038774205907125",
       "image": "rosco-merch.jpeg"
     },
@@ -544,24 +564,29 @@
       "image": "halfanniv-merch.jpeg"
     },
     {
-      "name": "Lucien Birthday Goods",
+      "name": "Lucien Birthday Voice & Goods",
       "link": "https://ichi-pro.booth.pm/items/6189842",
       "image": "lucien-merch.jpeg"
     },
     {
-      "name": "Avallum Halloween Voice",
+      "name": "Avallum Halloween Voice & Goods",
       "link": "https://ichi-pro.booth.pm/items/6216086",
       "image": "halloween-merch.jpeg"
     },
     {
-      "name": "Cassian Birthday Goods",
+      "name": "Cassian Birthday Voice & Goods",
       "link": "https://ichi-pro.booth.pm/items/6288096",
       "image": "cassian-merch.jpeg"
     },
     {
-      "name": "Gale Birthday Goods",
+      "name": "Gale Birthday Voice & Goods",
       "link": "https://ichi-pro.booth.pm/items/6334219",
       "image": "gale-merch.jpeg"
+    },
+    {
+      "name": "Winter Vacation Voice & Goods",
+      "link": "https://x.com/fsp_english/status/1870303442771816811",
+      "image": "winter-merch.jpeg"
     }
   ]
 }

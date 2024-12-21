@@ -8,6 +8,7 @@ import data from '../../data.json'
 
 const color = ref(data.channels.Cassian.extraColor)
 const font = ref(data.channels.Cassian.font)
+const titleColor = ref(data.channels.Cassian.titleColor)
 
 
 
@@ -46,21 +47,26 @@ const font = ref(data.channels.Cassian.font)
   font-family: 'Cormorant Garamond';
 }
 
+.cassian-section h2::after,
+.cassian-section h2::before {
+  content: none;
+}
+
+.cassian-section h2 {
+  font-family: v-bind(font);
+  background: v-bind(titleColor);
+  color: transparent;
+  background-clip: text;
+}
+
 .cassian-section.animation {
   position: absolute;
   top: 0;
   z-index: 997;
 }
 
-
-
 .cassian-section .hastag {
   color: v-bind(color);
-}
-
-.cassian-section h2::after,
-.cassian-section h2::before {
-  content: none;
 }
 
 .star {
