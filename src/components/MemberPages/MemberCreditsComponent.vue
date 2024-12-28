@@ -36,7 +36,7 @@ const font = ref(member.value.font)
                         <a :href="credit.socialMedia" target="_blank">{{ credit.name }}</a>
                     </li>
                 </ul>
-                <i>Please check the website credits for general credits.</i>
+                <i>Please check the website's "About & Credits" section for general credits.</i>
             </div>
         </div>
 

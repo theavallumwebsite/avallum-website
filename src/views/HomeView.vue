@@ -7,6 +7,7 @@ import BirthdayComponent from '@/components/BirthdayComponent.vue';
 import FooterComponent from '@/components/FooterComponent.vue';
 // @ts-ignore
 import MerchComponent from '@/components/MerchComponent.vue';
+import LinksComponent from '@/components/LinksComponent.vue';
 
 
 
@@ -20,6 +21,7 @@ import MerchComponent from '@/components/MerchComponent.vue';
     <MusicComponent></MusicComponent>
     <BirthdayComponent></BirthdayComponent>
     <MerchComponent></MerchComponent>
+    <LinksComponent></LinksComponent>
     <FooterComponent></FooterComponent>
   </main>
 </template>

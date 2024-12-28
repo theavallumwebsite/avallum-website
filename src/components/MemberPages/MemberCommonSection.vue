@@ -69,7 +69,8 @@ onMounted(() => {
                 <img :src="member.polaroids[3]" alt="" class="polaroid polaroid-d">
             </div>
             <div class="left image">
-                <img :src="member.model" alt="">
+                <img :src="member.model" alt="" class="model">
+                <img :src="member.chibi" alt="" class="chibi">
             </div>
             <div class="fact right fact-c">
                 <svg width="79" height="87" viewBox="0 0 79 87" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -266,15 +267,24 @@ h3 {
 
 .image {
     grid-area: 1 / 3 / 7 / 5;
-
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
 }
 
-.image img {
+.model {
     /* width: 120%; */
     width: 100%;
     max-width: 450px;
     position: relative;
     /* left: -10%; */
+}
+
+.chibi {
+    width: 50%;
+    height: auto;
+    position: relative;
+    left: -9vh;
 }
 
 .fact-c {
@@ -342,9 +352,11 @@ h3 {
     color: v-bind(extraColor);
 }
 
-.cassian-section .image img {
+.cassian-section .model {
     width: 100%;
 }
+
+
 
 .lucien-section h2 {
     -webkit-text-stroke: 1px #BB0F28;
@@ -358,6 +370,9 @@ h3 {
     color: v-bind(color);
 }
 
+.zander-section .chibi {
+    left: -10vw;
+}
 
 
 .zander-section .right svg path {
@@ -482,12 +497,16 @@ h3 {
         grid-area: 4 / 2 / 7 / 3;
     }
 
-    .image img {
+    .model {
         width: 150%;
         right: 10vw;
         bottom: 10vh;
     }
 
+    .chibi {
+        left: -30vw;
+        bottom: 10vh;
+    }
 
     .fact-c {
         grid-area: auto;
@@ -516,10 +535,15 @@ h3 {
         clip-path: polygon(0 0, 0% 0%, 111% 111%, 0% 106%);
     }
 
-    .cassian-section .image img {
+    .cassian-section .model {
         width: 150%;
         right: 10vw;
         bottom: 10vh;
+    }
+
+    .cassian-section .chibi {
+        right: 10vw;
+        bottom: 15vh;
     }
 
     .gale-section .image img {
@@ -538,9 +562,10 @@ h3 {
         bottom: 5vh;
     }
 
-    .zander-section .image img {
+    .zander-section .model {
         left: -2vw;
     }
+
 
 
 }

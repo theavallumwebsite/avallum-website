@@ -35,8 +35,8 @@ const getClass = (index: number) => {
 section {
     padding: 0px 15px;
     text-align: center;
-    height: 94vh;
-    background: linear-gradient(transparent, rgb(11, 11, 11));
+    height: 100vh;
+    border-bottom: 1px solid gold;
 }
 
 h3 {
@@ -48,9 +48,9 @@ h3 {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     gap: 20px;
-    overflow: scroll;
-    height: 83vh;
-    padding: 5px
+    /* overflow: scroll; */
+    height: 87vh;
+    padding: 5px;
 }
 
 .merchItem img {

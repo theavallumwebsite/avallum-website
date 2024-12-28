@@ -10,9 +10,10 @@
       Avallum is a five-person vtuber group created by
       <a href="https://firststage-pro.com/en/">First Stage Production</a>.
     </p>
+    <p>They debuted on <b>January 28th, 2024</b>.</p>
     <p>Together, they're searching for <i>Avallum</i>.</p>
     <a href="#members" class="hero-a">
-      <h2>Enter</h2>
+      <h2>Discover more about them</h2>
     </a>
   </section>
 </template>
