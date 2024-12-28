@@ -48,7 +48,7 @@ h3 {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     gap: 20px;
-    /* overflow: scroll; */
+    overflow: scroll;
     height: 87vh;
     padding: 5px;
 }
