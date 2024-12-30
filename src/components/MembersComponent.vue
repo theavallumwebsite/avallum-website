@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { useRouter } from 'vue-router'
-import gsap from 'gsap';
-import { onMounted } from 'vue';
+
 
 const router = useRouter()
 
@@ -35,7 +34,7 @@ function nagivateTo(member: string) {
         <div class="lucien" @click="nagivateTo('lucienlunaris')">
           <h3>Lucien Lunaris 🎸</h3>
         </div>
-        <img src="../assets/dewdrop.png" alt="" class="mascot">
+        <img src="../assets/lunarist.png" alt="" class="mascot">
       </div>
       <div class="container">
 

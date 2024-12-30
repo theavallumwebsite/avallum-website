@@ -39,7 +39,7 @@ onMounted(() => {
 
 
 <template>
-  <main>
+  <main class="cursor">
     <IntroComponent memberName="Zander" class="zander-section"></IntroComponent>
     <MemberCommonSection memberName="Zander" class="zander-section"></MemberCommonSection>
     <MemberMusicStreamsSection memberName="Zander" class="zander-section layout-2"></MemberMusicStreamsSection>
@@ -48,6 +48,10 @@ onMounted(() => {
 </template>
 
 <style>
+.cursor {
+  cursor: url('../assets/netherling-cursor.png'), auto;
+}
+
 .animation.zander-section {
   position: absolute;
   top: 0;

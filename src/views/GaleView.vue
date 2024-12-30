@@ -11,7 +11,7 @@ const font = ref(data.channels.Gale.font)
 </script>
 
 <template>
-  <main>
+  <main class="cursor">
     <IntroComponent memberName="Gale" class="gale-section"></IntroComponent>
     <MemberCommonSection memberName="Gale" class="gale-section"></MemberCommonSection>
     <MemberMusicStreamsSection memberName="Gale" class="gale-section layout-2"></MemberMusicStreamsSection>
@@ -20,6 +20,10 @@ const font = ref(data.channels.Gale.font)
 </template>
 
 <style>
+.cursor {
+  cursor: url('../assets/pipsqueak-cursor.png'), auto;
+}
+
 .animation.gale-section {
   position: absolute;
   top: 0;

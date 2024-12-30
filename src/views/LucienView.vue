@@ -13,7 +13,7 @@ const font = ref(data.channels.Lucien.font)
 </script>
 
 <template>
-  <main>
+  <main class="cursor">
     <IntroComponent memberName="Lucien" class="lucien-section"></IntroComponent>
     <MemberCommonSection memberName="Lucien" class="lucien-section"></MemberCommonSection>
     <MemberMusicStreamsSection memberName="Lucien" class="lucien-section layout-1"></MemberMusicStreamsSection>
@@ -31,5 +31,11 @@ const font = ref(data.channels.Lucien.font)
 
 .lucien-section {
   font-family: 'Cormorant Garamond';
+}
+</style>
+
+<style scoped>
+.cursor {
+  cursor: url('../assets/lunarist-cursor.png'), auto;
 }
 </style>

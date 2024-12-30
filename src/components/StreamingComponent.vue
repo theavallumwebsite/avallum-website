@@ -165,6 +165,10 @@ h2 {
     padding: 0px;
   }
 
+  .currentlyStreaming h2 {
+    padding-top: 2vh;
+  }
+
   .upcomingStreams {
     width: 100vw;
     height: 50vh;

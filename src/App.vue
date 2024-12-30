@@ -257,18 +257,28 @@ h1 {
 
 @media screen and (max-width: 768px) {
 
+  header {
+    font-size: 80%;
+  }
+
   h1 {
     padding-left: 0px;
+    /* text-align: center; */
+  }
+
+  nav {
+    padding: 0px 10px;
   }
 
   .nav-sections {
     justify-content: flex-end;
     align-items: flex-end;
     gap: 3vw;
+
   }
 
   .wrapper p {
-    font-size: 2vw;
+    font-size: 2.2vw;
   }
 }
 </style>

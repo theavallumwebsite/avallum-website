@@ -122,6 +122,7 @@ section {
     width: 10vw;
     opacity: 0.1;
     transform-origin: bottom center;
+    z-index: 999;
 }
 
 .dart {

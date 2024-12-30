@@ -4,7 +4,6 @@ import data from '../../../data.json'
 import GaleIntroComponent from './GaleIntroComponent.vue';
 import CassianAnimation from './CassianAnimation.vue';
 import LucienAnimation from './LucienAnimation.vue';
-import RoscoIntroComponent from './RoscoIntroComponent.vue';
 import ZanderIntroComponent from './ZanderIntroComponent.vue';
 
 const props = defineProps({
@@ -164,7 +163,7 @@ onMounted(() => {
         <CassianAnimation class="background" v-if="member.name === 'Cassian Floros'"></CassianAnimation>
         <LucienAnimation class="background" v-if="member.name === 'Lucien Lunaris'"></LucienAnimation>
         <ZanderIntroComponent class="background" v-if="member.name === 'Zander Netherbrand'"></ZanderIntroComponent>
-        <RoscoIntroComponent class="background" v-if="member.name === 'Rosco  Graves'"></RoscoIntroComponent>
+
     </section>
 
 </template>
@@ -180,7 +179,6 @@ section {
     /* font-family: 'Cormorant Garamond', serif; */
     position: relative;
     z-index: 998;
-
 }
 
 h2::after,
@@ -400,12 +398,9 @@ b {
     bottom: -10vh;
     right: 0;
     width: 70vw;
+    max-width: 1100px;
 }
 
-.zander-section .mascot {
-    width: 20%;
-    margin-left: 7vw;
-}
 
 .zander-section .mascot p {
     width: auto;
@@ -413,9 +408,6 @@ b {
     margin: 0;
 }
 
-/* .zander-section .mascot img {
-    float: left;
-} */
 
 /* Cass */
 
@@ -548,6 +540,7 @@ b {
 }
 
 .rosco-section .image {
+
     width: 30vw;
 }
 
@@ -583,8 +576,8 @@ b {
 @media (max-width: 768px) {
 
     h2 {
-        /* font-size: 1.2rem; */
-        font-size: 80%;
+        font-size: 1.3rem;
+        /* font-size: 100%; */
     }
 
     h3 {
@@ -594,7 +587,7 @@ b {
 
     p,
     li {
-        font-size: 65%;
+        font-size: 80%;
     }
 
     .intro {
@@ -640,12 +633,19 @@ b {
     }
 
     .mascot img {
-        width: 20vw;
+        width: 25vw;
     }
 
     .model-div {
         align-items: normal;
     }
+
+    .hastags {
+
+
+        flex-wrap: wrap;
+    }
+
 
     .gale-section .intro {
         padding: 0px;
@@ -656,7 +656,8 @@ b {
 
     .gale-section .content {
         width: 94vw;
-        height: 65vh;
+        height: 60vh;
+        justify-content: space-evenly;
     }
 
     .gale-section .image {
@@ -688,13 +689,12 @@ b {
         width: 92%;
     }
 
-    /*     
+
     .gale-section .mascot {
         position: relative;
         bottom: 0px;
         align-self: auto;
-        margin-top: 1vh;
-    } */
+    }
 
     .gale-section .mascot img {
         width: 20vw;
@@ -712,7 +712,7 @@ b {
     .cassian-section .intro {
         flex-direction: column-reverse;
         height: 100%;
-
+        justify-content: space-between;
     }
 
     .cassian-section .content {
@@ -760,24 +760,35 @@ b {
         margin: auto;
         padding: 0px;
         overflow: hidden;
+        justify-content: space-around;
     }
 
     .lucien-section .content .description {
         width: 90%;
+        margin: 0px auto;
     }
 
     .lucien-section .content .tags-list {
         margin: 0px
     }
 
+    .lucien-section .hastags {
+        margin-top: 1vh;
+    }
+
     .lucien-section .image {
         width: 100%;
         border: none;
+        height: 20vh;
     }
 
     .lucien-section .image img {
         top: 26vh;
         width: 100%;
+    }
+
+    .zander-section {
+        background-position: center;
     }
 
     .zander-section .intro {
@@ -803,16 +814,25 @@ b {
         top: 5vh;
     }
 
+    .zander-section .mascot {
+        width: 100%;
+        margin: auto;
+    }
 
 
     .rosco-section .intro {
         font-size: 0.9rem;
-        justify-content: space-around;
     }
 
     .rosco-section .content {
-        flex-direction: column;
+        flex-direction: column-reverse;
         width: 100vw;
+        height: 80vh;
+        justify-content: space-around;
+    }
+
+    .rosco-section .lists {
+        order: 1;
     }
 
     .rosco-section .lists ul {
@@ -821,6 +841,7 @@ b {
 
     .rosco-section .image {
         width: 100%;
+        order: 1;
     }
 
     .rosco-section .image img {
@@ -878,13 +899,13 @@ b {
 
     .newDiv {
         width: 90%;
-        flex-direction: row;
+        flex-direction: column;
         flex-wrap: wrap;
         align-items: center;
+        gap: 1vh;
     }
 
     .newDiv .description {
-        flex-basis: 100%;
         margin: 0px;
 
     }

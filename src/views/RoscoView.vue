@@ -14,9 +14,8 @@ const font = ref(data.channels.Rosco.font)
 
 
 <template>
-  <main>
+  <main class="cursor">
     <IntroComponent memberName="Rosco" class="rosco-section"></IntroComponent>
-
     <MemberCommonSection memberName="Rosco" class="rosco-section"></MemberCommonSection>
     <MemberMusicStreamsSection memberName="Rosco" class="rosco-section layout-2"></MemberMusicStreamsSection>
     <MemberCreditsComponent memberName="Rosco" class="rosco-section"></MemberCreditsComponent>
@@ -24,6 +23,10 @@ const font = ref(data.channels.Rosco.font)
 </template>
 
 <style scoped>
+.cursor {
+  cursor: url('../assets/roscal-cursor.png'), auto;
+}
+
 .animation {
   position: absolute;
   top: 0;
