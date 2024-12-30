@@ -12,22 +12,25 @@ let showModal = ref<boolean>(false);
             <div class="about">
                 <p @click="showModal = false" class="closeButton">X</p>
                 <h3>About</h3>
-                <i>This website is not affiliated with First Stage Production. No profit is being made off this
-                    website.</i>
-                <p>Avallum World was designed and developed by <b>Nana (@gukkietty on X)</b>.</p>
-                <p>I decided to do this website because I love Avallum and I wanted to gain some more developing
-                    experience for my own professional life. This is kinda my love letter to the community, and I hope
-                    that this website is useful.</p>
+                <i>This website is not affiliated with First Stage Production (FSP please don't bonk me pls)</i>
+                <p>Avallum World was designed and developed by <a href="https://x.com/gukkietty">Nana (@gukkietty on
+                        X)</a>.</p>
+                <p>I decided to do this website because I needed to gain more developing experience, so what better than
+                    to do a website about my favorite vtubers? I have a lot of love for Avallum and the community, and I
+                    hope to convey that much through this website.</p>
 
-                <h3>General Credits</h3>
-                <p>Data Collection: Noise & Hannah B. (HUGE thank you to them for putting together all the data!)</p>
-                <p>Mascots drawing: Nanni</p>
-                <p>Mascots drawing: Risa</p>
-                <p>Birthday Hat: Azure</p>
-                <p>Free assets: Pixabay</p>
-                <p>Cake image: Microsoft</p>
+                <h3>General Credits </h3>
+                <h4>(HUGE thank you to these people!)</h4>
+                <i>Please check the member pages for their credits.</i>
+                <p>Data Collection: <a href="https://x.com/noxise8">Noise</a> & <a
+                        href="https://x.com/Beenana0_0">Hannah B.</a></p>
+                <p>Pop up Roscal, Dewdrop: <a href="https://x.com/ryuttoz">Nanni</a></p>
+                <p>Pop up Pipsqueak, Netherling: <a href="https://x.com/risas_puffs">Risa</a></p>
+                <p>Pop up Lunarist: <a href="https://x.com/ren_deru16">Renderu</a></p>
+                <p>Birthday Hats: <a href="https://x.com/ashurnotazer">Azure</a></p>
                 <h3>For my fellow developers (and anyone curious)</h3>
-                <p>This was developed in <b>VueJS</b> (in typescript), with the <b>Holodex API</b> for all the stream
+                <p>Avallum World was developed in <b>VueJS</b> (typescript), with the <b>Holodex API</b> for all the
+                    stream
                     and
                     music
                     related data
@@ -54,14 +57,21 @@ section {
     background-blend-mode: darken; */
 }
 
+
+
 p {
     margin-left: 1vw;
 }
 
+a {
+    font-weight: bold;
+}
 
 .closeButton {
     float: right;
     padding-right: 10px;
+    font-family: sans-serif;
+    margin: 0px;
 }
 
 .modal {
@@ -88,8 +98,11 @@ p {
     overflow: scroll;
 }
 
-@media screen and (max-width: 768px) {
+.modal h3 {
+    text-transform: uppercase;
+}
 
+@media screen and (max-width: 768px) {
     section {
         height: 7vh;
     }

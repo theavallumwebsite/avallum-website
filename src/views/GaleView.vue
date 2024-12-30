@@ -20,10 +20,6 @@ const font = ref(data.channels.Gale.font)
 </template>
 
 <style>
-.cursor {
-  cursor: url('../assets/pipsqueak-cursor.png'), auto;
-}
-
 .animation.gale-section {
   position: absolute;
   top: 0;
@@ -46,5 +42,11 @@ const font = ref(data.channels.Gale.font)
 
 .gale-section {
   font-family: 'Quicksand';
+}
+</style>
+
+<style scoped>
+.cursor {
+  cursor: url('../assets/pipsqueak-cursor.png'), auto;
 }
 </style>

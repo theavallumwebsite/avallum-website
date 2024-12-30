@@ -471,6 +471,10 @@ section {
     .layout-2 .cd-container {
         grid-area: 2 / 2 /3 / 2;
     }
+
+    .rosco-section .streams {
+        background-size: cover;
+    }
 }
 </style>
 

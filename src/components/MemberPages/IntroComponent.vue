@@ -114,6 +114,7 @@ onMounted(() => {
 
 <template>
     <section>
+        <ZanderIntroComponent class="background" v-if="member.name === 'Zander Netherbrand'"></ZanderIntroComponent>
         <div class="intro">
             <video src="../../assets/rosco_background.mp4" v-if="memberName === 'Rosco'" class="rosco-video" autoplay
                 loop muted playsinline></video>
@@ -144,7 +145,7 @@ onMounted(() => {
                 </div>
 
                 <div class="mascot">
-                    <p>This is the fan mascot, a {{ member.fanName }}!</p>
+                    <p>This is the fan mascot, a <b>{{ member.fanName }}</b>!</p>
                     <img :src="member.mascot" alt="" />
                 </div>
 
@@ -162,7 +163,7 @@ onMounted(() => {
         <GaleIntroComponent class="background" v-if="member.name === 'Gale Galleon'"></GaleIntroComponent>
         <CassianAnimation class="background" v-if="member.name === 'Cassian Floros'"></CassianAnimation>
         <LucienAnimation class="background" v-if="member.name === 'Lucien Lunaris'"></LucienAnimation>
-        <ZanderIntroComponent class="background" v-if="member.name === 'Zander Netherbrand'"></ZanderIntroComponent>
+
 
     </section>
 
@@ -333,6 +334,8 @@ b {
 
 /* zander */
 
+
+
 .zander-section {
     z-index: 998;
     position: relative;
@@ -398,7 +401,8 @@ b {
     bottom: -10vh;
     right: 0;
     width: 70vw;
-    max-width: 1100px;
+    max-width: 1000px;
+    z-index: -2;
 }
 
 
@@ -820,9 +824,11 @@ b {
     }
 
 
+
     .rosco-section .intro {
         font-size: 0.9rem;
     }
+
 
     .rosco-section .content {
         flex-direction: column-reverse;

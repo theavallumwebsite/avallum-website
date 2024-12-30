@@ -90,7 +90,7 @@
       "Pagecredits": [
         {
           "role": "Mascot animation",
-          "name": "Ren",
+          "name": "Renderu",
           "socialMedia": "https://twitter.com/ren_deru16"
         },
         {
@@ -99,9 +99,14 @@
           "socialMedia": "https://twitter.com/Beenana0_0"
         },
         {
-          "role": "Mascot animation",
-          "name": "Ren",
-          "socialMedia": "https://twitter.com/ren_deru16"
+          "role": "Pattern",
+          "name": "Nana (me)",
+          "socialMedia": "https://twitter.com/gukkietty"
+        },
+        {
+          "role": "Cursor",
+          "name": "Risa",
+          "socialMedia": "https://x.com/risas_puffs"
         }
       ]
     },
@@ -206,14 +211,19 @@
           "socialMedia": "https://twitter.com/ren_deru16"
         },
         {
-          "role": "Mama (model)",
-          "name": "Kokonata",
-          "socialMedia": "https://twitter.com/cocokana_ovo"
-        },
-        {
           "role": "Description and lore writer",
           "name": "Hannah B.",
           "socialMedia": "https://twitter.com/Beenana0_0"
+        },
+        {
+          "role": "Pattern",
+          "name": "Nana (me)",
+          "socialMedia": "https://twitter.com/gukkietty"
+        },
+        {
+          "role": "Cursor",
+          "name": "Risa",
+          "socialMedia": "https://x.com/risas_puffs"
         }
       ]
     },
@@ -335,6 +345,16 @@
           "role": "Description and lore writer",
           "name": "Hannah B.",
           "socialMedia": "https://twitter.com/Beenana0_0"
+        },
+        {
+          "role": "Pattern",
+          "name": "Nana (me)",
+          "socialMedia": "https://twitter.com/gukkietty"
+        },
+        {
+          "role": "Cursor",
+          "name": "Renderu",
+          "socialMedia": "https://x.com/ren_deru16"
         }
       ]
     },
@@ -426,13 +446,18 @@
       "Pagecredits": [
         {
           "role": "Mascot animation",
-          "name": "Ren",
+          "name": "Renderu",
           "socialMedia": "https://twitter.com/ren_deru16"
         },
         {
-          "role": "Mama (model)",
-          "name": "Kokonata",
-          "socialMedia": "https://twitter.com/cocokana_ovo"
+          "role": "Description and lore writer",
+          "name": "Hannah B.",
+          "socialMedia": "https://twitter.com/Beenana0_0"
+        },
+        {
+          "role": "Cursor",
+          "name": "Risa",
+          "socialMedia": "https://x.com/risas_puffs"
         }
       ]
     },
@@ -542,6 +567,11 @@
           "role": "Description and lore writer",
           "name": "Hannah B.",
           "socialMedia": "https://twitter.com/Beenana0_0"
+        },
+        {
+          "role": "Cursor",
+          "name": "Nanni",
+          "socialMedia": "https://x.com/ryuttoz"
         }
       ]
     }
