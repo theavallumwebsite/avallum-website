@@ -23,14 +23,14 @@
       "birthdayHat": "Gale-party-hat.png",
       "font": "Pirata One",
       "titleColor": "linear-gradient(#E5C373, #AC8246, #C0A054)",
-      "alternativeNames": "Captain, Gae Galleon",
+      "alternativeNames": "Captain",
       "facts": [
         "Hates vegetables",
         "Can turn any horror game into a comedy",
         "is basically Kermit the Frog",
         "'Peanitz'"
       ],
-      "tags": ["December 9th", "28 years old", "Human", "Pirate"],
+      "tags": ["December 9th", "29 years old", "Human", "Pirate"],
       "hastags": [
         "Art: #galeGallery",
         "Live: #galeGoingLive",
@@ -47,7 +47,7 @@
       "emoji": "🍻⚔️",
       "debut": "https://www.youtube.com/embed/VOhzg-Vi7Z0",
       "debut3D": "https://www.youtube.com/embed/LPvjfazmpLA",
-      "ogSongImage": "change-square.jpg",
+      "cd": "gale-cd.png",
       "X": "https://x.com/GaleGalleon",
       "Youtube": "https://www.youtube.com/@GaleGalleon",
       "credits": [
@@ -149,7 +149,7 @@
       "emoji": "🌿✨",
       "debut": "https://www.youtube.com/embed/Myb8C_slm08",
       "debut3D": "https://www.youtube.com/embed/1QsGykAKGTU",
-      "ogSongImage": "manymanymore-square.jpeg",
+      "cd": "cassian-cd.png",
       "X": "https://x.com/CassianFloros",
       "Youtube": "https://www.youtube.com/@CassianFloros",
       "credits": [
@@ -270,7 +270,7 @@
       "emoji": "🎸🌙",
       "debut": "https://www.youtube.com/embed/a7m0Iy-Z5Iw",
       "debut3D": "https://www.youtube.com/embed/VJyp8skS5u0",
-      "ogSongImage": "dearyesterday-square.jpg",
+      "cd": "lucien-cd.png",
       "X": "https://x.com/LucienLunaris",
       "Youtube": "https://www.youtube.com/@LucienLunaris",
       "credits": [
@@ -398,7 +398,7 @@
       "emoji": "♈️",
       "debut": "https://www.youtube.com/embed/LuUxkgwdmis",
       "debut3D": "https://www.youtube.com/embed/DB256_jcVxI",
-      "ogSongImage": "coldwrists-square.jpg",
+      "cd": "zander-cd.png",
       "X": "https://x.com/ZanderNetherbrand",
       "Youtube": "https://www.youtube.com/@ZanderNetherbrand",
       "credits": [
@@ -471,8 +471,8 @@
       "model": "rosco_model.webp",
       "portrait": "rosco-portrait.webp",
       "mainArt": "",
-      "mainArtTransparent": "rosco_test.png",
-      "chibi": "",
+      "mainArtTransparent": "rosco_pc.png",
+      "chibi": "rosco-chibi.gif",
       "birthdayHat": "Rosco-party-hat.png",
       "font": "Sedgwick Ave Display",
       "titleColor": "#FA1C9A",
@@ -502,7 +502,7 @@
       "emoji": "🕹️🩻",
       "debut": "https://www.youtube.com/embed/XvkFHGc4V44",
       "debut3D": "https://www.youtube.com/embed/8PRMe739U7U",
-      "ogSongImage": "deadmeat-square.jpg",
+      "cd": "rosco-cd.png",
       "X": "https://x.com/RoscoGraves",
       "Youtube": "https://www.youtube.com/@RoscoGraves",
       "credits": [

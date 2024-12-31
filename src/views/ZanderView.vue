@@ -48,10 +48,6 @@ onMounted(() => {
 </template>
 
 <style>
-.cursor {
-  cursor: url('../assets/netherling-cursor.png'), auto;
-}
-
 .animation.zander-section {
   position: absolute;
   top: 0;
@@ -74,5 +70,11 @@ onMounted(() => {
   color: transparent;
   text-shadow: -1px -1px 2px rgba(213, 3, 255, 0.5), 1px 1px 2px rgba(57, 0, 52, 0.6);
   filter: drop-shadow(0px 0px 0.5rem #c831d0);
+}
+</style>
+
+<style scoped>
+.cursor {
+  cursor: url('../assets/netherling-cursor.png'), auto;
 }
 </style>

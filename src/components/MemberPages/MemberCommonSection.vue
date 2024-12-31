@@ -176,6 +176,16 @@ h3 {
     color: v-bind(extraColor);
 }
 
+.polaroid:hover {
+    animation: scale 0.2s alternate linear forwards;
+}
+
+@keyframes scale {
+    100% {
+        transform: scale(1.1);
+    }
+}
+
 .polaroid img {
     width: 50%;
     max-width: 150px;

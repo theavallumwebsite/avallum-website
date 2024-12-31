@@ -7,7 +7,7 @@ let showModal = ref<boolean>(false);
 <template>
     <section id="footer" class="footer">
         <h3>Avallum World</h3>
-        <p @click="showModal = true">About & Credits</p>
+        <p @click="showModal = true" class="modalButton">About & Credits</p>
         <div v-if="showModal" class="modal" @click.self="showModal = false">
             <div class="about">
                 <p @click="showModal = false" class="closeButton">X</p>
@@ -100,6 +100,16 @@ a {
 
 .modal h3 {
     text-transform: uppercase;
+}
+
+.modalButton:hover {
+    animation: scale 0.3s alternate linear forwards;
+}
+
+@keyframes scale {
+    100% {
+        transform: scale(1.1);
+    }
 }
 
 @media screen and (max-width: 768px) {

@@ -27,7 +27,7 @@ async function getKaraoke() {
       }
     })
   } catch (error) {
-    console.log('error karaoke', error)
+    console.log('karaoke error', error)
   }
 }
 
@@ -46,7 +46,7 @@ async function getCovers() {
       }
     })
   } catch (error) {
-    console.log('error covers', error)
+    console.log('cover error', error)
   }
 }
 
@@ -123,7 +123,7 @@ async function getMemberMusic(member: keyof typeof data.channels) {
     const cover = await getMusic(channelId, 'Music_Cover')
     const karaoke = await getMusic(channelId, 'singing')
     const originalSong = await getMusic(channelId, 'Original_Song')
-    console.log(cover, karaoke, originalSong)
+    // console.log(cover, karaoke, originalSong)
     allSongs.value = []
     allSongs.value.push(...cover.data, ...karaoke.data, ...originalSong.data)
   } catch (error) {
@@ -141,7 +141,7 @@ const filteredSongs = computed(() => {
 
 onMounted(() => {
   getAllSongs()
-  console.log(allSongs)
+  // console.log(allSongs)
 })
 </script>
 

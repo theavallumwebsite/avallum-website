@@ -102,7 +102,7 @@ function roscoChanges() {
 
 onMounted(() => {
     changeHastag()
-    console.log(member.value.name)
+    // console.log(member.value.name)
     if (member.value.name === "Gale Galleon") {
         galeAddons()
     }
@@ -500,7 +500,7 @@ b {
 
 
 .rosco-section {
-    background: linear-gradient(#690031e0, #00042cb1), url('../../assets/rosco_transparent.png');
+    background: linear-gradient(#690031e0, #00042cb1), url('../../assets/rosco_pc.png');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;

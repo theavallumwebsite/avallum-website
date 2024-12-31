@@ -97,9 +97,9 @@ onMounted(() => {
     <div class="cd-container">
         <div class="cd-player">
             <div class="cd-images">
-                <img :src="memberName === 'avallum' ? `${BASE_URL}crossingfates-square.jpg` : `${BASE_URL}${member.ogSongImage}`"
-                    alt="CD Image" class="image">
-                <img src=" ../assets/cd.png" alt="" class="cd">
+                <!-- <img :src="memberName === 'avallum' ? `${BASE_URL}avallum-cd.png` : `${BASE_URL}${member.cd}`"
+                    alt="CD Image" class="image"> -->
+                <img :src="memberName === 'avallum' ? `avallum-cd.png` : `${member.cd}`" alt="CD Image" class="image">
             </div>
 
         </div>
@@ -140,16 +140,6 @@ onMounted(() => {
     transform-origin: 50% 50%;
 }
 
-.cd {
-    /* max-height: 200px;
-    max-width: 200px; */
-    width: 100%;
-    aspect-ratio: 1 / 1;
-    position: relative;
-    bottom: 101%;
-    z-index: 998;
-}
-
 .image {
     /* max-height: 200px;
     max-width: 200px; */
@@ -172,7 +162,7 @@ onMounted(() => {
     margin: 0px;
 }
 
-ç .cassian-section .cd-container {
+.cassian-section .cd-container {
     display: flex;
     justify-content: center;
     align-items: center;

@@ -52,7 +52,7 @@ onMounted(() => {
         </div>
       </div>
       <div v-else>
-        <p>No one is live.</p>
+        <p>No one is live :( </p>
       </div>
 
     </div>

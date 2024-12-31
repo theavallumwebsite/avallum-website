@@ -227,6 +227,16 @@ b {
 }
 
 
+.birthdaycake:hover {
+    animation: scale 0.3s alternate linear forwards;
+}
+
+@keyframes scale {
+    100% {
+        transform: scale(1.1);
+    }
+}
+
 @media screen and (max-width: 768px) {
     .birthdays {
         flex-direction: column;

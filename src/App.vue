@@ -255,6 +255,16 @@ h1 {
   -webkit-text-stroke: 0.4px black;
 }
 
+a:hover {
+  animation: scale 0.2s alternate linear forwards;
+}
+
+@keyframes scale {
+  100% {
+    transform: scale(1.1);
+  }
+}
+
 @media screen and (max-width: 768px) {
 
   header {

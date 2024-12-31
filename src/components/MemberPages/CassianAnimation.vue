@@ -4,7 +4,7 @@ import { onMounted } from 'vue';
 
 function animation() {
   const plants = document.querySelectorAll('.plant')
-  console.log(plants)
+  // console.log(plants)
 
   plants.forEach((plant) => {
     gsap.fromTo(plant,

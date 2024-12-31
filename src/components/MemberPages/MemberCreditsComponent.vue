@@ -82,6 +82,7 @@ li>p {
     font-weight: bold;
 }
 
+
 @media (max-width: 768px) {
 
     .credit-list {
