@@ -8,22 +8,10 @@
       // Prevent infinite redirection loop
       const currentPath = location.pathname
 
-      // Check if the current page is a valid route
-      const validRoutes = [
-        '/', // Home page
-        '/cassianfloros',
-        '/galegalleon',
-        '/zandernetherbrand',
-        '/roscograves',
-        '/lucienlunaris'
-      ]
-
-      // Check if the current path is a valid route
-      const isValidRoute = validRoutes.includes(currentPath)
-
-      if (!isValidRoute) {
-        // If the path is not valid, redirect to the home page
-        const redirectTo = location.origin + location.pathname
+      // Only redirect if we are not on the homepage already
+      if (currentPath !== '/') {
+        // Redirect to the homepage if we're not already there
+        const redirectTo = location.origin + '/'
         location.replace(redirectTo)
       }
     </script>
