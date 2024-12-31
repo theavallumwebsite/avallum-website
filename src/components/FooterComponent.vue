@@ -12,7 +12,7 @@ let showModal = ref<boolean>(false);
             <div class="about">
                 <p @click="showModal = false" class="closeButton">X</p>
                 <h3>About</h3>
-                <i>This website is not affiliated with First Stage Production (FSP please don't bonk me pls)</i>
+                <i>This website is not affiliated with First Stage Production (FSP don't bonk me pls)</i>
                 <p>Avallum World was designed and developed by <a href="https://x.com/gukkietty">Nana (@gukkietty on
                         X)</a>.</p>
                 <p>I decided to do this website because I needed to gain more developing experience, so what better than
@@ -21,7 +21,7 @@ let showModal = ref<boolean>(false);
 
                 <h3>General Credits </h3>
                 <h4>(HUGE thank you to these people!)</h4>
-                <i>Please check the member pages for their credits.</i>
+                <i>Please check the member pages for the rest of the credits.</i>
                 <p>Data Collection: <a href="https://x.com/noxise8">Noise</a> & <a
                         href="https://x.com/Beenana0_0">Hannah B.</a></p>
                 <p>Pop up Roscal, Dewdrop: <a href="https://x.com/ryuttoz">Nanni</a></p>

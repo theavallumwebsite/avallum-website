@@ -2,7 +2,6 @@
 import { RouterLink, RouterView, useRoute } from 'vue-router'
 import { computed, onMounted, onUnmounted, ref } from 'vue'
 import router from './router';
-import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 
@@ -215,9 +214,7 @@ h1 {
 .cassian-header a,
 .cassian-header h1 {
   color: white;
-  /* color: #146665; */
   font-family: 'Abhaya Libre';
-  /* -webkit-text-stroke: 0.3px #146665; */
 }
 
 .cassian-header h1 {

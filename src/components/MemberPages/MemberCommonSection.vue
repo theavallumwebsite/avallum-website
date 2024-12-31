@@ -294,7 +294,7 @@ h3 {
     width: 50%;
     height: auto;
     position: relative;
-    left: -9vh;
+    left: -16vh;
 }
 
 .fact-c {
@@ -435,6 +435,10 @@ h3 {
     left: auto;
 }
 
+.rosco-section .image .chibi {
+    left: -8vw;
+}
+
 /* mobile */
 
 @media (max-width: 768px) {
@@ -572,8 +576,21 @@ h3 {
         bottom: 5vh;
     }
 
+    .rosco-section .image .chibi {
+        left: -32vw;
+    }
+
+    .rosco-section .content p {
+        width: 96%;
+    }
+
+
     .zander-section .model {
         left: -2vw;
+    }
+
+    .zander-section .chibi {
+        left: -30vw;
     }
 
 
