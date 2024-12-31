@@ -4,7 +4,8 @@
     <meta http-equiv="refresh" content="0; url=/" />
     <script>
       // Redirect to the main page and let Vue Router handle the route
-      const redirectTo = location.origin + location.pathname + location.search + location.hash
+      // const redirectTo = location.pathname + location.search + location.hash
+      const redirectTo = location.origin + location.pathname
       location.replace('/' + redirectTo)
     </script>
   </head>
