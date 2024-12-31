@@ -1,0 +1,40 @@
+<!-- <!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="refresh" content="0; url=/" />
+    <script>
+      // Prevent infinite redirection loop
+      const currentPath = location.pathname
+
+      // Only redirect if we are not on the homepage already
+      if (currentPath !== '/') {
+        // Redirect to the homepage if we're not already there
+        const redirectTo = location.origin + '/'
+        location.replace(redirectTo)
+      }
+    </script>
+  </head>
+  <body>
+    Loading...
+  </body>
+</html> -->
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Page Not Found</title>
+    <meta http-equiv="refresh" content="0; url=/" />
+    <script>
+      // Redirect to the homepage (index.html)
+      const redirectTo = location.pathname + location.search + location.hash
+      location.replace('avallumworld.com/' + redirectTo)
+    </script>
+  </head>
+  <body>
+    <h1>Loading...</h1>
+  </body>
+</html>

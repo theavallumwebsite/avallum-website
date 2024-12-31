@@ -94,15 +94,13 @@ function cleanupScrollBehavior() {
   currentSectionIndex.value = 0;
 }
 
-// function aosInitialize() {
-//   const sections = document.querySelectorAll('section:not(.footer)');
+function scrollTo(sectionId: string) {
+  const section = document.getElementById(sectionId);
+  if (section) {
+    section.scrollIntoView({ behavior: 'smooth' });
+  }
+}
 
-//   sections.forEach((section) => {
-//     section.setAttribute('data-aos', 'slide-up');
-//   });
-
-//   AOS.init()
-// }
 
 window.addEventListener('hashchange', () => {
   isHashNavigation = true;
@@ -110,9 +108,7 @@ window.addEventListener('hashchange', () => {
 
 onMounted(() => {
   // initializeScrollBehavior()
-  // setTimeout(() => {
-  //   aosInitialize()
-  // }, 100)
+
 });
 
 
@@ -125,9 +121,7 @@ onUnmounted(() => {
 //   cleanupScrollBehavior();
 //   initializeScrollBehavior();
 //   next();
-//   // setTimeout(() => {
-//   //   aosInitialize()
-//   // }, 100)
+
 // });
 
 
@@ -144,11 +138,11 @@ onUnmounted(() => {
         </RouterLink>
 
         <div class="nav-sections" v-if="route.name === 'home'">
-          <a href="#members">Members</a>
-          <a href="#streams">Streams</a>
-          <a href="#music">Music</a>
-          <a href="#birthday">Birthdays</a>
-          <a href="#merch">Merch</a>
+          <a @click.prevent="scrollTo('members')">Members</a>
+          <a @click.prevent="scrollTo('streams')">Streams</a>
+          <a @click.prevent="scrollTo('music')">Music</a>
+          <a @click.prevent="scrollTo('birthday')">Birthdays</a>
+          <a @click.prevent="scrollTo('merch')">Merch</a>
         </div>
 
 

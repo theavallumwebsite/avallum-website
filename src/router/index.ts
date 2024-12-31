@@ -1,4 +1,4 @@
-import { createRouter, createWebHistory } from 'vue-router'
+import { createRouter, createWebHashHistory, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import CassianView from '@/views/CassianView.vue'
 import GaleView from '@/views/GaleView.vue'
@@ -7,7 +7,7 @@ import RoscoView from '@/views/RoscoView.vue'
 import LucienView from '@/views/LucienView.vue'
 
 const router = createRouter({
-  history: createWebHistory(import.meta.env.BASE_URL),
+  history: createWebHashHistory(import.meta.env.BASE_URL),
   routes: [
     {
       path: '/',
