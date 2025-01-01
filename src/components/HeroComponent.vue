@@ -1,4 +1,11 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+function scrollTo(sectionId: string) {
+  const section = document.getElementById(sectionId);
+  if (section) {
+    section.scrollIntoView({ behavior: 'smooth' });
+  }
+}
+</script>
 
 <template>
   <section id="hero">
@@ -12,7 +19,7 @@
     </p>
     <p>They debuted on <b>January 28th, 2024</b>.</p>
 
-    <a href="#members" class="hero-a">
+    <a @click.prevent="scrollTo('members')" class="hero-a">
       <h2>Discover more about them</h2>
     </a>
   </section>

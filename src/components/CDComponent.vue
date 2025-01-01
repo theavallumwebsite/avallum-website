@@ -83,7 +83,7 @@ function addDecoration() {
 
 }
 
-const BASE_URL = import.meta.env.BASE_URL;
+
 
 onMounted(() => {
     cdAnimation()
@@ -95,14 +95,17 @@ onMounted(() => {
 
 <template>
     <div class="cd-container">
-        <div class="cd-player">
-            <div class="cd-images">
-                <!-- <img :src="memberName === 'avallum' ? `${BASE_URL}avallum-cd.png` : `${BASE_URL}${member.cd}`"
-                    alt="CD Image" class="image"> -->
-                <img :src="memberName === 'avallum' ? `avallum-cd.png` : `${member.cd}`" alt="CD Image" class="image">
-            </div>
+        <a :href="memberName === 'avallum' ? 'https://www.youtube.com/watch?v=Z-4pJkt6c84' : member.cdLink"
+            target="_blank">
+            <div class="cd-player">
+                <div class="cd-images">
+                    <img :src="memberName === 'avallum' ? `avallum-cd.png` : `${member.cd}`" alt="CD Image"
+                        class="image">
+                </div>
 
-        </div>
+            </div>
+        </a>
+
 
     </div>
 </template>

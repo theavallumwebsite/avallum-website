@@ -253,6 +253,11 @@ b {
     color: v-bind(color);
 }
 
+.hastags {
+    flex-wrap: wrap;
+    gap: 1vw;
+}
+
 
 .icons a {
     color: v-bind(color);
@@ -457,6 +462,7 @@ b {
     height: 100vh;
     margin: auto;
 
+
 }
 
 .gale-section .content {
@@ -656,12 +662,14 @@ b {
         width: 94vw;
         height: 95vh;
         margin: auto;
+
     }
 
     .gale-section .content {
         width: 94vw;
         height: 60vh;
         justify-content: space-evenly;
+        overflow: scroll;
     }
 
     .gale-section .image {

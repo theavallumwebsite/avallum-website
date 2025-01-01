@@ -19,7 +19,7 @@
       "portrait": "gale-portrait.webp",
       "mainArt": "",
       "mainArtTransparent": "",
-      "chibi": "",
+      "chibi": "gale-chibi.gif",
       "birthdayHat": "Gale-party-hat.png",
       "font": "Pirata One",
       "titleColor": "linear-gradient(#E5C373, #AC8246, #C0A054)",
@@ -27,15 +27,18 @@
       "facts": [
         "Hates vegetables",
         "Can turn any horror game into a comedy",
-        "is basically Kermit the Frog",
+        "Has a parrot named Pip!",
         "'Peanitz'"
       ],
       "tags": ["December 9th", "29 years old", "Human", "Pirate"],
       "hastags": [
-        "Art: #galeGallery",
-        "Live: #galeGoingLive",
+        "Art: #GaleGallery",
+        "Live: #GaleGoingLive",
         "Clips: #Pipsclips",
-        "Memes: #GaleGallons"
+        "Memes: #GaleGallons",
+        "Thumbnails: #thumbGale",
+        "Assets: #GalesGarments",
+        "NSFW: #GaleGoneWild"
       ],
       "fanName": "Pipsqueak",
       "mascot": "pipsqueak.gif",
@@ -48,6 +51,7 @@
       "debut": "https://www.youtube.com/embed/VOhzg-Vi7Z0",
       "debut3D": "https://www.youtube.com/embed/LPvjfazmpLA",
       "cd": "gale-cd.png",
+      "cdLink": "https://www.youtube.com/watch?v=K7OFCKO4SWU",
       "X": "https://x.com/GaleGalleon",
       "Youtube": "https://www.youtube.com/@GaleGalleon",
       "credits": [
@@ -142,7 +146,10 @@
         "Art: #Cassthetic",
         "Live: #BroadCASSt",
         "Clips & Memes: #ROFLoros",
-        "Assets & Thumbnails: #Cassets"
+        "Assets & Thumbnails: #Cassets",
+        "NSFW: #Casscheeks",
+        "Merch: #TreatYourElf",
+        "Food: #deliCassies"
       ],
       "fanName": "Dewdrop",
       "mascot": "dewdrop.gif",
@@ -155,6 +162,7 @@
       "debut": "https://www.youtube.com/embed/Myb8C_slm08",
       "debut3D": "https://www.youtube.com/embed/1QsGykAKGTU",
       "cd": "cassian-cd.png",
+      "cdLink": "https://www.youtube.com/watch?v=2TqgQ2WzAwk",
       "X": "https://x.com/CassianFloros",
       "Youtube": "https://www.youtube.com/@CassianFloros",
       "credits": [
@@ -286,6 +294,7 @@
       "debut": "https://www.youtube.com/embed/a7m0Iy-Z5Iw",
       "debut3D": "https://www.youtube.com/embed/VJyp8skS5u0",
       "cd": "lucien-cd.png",
+      "cdLink": "https://www.youtube.com/watch?v=_c62seXgMPk",
       "X": "https://x.com/LucienLunaris",
       "Youtube": "https://www.youtube.com/@LucienLunaris",
       "credits": [
@@ -409,9 +418,14 @@
       "hastags": [
         "Art: #Netherrizz",
         "Live: #Netherbeckon",
-        "Clips & memes: #Netherbanter",
+        "Memes: #Netherbanter",
+        "Clips: #Netherclips",
         "Thumbnails: #NailOnTheIncubus",
-        "Assets: #Netherbranding"
+        "Assets: #Netherbranding",
+        "NSFW: #Netherbliss",
+        "Food: #Nethernoms",
+        "Fanfic: #Netherfiction",
+        "Merch: Nethermerch"
       ],
       "fanName": "Netherling",
       "mascot": "netherling.gif",
@@ -424,6 +438,7 @@
       "debut": "https://www.youtube.com/embed/LuUxkgwdmis",
       "debut3D": "https://www.youtube.com/embed/DB256_jcVxI",
       "cd": "zander-cd.png",
+      "cdLink": "https://www.youtube.com/watch?v=TzLHyhY-js0",
       "X": "https://x.com/ZanderNetherbrand",
       "Youtube": "https://www.youtube.com/@ZanderNetherbrand",
       "credits": [
@@ -538,6 +553,7 @@
       "debut": "https://www.youtube.com/embed/XvkFHGc4V44",
       "debut3D": "https://www.youtube.com/embed/8PRMe739U7U",
       "cd": "rosco-cd.png",
+      "cdLink": "https://www.youtube.com/watch?v=gbvqrhIp0JE",
       "X": "https://x.com/RoscoGraves",
       "Youtube": "https://www.youtube.com/@RoscoGraves",
       "credits": [

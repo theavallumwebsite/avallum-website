@@ -566,6 +566,11 @@ h3 {
         bottom: 5vh;
     }
 
+    .gale-section .image .chibi {
+        width: 100%;
+        left: -32vw;
+    }
+
     .gale-section .content p {
         width: 90%;
     }

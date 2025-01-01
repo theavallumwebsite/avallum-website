@@ -17,7 +17,6 @@ function nagivateTo(member: string) {
     <h2>Members</h2>
     <div class="members-list">
       <div @click="nagivateTo('galegalleon')" class="container">
-
         <div class="gale">
           <h3>Gale Galleon 🍻</h3>
         </div>
@@ -55,7 +54,7 @@ function nagivateTo(member: string) {
 
 <style scoped>
 #members {
-  background: linear-gradient(rgba(0, 0, 0, 0.99), rgba(38, 38, 38, 0.96)), url('/avallum-website/src/assets/black-stars.png');
+  background: linear-gradient(rgba(0, 0, 0, 0.99), rgba(38, 38, 38, 0.94)), url('../assets/black-stars.png');
   background-blend-mode: darken;
   position: relative;
   display: flex;

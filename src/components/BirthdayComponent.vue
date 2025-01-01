@@ -33,6 +33,7 @@ function findClosestBirthday() {
 
     const birthdays = extractBirthdays().map(({ name, birthday }) => {
         const birthdayDate = new Date(birthday)
+        birthdayDate.setFullYear(today.getFullYear());
 
         if (birthdayDate.getTime() < todayTime) {
             birthdayDate.setFullYear(today.getFullYear() + 1);
@@ -51,6 +52,8 @@ function findClosestBirthday() {
     const channels = Object.values(data.channels);
     const closestChannel = channels.find(channel => channel.name === calculatedClosestBirthday.name);
 
+    const isToday = calculatedClosestBirthday.birthdayDate.getTime() === todayTime;
+
     closestBirthday.value = {
         name: calculatedClosestBirthday.name,
         birthday: calculatedClosestBirthday.birthdayDate,
@@ -58,7 +61,8 @@ function findClosestBirthday() {
             month: 'long',
             day: 'numeric',
         }),
-        birthdayHat: closestChannel?.birthdayHat || null
+        birthdayHat: closestChannel?.birthdayHat || null,
+        isToday,
     }
 
     birthdayCountdown()
@@ -125,17 +129,21 @@ onMounted(() => {
         <i>Please note that this uses your local time and not JST.</i>
         <div class="birthdays">
             <div class="left">
-                <!-- <img :src="closestBirthday.birthdayHat" alt="" class="birthdayHat"
-                    v-if="closestBirthday && closestBirthday.birthdayHat"> -->
                 <img :src="closestBirthday.portrait" alt="" class="mainModel" v-if="closestBirthday">
             </div>
             <div class="right">
                 <div class="text" v-if="closestBirthday">
                     <img src="../assets/birthdaycake.png" alt="" class="birthdaycake">
-                    <h3>The next birthday is <b>{{ closestBirthday.name }}</b>'s on <b>{{
-                        closestBirthday.formattedBirthday }}th</b>.
-                    </h3>
-                    <p>It's in {{ countdown.days }} days, {{ countdown.hours }} hours.</p>
+                    <div v-if="closestBirthday.isToday">
+                        <h3>Today is <b>{{ closestBirthday.name }}</b>'s birthday!</h3>
+                        <p>Happy birthday!</p>
+                    </div>
+                    <div v-else>
+                        <h3>The next birthday is <b>{{ closestBirthday.name }}</b>'s on <b>{{
+                            closestBirthday.formattedBirthday }}th</b>.
+                        </h3>
+                        <p>It's in {{ countdown.days }} days, {{ countdown.hours }} hours.</p>
+                    </div>
                 </div>
                 <div v-else>
                     <p>No birthdays. (if you see this please scream at me on X because you're not supposed to lmao)</p>

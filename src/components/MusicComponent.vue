@@ -149,9 +149,9 @@ onMounted(() => {
   <section id="music">
     <div class="music-top">
       <div class="music-top-container">
-        <a href="https://www.youtube.com/watch?v=-WXRrpnYJwA" class="CD">
+        <div class="CD">
           <CDComponent memberName="avallum" class="avallum-section"></CDComponent>
-        </a>
+        </div>
         <div class="musicTopContent">
           <h2>Music</h2>
           <p>Discover all of Avallum's music!</p>
