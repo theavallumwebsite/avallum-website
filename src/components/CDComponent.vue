@@ -78,7 +78,7 @@ function addDecoration() {
     svg2.classList.add("star")
     svg2.classList.add("star1")
 
-    container?.insertBefore(svg1, container.querySelector(".cd-player"));
+    container?.insertBefore(svg1, container.querySelector("a .cd-player"));
     container?.appendChild(svg2)
 
 }
@@ -94,20 +94,17 @@ onMounted(() => {
 </script>
 
 <template>
-    <div class="cd-container">
-        <a :href="memberName === 'avallum' ? 'https://www.youtube.com/watch?v=Z-4pJkt6c84' : member.cdLink"
-            target="_blank">
+    <a :href="memberName === 'avallum' ? 'https://www.youtube.com/watch?v=Z-4pJkt6c84' : member.cdLink" target="_blank">
+        <div class="cd-container">
             <div class="cd-player">
                 <div class="cd-images">
                     <img :src="memberName === 'avallum' ? `avallum-cd.png` : `${member.cd}`" alt="CD Image"
                         class="image">
                 </div>
-
             </div>
-        </a>
 
-
-    </div>
+        </div>
+    </a>
 </template>
 
 
